@@ -8,7 +8,7 @@ throughout this theme's SASS files.
 @import "../vendor/sass/foundation/functions";
 
 // We use these as default colors throughout
-$primary-color: #69AF41;
+$primary-color: #66cc33;
 $secondary-color: #FFC55B;
 $alert-color: #f04124;
 $success-color: #43AC6A;
@@ -24,6 +24,7 @@ $font-family-sans-serif: "Helvetica", sans-serif;
 $font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif;
 $font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
 $body-font-color: #222;
+$base-font-size: 100%;
 
 // Sizes
 $header-height: 80px;

@@ -12,6 +12,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 get_header();
+
+// TODO gap under header
 ?>
 
 	<section id="home-content" class="row">
@@ -115,9 +117,38 @@ if ( ! empty( $featured_products ) ) {
 	</section>
 <?php
 }
-
-get_sidebar();
 ?>
+
+	<div class="row">
+
+		<div class="home-about-author columns small-12 medium-9">
+
+			<div class="row">
+				<div class="home-author-meta columns small-12 medium-3">
+					<div class="home-author-image">
+
+					</div>
+
+					<div class="home-author-social">
+
+					</div>
+				</div>
+
+				<div class="home-author-info collumns small-12 medium-9">
+					<h3>About the author</h3>
+
+					<h4>Susan case Bonner</h4>
+					<p>
+						Among many other fine qualities, my royal friend Tranquo, being gifted with a devout love for all matters of barbaric vertu, had brought together in Pupella whatever rare things the more ingenious of his people could invent; chiefly carved woods of
+					</p>
+				</div>
+			</div>
+
+		</div>
+
+		<?php get_sidebar(); ?>
+
+	</div>
 
 <?php
 page_end();

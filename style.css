@@ -3177,12 +3177,12 @@ button, .button {
   padding-bottom: 1.0625rem;
   padding-left: 2rem;
   font-size: 1rem;
-  background: #69AF41;
-  border-color: #548c34;
+  background: #66cc33;
+  border-color: #52a329;
   color: #FFFFFF;
   transition: background-color 300ms ease-out; }
   button:hover, button:focus, .button:hover, .button:focus {
-    background: #548c34; }
+    background: #52a329; }
   button:hover, button:focus, .button:hover, .button:focus {
     color: #FFFFFF; }
   button.secondary, .button.secondary {
@@ -3258,18 +3258,18 @@ button, .button {
   button.round, .button.round {
     border-radius: 1000px; }
   button.disabled, button[disabled], .button.disabled, .button[disabled] {
-    background: #69AF41;
-    border-color: #548c34;
+    background: #66cc33;
+    border-color: #52a329;
     color: #FFFFFF;
     cursor: default;
     opacity: 0.7;
     box-shadow: none; }
     button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
-      background: #548c34; }
+      background: #52a329; }
     button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
       color: #FFFFFF; }
     button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
-      background: #69AF41; }
+      background: #66cc33; }
     button.disabled.secondary, button[disabled].secondary, .button.disabled.secondary, .button[disabled].secondary {
       background: #FFC55B;
       border-color: #ffad16;
@@ -3463,11 +3463,11 @@ div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, t
 
 /* Default Link Styles */
 a {
-  color: #69AF41;
+  color: #66cc33;
   text-decoration: none;
   line-height: inherit; }
   a:hover, a:focus {
-    color: #5a9738; }
+    color: #58af2c; }
   a img {
     border: none; }
 
@@ -4072,7 +4072,7 @@ throughout this theme's SASS files.
 a.color-invert, #site-header .top-header .menu-item a, #site-header .bottom-header #site-nav .menu-item a {
   color: inherit; }
   a.color-invert:hover, #site-header .top-header .menu-item a:hover, #site-header .bottom-header #site-nav .menu-item a:hover {
-    color: #5a9738; }
+    color: #58af2c; }
 
 h1, h2, h3, h4, h5, h6 {
   letter-spacing: 2px; }
@@ -4110,7 +4110,7 @@ throughout this theme's SASS files.
 #site-header .bottom-header {
   margin-top: 7px;
   margin-bottom: 7px;
-  color: #69AF41;
+  color: #66cc33;
   background: #fff;
   margin-top: 160px;
   position: relative; }
@@ -4118,7 +4118,7 @@ throughout this theme's SASS files.
     content: '';
     width: 100%;
     height: 7px;
-    background: rgba(105, 175, 65, 0.6);
+    background: rgba(102, 204, 51, 0.6);
     position: relative; }
   #site-header .bottom-header:before {
     top: -7px; }
@@ -4159,7 +4159,7 @@ throughout this theme's SASS files.
 #site-footer {
   margin-top: 7px;
   margin-bottom: 7px;
-  background: #69AF41;
+  background: #66cc33;
   text-align: center;
   color: #fff; }
   #site-footer:before, #site-footer:after {
@@ -4287,7 +4287,7 @@ body.home .home-feature {
 body.home .home-welcome {
   background: #fff;
   border-style: solid;
-  border-color: #69AF41;
+  border-color: #66cc33;
   border-width: 8px 0;
   color: #8B8D0C; }
   body.home .home-welcome h2 {
@@ -4311,12 +4311,12 @@ body.home .home-featured-products .product-content {
   width: 60%;
   font-size: 0.8em; }
   body.home .home-featured-products .product-content .product-title {
-    color: #69AF41;
+    color: #66cc33;
     font-size: 1.3em;
     line-height: 1; }
   body.home .home-featured-products .product-content .add_to_cart_button {
     background: transparent;
-    color: #69AF41;
+    color: #66cc33;
     padding: 0 10px 0 0;
     margin: 0 10px 0 0;
     border-right: 1px solid #ccc; }

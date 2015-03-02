@@ -12,8 +12,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 
-<aside id="site-sidebar">
+<aside id="site-sidebar" class="columns small-12 medium-3">
 
-	<?php dynamic_sidebar()
+	<?php dynamic_sidebar( 'primary' ); ?>
 
 </aside>

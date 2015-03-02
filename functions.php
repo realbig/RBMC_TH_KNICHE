@@ -38,6 +38,8 @@ $theme_fonts = array(
 //	'bangers' => 'http://fonts.googleapis.com/css?family=Bangers',
 );
 
+//http://www.google.com/fonts/specimen/Architects+Daughter
+//
 /**
  * Setup theme properties and stuff.
  *
@@ -129,6 +131,13 @@ add_action( 'after_setup_theme', function () {
  * @since 0.1.0
  */
 add_action( 'widgets_init', function () {
+
+	// Primary
+	register_sidebar( array(
+		'name' => 'Primary',
+		'id' => 'primary',
+		'description' => 'Displays on the side of most pages.',
+	));
 
 	// Footer
 	register_sidebar( array(
