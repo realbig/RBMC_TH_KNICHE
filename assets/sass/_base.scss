@@ -1,0 +1,21 @@
+/*
+Base element settings (no classes or id's).
+
+@since 0.1.0
+*/
+
+@import "settings";
+
+a {
+  &.color-invert {
+    color: inherit;
+
+    &:hover {
+      color: $anchor-font-color-hover;
+    }
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: 2px;
+}

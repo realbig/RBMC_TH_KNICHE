@@ -1,0 +1,45 @@
+/*
+Styles front-page.php.
+
+@since 0.1.0
+*/
+
+@import "../settings";
+
+body.home {
+
+  // Feature
+  .home-feature {
+    background: rgba(255, 255, 255, 0.6);
+
+    .home-feature-left {
+      padding: 20px;
+    }
+
+    .home-feature-right {
+      padding: 20px;
+
+      .container {
+        background: #fff;
+        padding: 20px;
+      }
+
+      p, .button {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  // Welcome
+  .home-welcome {
+    background: #fff;
+    border-style: solid;
+    border-color: $primary-color;
+    border-width: 8px 0;
+    color: $fourth-color;
+
+    h2 {
+      color: $third-color;
+    }
+  }
+}

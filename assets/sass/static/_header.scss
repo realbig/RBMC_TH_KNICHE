@@ -1,0 +1,80 @@
+/*
+The static site header.
+
+@since 0.1.0
+*/
+@import "../settings";
+
+$top-header-height: 60px;
+$bottom-header-height: 70px;
+
+#site-header {
+
+  .top-header {
+    background: #202020;
+    color: #ddd;
+    line-height: $top-header-height;
+
+    // Nav
+    .menu {
+      margin: 0;
+    }
+
+    .menu-item {
+      display: inline-block;
+      padding: 0 10px;
+      line-height: $top-header-height;
+
+      a {
+        @extend a.color-invert;
+      }
+    }
+
+    // User
+    .user-menu {
+      p {
+        margin: 0;
+        line-height: $top-header-height;
+      }
+    }
+  }
+
+  .bottom-header {
+    @include white-trim;
+    background: $primary-color;
+    margin-top: 160px;
+
+    // Logo
+    #site-logo {
+      position: relative;
+      height: $bottom-header-height;
+
+      img {
+        position: absolute;
+        bottom: 0;
+        min-width: 350px;
+      }
+    }
+
+    // Nav
+    #site-nav {
+
+      .menu {
+        margin: 0;
+        text-align: right;
+      }
+
+      .menu-item {
+        display: inline-block;
+        padding: 0 10px;
+        color: #fff;
+        line-height: $bottom-header-height;
+        font-size: 2em;
+
+        a {
+          @extend a.color-invert;
+        }
+      }
+    }
+  }
+}

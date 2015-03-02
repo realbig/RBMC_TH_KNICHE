@@ -1,0 +1,17 @@
+/*
+The static site footer.
+
+@since 0.1.0
+*/
+
+@import "../settings";
+
+#site-footer {
+  @include white-trim;
+  background: $primary-color;
+  text-align: center;
+
+  p {
+    margin: 0;
+  }
+}
