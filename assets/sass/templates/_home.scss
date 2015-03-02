@@ -10,7 +10,10 @@ body.home {
 
   // Feature
   .home-feature {
-    background: rgba(255, 255, 255, 0.6);
+    margin-top: 10px;
+    background: url("assets/images/home-feature-back.png");
+    background-size: cover;
+    padding-top: 50px;
 
     .home-feature-left {
       padding: 20px;
@@ -20,7 +23,7 @@ body.home {
       padding: 20px;
 
       .container {
-        background: #fff;
+        color: #fff;
         padding: 20px;
       }
 
@@ -40,6 +43,50 @@ body.home {
 
     h2 {
       color: $third-color;
+    }
+  }
+
+  // Content
+  #site-content {
+    margin-top: 0;
+  }
+
+  // Featured Products
+  .home-featured-products {
+
+    li {
+      list-style: none;
+
+      > .container {
+        @include clearfix;
+        border: 1px solid #ccc;
+        padding: 5px;
+      }
+    }
+
+    .product-image {
+      float: left;
+      width: 40%;
+    }
+
+    .product-content {
+      float: left;
+      width: 60%;
+      font-size: 0.8em;
+
+      .product-title {
+        color: $primary-color;
+        font-size: 1.3em;
+        line-height: 1;
+      }
+
+      .add_to_cart_button {
+        background: transparent;
+        color: $primary-color;
+        padding: 0 10px 0 0;
+        margin: 0 10px 0 0;
+        border-right: 1px solid #ccc;
+      }
     }
   }
 }

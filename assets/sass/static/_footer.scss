@@ -7,9 +7,10 @@ The static site footer.
 @import "../settings";
 
 #site-footer {
-  @include white-trim;
+  @include trim;
   background: $primary-color;
   text-align: center;
+  color: #fff;
 
   p {
     margin: 0;

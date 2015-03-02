@@ -51,7 +51,73 @@ get_header();
 
 	</section>
 
-<?php page_start(); ?>
+<?php
+page_start();
+
+$featured_products = get_posts( array(
+	'post_type'      => 'product',
+	'meta_key'       => '_featured',
+	'meta_value'     => 'yes',
+	'posts_per_page' => 3,
+) );
+
+if ( ! empty( $featured_products ) ) {
+	global $post;
+
+	add_filter( 'woocommerce_loop_add_to_cart_link', function () {
+
+		global $product;
+
+		return sprintf( '<a href="%s" rel="nofollow" data-product_id="%s" data-product_sku="%s" data-quantity="%s" class="button %s product_type_%s">%s</a>',
+			esc_url( $product->add_to_cart_url() ),
+			esc_attr( $product->id ),
+			esc_attr( $product->get_sku() ),
+			esc_attr( isset( $quantity ) ? $quantity : 1 ),
+			$product->is_purchasable() && $product->is_in_stock() ? 'add_to_cart_button' : '',
+			esc_attr( $product->product_type ),
+			'<span class="icon-cart"></span>'
+		);
+	} );
+	?>
+	<section class="home-featured-products">
+		<h3>Featured Books</h3>
+		<ul class="products row">
+			<?php
+			foreach ( $featured_products as $post ) {
+				setup_postdata( $post );
+				?>
+				<li class="columns small-12 medium-4">
+
+					<div class="container">
+						<div class="product-image">
+							<?php the_post_thumbnail( 'thumbnail' ); ?>
+						</div>
+
+						<div class="product-content">
+							<h4 class="product-title">
+								<?php the_title(); ?>
+							</h4>
+
+							<?php echo custom_excerpt_length(); ?>
+
+							<div class="product-buy">
+								<?php wc_get_template( 'loop/add-to-cart.php' ); ?>
+								<?php wc_get_template( 'loop/price.php' ); ?>
+							</div>
+						</div>
+					</div>
+				</li>
+			<?php
+			}
+			wp_reset_postdata();
+			?>
+		</ul>
+	</section>
+<?php
+}
+
+get_sidebar();
+?>
 
 <?php
 page_end();

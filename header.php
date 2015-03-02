@@ -69,11 +69,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		<section class="bottom-header row">
 
-			<div id="site-logo" class="columns small-12 medium-2">
-				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-header.png" />
-			</div>
+			<img class="site-logo" src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-header.png" />
 
-			<nav id="site-nav" class="columns small-12 medium-10">
+			<nav id="site-nav" class="columns small-12 medium-6 push-6">
 				<?php
 				wp_nav_menu( array(
 					'theme_location' => 'primary',

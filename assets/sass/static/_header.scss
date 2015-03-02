@@ -6,7 +6,7 @@ The static site header.
 @import "../settings";
 
 $top-header-height: 60px;
-$bottom-header-height: 70px;
+$bottom-header-height: 50px;
 
 #site-header {
 
@@ -40,20 +40,19 @@ $bottom-header-height: 70px;
   }
 
   .bottom-header {
-    @include white-trim;
-    background: $primary-color;
+    @include trim($primary-color);
+    color: $primary-color;
+    background: #fff;
     margin-top: 160px;
+    position: relative;
 
     // Logo
-    #site-logo {
-      position: relative;
-      height: $bottom-header-height;
-
-      img {
-        position: absolute;
-        bottom: 0;
-        min-width: 350px;
-      }
+    .site-logo {
+      position: absolute;
+      bottom: -100px;
+      left: 20px;
+      width: 50%;
+      z-index: 10;
     }
 
     // Nav
@@ -67,9 +66,8 @@ $bottom-header-height: 70px;
       .menu-item {
         display: inline-block;
         padding: 0 10px;
-        color: #fff;
         line-height: $bottom-header-height;
-        font-size: 2em;
+        font-size: 1.4em;
 
         a {
           @extend a.color-invert;

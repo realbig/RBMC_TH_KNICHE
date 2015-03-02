@@ -150,5 +150,21 @@ function page_end() {
 	include_once __DIR__ . '/partials/html-page-end.php';
 }
 
+function custom_excerpt_length( $length = 15, $append = '...' ) {
+
+	global $post;
+
+	$excerpt = explode( ' ', strip_tags( get_the_excerpt( $post ) ) );
+
+	// Determine if appending is necessary
+	if ( count( $excerpt ) <= $length ) {
+		$append = '';
+	}
+
+	$excerpt = implode( ' ', array_splice( $excerpt, 0, $length ) );
+
+	return $excerpt . $append;
+}
+
 // Include other static files
 require_once __DIR__ . '/shortcodes.php';
