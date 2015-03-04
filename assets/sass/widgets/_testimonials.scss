@@ -1,0 +1,105 @@
+/*
+Styles the testimonial widget.
+
+@since 0.1.0
+*/
+
+@import "../settings";
+
+.testimonials-container {
+  position: relative;
+  overflow: hidden;
+
+  .testimonials-prev, .testimonials-next {
+    color: #ccc;
+    position: absolute;
+    top: 60px;
+    font-size: 20px;
+    transition: color 300ms;
+    cursor: pointer;
+    z-index: 10;
+
+    &:hover {
+      color: #555;
+    }
+  }
+
+  .testimonials-prev {
+    left: 0;
+  }
+
+  .testimonials-next {
+    right: 0;
+  }
+
+  // The list
+  .testimonials {
+    list-style: none;
+    margin: 0;
+    position: relative;
+
+    // With JavaScript
+    &.js {
+      transition: left 300ms;
+
+      .testimonial {
+        float: left;
+        opacity: 0;
+        transition: opacity 300ms;
+
+        &.active {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  // The list item
+  .testimonial {
+    color: #777;
+
+    .testimonial-image {
+      text-align: center;
+      margin: 20px 0;
+      position: relative;
+
+      img {
+        overflow: hidden;
+        border: 10px solid #ccc;
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+      }
+
+      // Down arrow
+      &:after {
+        content: '';
+        border-top: 16px solid #ccc;
+        border-left: 16px solid transparent;
+        border-right: 16px solid transparent;
+        position: absolute;
+        left: 50%;
+        bottom: -10px;
+        margin-left: -16px;
+      }
+    }
+
+    .testimonial-author {
+      text-align: center;
+      font-family: $body-font-family;
+      text-transform: uppercase;
+      font-size: 1.3em;
+
+      .testimonial-role {
+        color: $primary-color;
+      }
+    }
+
+    .testimonial-content {
+      .icon-quote {
+        font-size: 35px;
+        color: #ddd;
+      }
+    }
+  }
+}

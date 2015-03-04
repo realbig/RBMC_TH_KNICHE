@@ -6,10 +6,11 @@ The static site header.
 @import "../settings";
 
 $top-header-height: 60px;
-$bottom-header-height: 50px;
+$primary-nav-height: 50px;
 
 #site-header {
 
+  // Top header
   .top-header {
     background: #202020;
     color: #ddd;
@@ -37,9 +38,44 @@ $bottom-header-height: 50px;
         line-height: $top-header-height;
       }
     }
+
+    // Cart
+    > .row {
+      position: relative;
+    }
+
+    .cart {
+      width: 120px;
+      background: #fff;
+      position: absolute;
+      top: 0;
+      right: 50px;
+      text-align: center;
+      border-top: 5px solid $primary-color;
+
+      p {
+        margin: 10px 0;
+        vertical-align: middle;
+      }
+
+      .cart-link {
+        font-size: 1.3em;
+
+        [class*='icon'] {
+          font-size: 1.5em;
+          vertical-align: middle;
+          margin-right: 5px;
+        }
+      }
+
+      .cart-contents {
+        color: $body-font-color;
+      }
+    }
   }
 
-  .bottom-header {
+  // Bottom header
+  .primary-nav {
     @include trim($primary-color);
     color: $primary-color;
     background: #fff;
@@ -66,12 +102,44 @@ $bottom-header-height: 50px;
       .menu-item {
         display: inline-block;
         padding: 0 10px;
-        line-height: $bottom-header-height;
-        font-size: 1.4em;
+        line-height: $primary-nav-height;
+        font-size: 1.7em;
+        font-family: $header-font-family;
 
         a {
           @extend a.color-invert;
         }
+      }
+    }
+  }
+
+  // Feature
+  .feature {
+    margin-top: 27px; // Compensate for green border (7px tall)
+    margin-bottom: 20px;
+    background: url("assets/images/feature-back.png");
+    background-size: cover;
+    padding-top: 50px;
+
+    .feature-left {
+      padding: 20px;
+    }
+
+    .feature-right {
+      padding: 20px;
+
+      .container {
+        color: #fff;
+        padding: 20px;
+      }
+
+      p, .button {
+        margin-bottom: 0;
+      }
+
+      p {
+        font-size: 2em;
+        margin-bottom: 1em;
       }
     }
   }

@@ -12,46 +12,23 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 get_header();
-
-// TODO gap under header
 ?>
 
-	<section id="home-content" class="row">
-
-		<div class="home-feature columns small-12">
-
-			<div class="row">
-
-				<div class="home-feature-left columns small-12 medium-6">
-					<?php // FIXME make admin accessible ?>
-					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/temp-home.png"/>
-				</div>
-
-				<div class="home-feature-right columns small-12 medium-6">
-
-					<div class="container">
-						<p class="home-feature-statement">
-							Teach your children the skill with eternal benefits.
-						</p>
-
-						<a href="#" class="button secondary expand">Buy Here</a>
-					</div>
-
-				</div>
-
-			</div>
-
-		</div>
-
-		<div class="home-welcome columns small-12">
-			<h2>Welcome to Kid Niche</h2>
+	<div class="home-welcome row">
+		<div class="columns small-12">
+			<h2>
+				<?php
+				echo get_post_meta( get_the_ID(), '_kidniche_home_welcome_blurb_title', true );
+				?>
+			</h2>
 
 			<p class="home-welcome-blurb">
-				Offering a wide selection of Christian books for children and teens.
+				<?php
+				echo get_post_meta( get_the_ID(), '_kidniche_home_welcome_blurb', true );
+				?>
 			</p>
 		</div>
-
-	</section>
+	</div>
 
 <?php
 page_start();
@@ -82,7 +59,7 @@ if ( ! empty( $featured_products ) ) {
 	} );
 	?>
 	<section class="home-featured-products">
-		<h3>Featured Books</h3>
+		<h3 class="section-title">Featured Books</h3>
 		<ul class="products row">
 			<?php
 			foreach ( $featured_products as $post ) {
@@ -100,7 +77,9 @@ if ( ! empty( $featured_products ) ) {
 								<?php the_title(); ?>
 							</h4>
 
-							<?php echo custom_excerpt_length(); ?>
+							<p>
+								<?php echo custom_excerpt_length(); ?>
+							</p>
 
 							<div class="product-buy">
 								<?php wc_get_template( 'loop/add-to-cart.php' ); ?>
@@ -119,36 +98,102 @@ if ( ! empty( $featured_products ) ) {
 }
 ?>
 
-	<div class="row">
+	<section id="site-content" class="row">
 
-		<div class="home-about-author columns small-12 medium-9">
+		<div class="content columns small-12 medium-9">
 
-			<div class="row">
+			<div class="home-about-author row">
 				<div class="home-author-meta columns small-12 medium-3">
 					<div class="home-author-image">
-
+						<?php
+						echo wp_get_attachment_image(
+							get_post_meta( get_the_ID(), '_kidniche_home_author_image', true )
+						);
+						?>
 					</div>
 
 					<div class="home-author-social">
-
+						<?php echo do_shortcode( get_post_meta( get_the_id(), '_kidniche_home_author_social' , true ) ); ?>
 					</div>
 				</div>
 
-				<div class="home-author-info collumns small-12 medium-9">
-					<h3>About the author</h3>
+				<div class="home-author-info columns small-12 medium-9">
+					<h3 class="home-author-title">About the author</h3>
 
-					<h4>Susan case Bonner</h4>
-					<p>
-						Among many other fine qualities, my royal friend Tranquo, being gifted with a devout love for all matters of barbaric vertu, had brought together in Pupella whatever rare things the more ingenious of his people could invent; chiefly carved woods of
-					</p>
+					<h4 class="home-author-name">Susan case Bonner</h4>
+
+					<div class="home-author-content">
+						<?php
+						echo apply_filters(
+							'the_content',
+							get_post_meta( get_the_ID(), '_kidniche_home_about_the_author', true )
+						);
+						?>
+					</div>
 				</div>
 			</div>
+
+
+			<?php
+			$blog_post_count = get_post_meta( get_the_ID(), '_kidniche_home_blog_post_count', true );
+			$posts = get_posts( array(
+				'numberposts' => $blog_post_count ? $blog_post_count : 3,
+			) );
+
+			if ( ! empty( $posts ) ) {
+				global $post;
+				?>
+				<div class="home-blog row">
+					<div class="columns small-12">
+
+						<h3 class="section-title">From the Blog</h3>
+
+						<?php
+						foreach ( $posts as $post ) {
+							setup_postdata( $post );
+							?>
+							<article id="post-<?php the_ID(); ?>" <?php post_class( array( 'row' ) ); ?>>
+
+								<div class="post-image columns small-12 medium-3">
+									<?php the_post_thumbnail( 'medium' ); ?>
+								</div>
+
+								<div class="post-content columns small-12 medium-9">
+
+									<h4 class="post-title">
+										<a href="<?php the_permalink(); ?>" class="color-invert">
+											<?php the_title(); ?>
+										</a>
+									</h4>
+
+									<p class="post-comment-count">
+										<span class="icon-bubble"></span>
+										<?php $comment_count = wp_count_comments()->approved; ?>
+										<?php echo $comment_count . _n( ' comment', ' comments', $comment_count ); ?>
+									</p>
+
+									<p class="post-excerpt">
+										<?php the_excerpt(); ?>
+									</p>
+
+								</div>
+
+							</article>
+						<?php
+						}
+						wp_reset_postdata();
+						?>
+					</div>
+				</div>
+			<?php
+			}
+			?>
 
 		</div>
 
 		<?php get_sidebar(); ?>
 
-	</div>
+	</section>
 
 <?php
 page_end();

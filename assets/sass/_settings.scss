@@ -24,17 +24,28 @@ $font-family-sans-serif: "Helvetica", sans-serif;
 $font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif;
 $font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
 $body-font-color: #222;
-$base-font-size: 100%;
+$base-font-size: 13px;
+$rem-base: $base-font-size;
 
 // Sizes
 $header-height: 80px;
 $gutter: 30px;
 
 // We use these to control header font styles
-$header-font-family: $font-family-sans-serif;
+$header-font-family: 'Architects Daughter', cursive;;
 $header-line-height: 1.4;
 $header-top-margin: .2rem;
 $header-bottom-margin: .5rem;
+$button-font-tny: rem-calc(13);
+$button-font-sml: rem-calc(16);
+$button-font-med: rem-calc(20);
+$button-font-lrg: rem-calc(25);
+
+// Buttons
+$button-border-width: 1px;
+$button-border-color: #999;
+$button-font-color: $body-font-color;
+$button-font-family: $header-font-family;
 
 // We use these to style anchors
 $anchor-text-decoration: none;
@@ -107,5 +118,21 @@ $xxlarge-only: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)}) and (m
 
   &:after {
     bottom: -7px;
+  }
+}
+
+@mixin header-border {
+  border-top: 1px solid #aaa;
+  border-bottom: 1px solid #aaa;
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    height: 4px;
+    width: 30px;
+    background: $primary-color;
   }
 }

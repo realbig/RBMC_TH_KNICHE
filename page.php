@@ -14,9 +14,22 @@ if ( ! defined( 'ABSPATH' ) ) {
 get_header();
 
 the_post();
+
+page_start();
 ?>
 
-<!-- Page HTML -->
+	<div class="row">
+		<div class="page-content columns small-12 medium-9">
+			<h1 class="page-title">
+				<?php the_title(); ?>
+			</h1>
 
+			<?php the_content(); ?>
+		</div>
+
+		<?php get_sidebar(); ?>
+</div>
 <?php
+page_end();
+
 get_footer();

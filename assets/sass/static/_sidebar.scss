@@ -1,0 +1,22 @@
+/*
+Content sidebar.
+
+@since 0.1.0
+*/
+
+@import "../settings";
+
+#site-sidebar {
+
+  .widgets {
+    list-style: none;
+  }
+
+  .widget {
+
+  }
+
+  .widget-title {
+    color: #555;
+  }
+}

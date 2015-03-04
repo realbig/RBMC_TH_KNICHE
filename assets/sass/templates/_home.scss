@@ -8,29 +8,8 @@ Styles front-page.php.
 
 body.home {
 
-  // Feature
-  .home-feature {
-    margin-top: 10px;
-    background: url("assets/images/home-feature-back.png");
-    background-size: cover;
-    padding-top: 50px;
-
-    .home-feature-left {
-      padding: 20px;
-    }
-
-    .home-feature-right {
-      padding: 20px;
-
-      .container {
-        color: #fff;
-        padding: 20px;
-      }
-
-      p, .button {
-        margin-bottom: 0;
-      }
-    }
+  .section-title {
+    margin: 20px 0;
   }
 
   // Welcome
@@ -38,17 +17,25 @@ body.home {
     background: #fff;
     border-style: solid;
     border-color: $primary-color;
-    border-width: 8px 0;
+    border-width: 5px 0;
     color: $fourth-color;
+    padding: 20px;
 
     h2 {
       color: $third-color;
+    }
+
+    p {
+      font-size: 2em;
+      margin: 0;
     }
   }
 
   // Content
   #site-content {
     margin-top: 0;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   // Featured Products
@@ -72,12 +59,17 @@ body.home {
     .product-content {
       float: left;
       width: 60%;
-      font-size: 0.8em;
+      font-size: 0.9em;
+
+      p {
+        font-size: 1em;
+      }
 
       .product-title {
         color: $primary-color;
         font-size: 1.3em;
         line-height: 1;
+        font-family: $font-family-sans-serif;
       }
 
       .add_to_cart_button {
@@ -85,8 +77,51 @@ body.home {
         color: $primary-color;
         padding: 0 10px 0 0;
         margin: 0 10px 0 0;
-        border-right: 1px solid #ccc;
+        border: 0 solid #ccc;
+        border-right-width: 1px;
       }
     }
+  }
+
+  // About the author
+  .home-about-author {
+    background: #F8F8F8;
+    border-style: solid;
+    border-color: $primary-color;
+    border-width: 5px 0;
+    margin-top: 80px;
+
+    .home-author-meta {
+      text-align: center;
+    }
+
+    .home-author-image {
+      border-radius: 50%;
+      border: 5px solid $primary-color;
+      overflow: hidden;
+      background: #fff;
+      margin-top: -73px;
+      width: 140px;
+      height: 140px;
+      display: inline-block;
+    }
+
+    .home-author-name {
+      color: #555;
+    }
+
+    .home-author-content {
+      color: #555;
+    }
+
+    .home-author-social {
+      margin-top: 30px;
+    }
+  }
+
+  // Blog
+  .post-comment-count {
+    font-weight: bold;
+    color: #aaa;
   }
 }

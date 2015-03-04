@@ -1,0 +1,2 @@
+!function(a){"use strict";a(function(){var b;a(".image-button").click(function(c){var d=a(this);return c.preventDefault(),b?void b.open():(b=wp.media.frames.meta_image_frame=wp.media({title:"Select Author Image",button:{text:"Use Image"},library:{type:"image"}}),b.on("select",function(){var a=b.state().get("selection").first().toJSON();console.log(a),d.siblings(".image-id").val(a.id),d.siblings(".image-preview").attr("src",a.url)}),void b.open())})})}(jQuery);
+//# sourceMappingURL=admin.js.map

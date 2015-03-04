@@ -9,6 +9,4 @@
 
     $(document).foundation();
 
-    $(document).removeClass('no-js');
-
 })(jQuery);

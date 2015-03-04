@@ -10,6 +10,8 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	die;
 }
+
+global $woocommerce;
 ?>
 
 <!DOCTYPE html>
@@ -63,13 +65,33 @@ if ( ! defined( 'ABSPATH' ) ) {
 					<?php endif; ?>
 				</div>
 
+				<div class="cart">
+					<p class="cart-link">
+						<a href="<?php echo $woocommerce->cart->get_checkout_url(); ?>">
+							<span class="icon-cart"></span>
+							Cart
+						</a>
+					</p>
+
+					<p class="cart-contents">
+						<?php
+						$cart_count = sizeof( $woocommerce->cart->cart_contents );
+						echo $cart_count . _n( ' item', ' items', $cart_count );
+						?>
+						&nbsp;-
+						<?php echo $woocommerce->cart->get_cart_total(); ?>
+					</p>
+				</div>
+
 			</div>
 
 		</section>
 
-		<section class="bottom-header row">
+		<section class="primary-nav row">
 
-			<img class="site-logo" src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-header.png" />
+			<a href="<?php bloginfo( 'url' ); ?>">
+				<img class="site-logo" src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-header.png"/>
+			</a>
 
 			<nav id="site-nav" class="columns small-12 medium-6 push-6">
 				<?php
@@ -79,6 +101,41 @@ if ( ! defined( 'ABSPATH' ) ) {
 				) );
 				?>
 			</nav>
+
+		</section>
+
+		<section class="feature row">
+
+			<div class="columns small-12">
+
+				<div class="row">
+
+					<div class="feature-left columns small-12 medium-6">
+						<?php // FIXME make admin accessible ?>
+						<img src="<?php echo get_template_directory_uri(); ?>/assets/images/temp-home.png"/>
+					</div>
+
+					<div class="feature-right columns small-12 medium-6">
+
+						<div class="container">
+							<div class="feature-statement">
+								<p>
+									Teach your children the skill with eternal benefits.
+								</p>
+
+								<p>
+									Teach your children to pray.
+								</p>
+							</div>
+
+							<a href="#" class="button secondary expand">Buy Here</a>
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
 
 		</section>
 

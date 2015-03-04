@@ -29,17 +29,15 @@ define( 'THEME_VERSION', '0.1.0' );
 /**
  * The theme's ID (used in handlers).
  */
-define( 'THEME_ID', 'my_theme' );
+define( 'THEME_ID', 'kidniche' );
 
 /**
  * Fonts for the theme. Must be hosted font (Google fonts for example).
  */
 $theme_fonts = array(
-//	'bangers' => 'http://fonts.googleapis.com/css?family=Bangers',
+	'architects-daughter' => 'http://fonts.googleapis.com/css?family=Architects+Daughter',
 );
 
-//http://www.google.com/fonts/specimen/Architects+Daughter
-//
 /**
  * Setup theme properties and stuff.
  *
@@ -80,6 +78,15 @@ add_action( 'init', function () {
 		true
 	);
 
+	// Admin script
+	wp_register_script(
+		THEME_ID . '-admin',
+		get_template_directory_uri() . '/admin.js',
+		array( 'jquery' ),
+		defined( 'WP_DEBUG' ) && WP_DEBUG ? time() : THEME_VERSION,
+		true
+	);
+
 	// Theme fonts
 	if ( ! empty( $theme_fonts ) ) {
 		foreach ( $theme_fonts as $ID => $link ) {
@@ -115,6 +122,16 @@ add_action( 'wp_enqueue_scripts', function () {
 } );
 
 /**
+ * Enqueue admin script.
+ *
+ * @since 0.1.0
+ */
+add_action( 'admin_enqueue_scripts', function () {
+
+	wp_enqueue_script( THEME_ID . '-admin' );
+});
+
+/**
  * Register nav menus.
  *
  * @since 0.1.0
@@ -137,6 +154,8 @@ add_action( 'widgets_init', function () {
 		'name' => 'Primary',
 		'id' => 'primary',
 		'description' => 'Displays on the side of most pages.',
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
 	));
 
 	// Footer
@@ -176,4 +195,6 @@ function custom_excerpt_length( $length = 15, $append = '...' ) {
 }
 
 // Include other static files
-require_once __DIR__ . '/shortcodes.php';
+require_once __DIR__ . '/includes/shortcodes.php';
+require_once __DIR__ . '/includes/widgets.php';
+require_once __DIR__ . '/admin/admin.php';

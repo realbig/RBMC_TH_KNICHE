@@ -7,6 +7,10 @@ Styles shared among all templates.
 @import "../settings";
 
 body {
-  background: url("assets/images/site-background.jpg");
+  background: url("assets/images/site-background.jpg") no-repeat center center fixed;
   background-size: cover;
+}
+
+.page-title, .section-title, .widget-title {
+  @include header-border;
 }

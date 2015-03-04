@@ -1,0 +1,29 @@
+/*
+Social shortcodes.
+
+@since 0.1.0
+*/
+
+@import "../settings";
+
+[class*="social-icon"] {
+  background: #E8E8E8;
+  box-shadow: 0 0 20px #D0D0D0 inset;
+  color: #CDCDCD;
+  display: inline-block;
+  text-align: center;
+  font-size: 20px;
+  margin: 0 2px;
+  transition: background 300ms, box-shadow 300ms, color 300ms;
+
+  &:hover {
+    background: darken(#E8E8E8, 5%);
+    box-shadow: 0 0 20px darken(#D0D0D0, 5%) inset;
+    color: darken(#CDCDCD, 10%);
+  }
+
+  &:before {
+    padding: 10px;
+    display: block;
+  }
+}
