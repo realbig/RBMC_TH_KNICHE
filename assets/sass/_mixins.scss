@@ -22,6 +22,7 @@ Global mixins.
     height: 7px;
     background: rgba($color, 0.6);
     position: relative;
+    display: block;
   }
 
   &:before {

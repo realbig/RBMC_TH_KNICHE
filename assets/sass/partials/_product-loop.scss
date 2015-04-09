@@ -1,0 +1,50 @@
+/*
+Product loop.
+
+@since 1.0.0
+*/
+
+@import "../settings";
+
+.product-loop {
+  li {
+    list-style: none;
+
+    > .container {
+      @include clearfix;
+      border: 1px solid #ccc;
+      padding: 5px;
+    }
+  }
+
+  .product-image {
+    float: left;
+    margin-right: 1em;
+    max-width: 35%;
+  }
+
+  .product-content {
+    font-size: 0.9em;
+    overflow: auto;
+
+    p {
+      font-size: 1em;
+    }
+
+    .product-title {
+      color: $primary-color;
+      font-size: 1.3em;
+      line-height: 1;
+      font-family: $font-family-sans-serif;
+    }
+
+    .add_to_cart_button {
+      background: transparent;
+      color: $primary-color;
+      padding: 0 10px 0 0;
+      margin: 0 10px 0 0;
+      border: 0 solid #ccc;
+      border-right-width: 1px;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+/*
+The single book landing page.
+
+@since 1.0.0
+*/
+
+@import "../settings";
+
+body.single-book {
+
+  .book-snippet {
+    @include trim($primary-color);
+
+    background: #fff;
+    margin: $gutter 0;
+
+    > .row {
+      padding: $gutter 0;
+    }
+
+    .book-copy {
+      font-size: 3em;
+      font-weight: bold;
+      line-height: 1.3;
+
+      p {
+        line-height: inherit;
+        font-size: inherit;
+        font-weight: inherit;
+      }
+    }
+  }
+}

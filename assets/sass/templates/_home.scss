@@ -23,6 +23,7 @@ body.home {
 
     h2 {
       color: $third-color;
+      margin-bottom: 0;
     }
 
     p {
@@ -41,83 +42,6 @@ body.home {
   // Featured Products
   .home-featured-products {
     background: #fff;
-
-    li {
-      list-style: none;
-
-      > .container {
-        @include clearfix;
-        border: 1px solid #ccc;
-        padding: 5px;
-      }
-    }
-
-    .product-image {
-      float: left;
-      width: 40%;
-    }
-
-    .product-content {
-      float: left;
-      width: 60%;
-      font-size: 0.9em;
-
-      p {
-        font-size: 1em;
-      }
-
-      .product-title {
-        color: $primary-color;
-        font-size: 1.3em;
-        line-height: 1;
-        font-family: $font-family-sans-serif;
-      }
-
-      .add_to_cart_button {
-        background: transparent;
-        color: $primary-color;
-        padding: 0 10px 0 0;
-        margin: 0 10px 0 0;
-        border: 0 solid #ccc;
-        border-right-width: 1px;
-      }
-    }
-  }
-
-  // About the author
-  .home-about-author {
-    background: #F8F8F8;
-    border-style: solid;
-    border-color: $primary-color;
-    border-width: 5px 0;
-    margin-top: 80px;
-
-    .home-author-meta {
-      text-align: center;
-    }
-
-    .home-author-image {
-      border-radius: 50%;
-      border: 5px solid $primary-color;
-      overflow: hidden;
-      background: #fff;
-      margin-top: -73px;
-      width: 140px;
-      height: 140px;
-      display: inline-block;
-    }
-
-    .home-author-name {
-      color: #555;
-    }
-
-    .home-author-content {
-      color: #555;
-    }
-
-    .home-author-social {
-      margin-top: 30px;
-    }
   }
 
   // Blog

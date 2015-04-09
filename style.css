@@ -4072,9 +4072,6 @@ a.color-invert, #site-header .top-header .menu-item a, #site-header .primary-nav
   a.color-invert:hover, #site-header .top-header .menu-item a:hover, #site-header .primary-nav #site-nav .menu-item a:hover {
     color: #58af2c; }
 
-h1, h2, h3, h4, h5, h6 {
-  letter-spacing: 2px; }
-
 /*
 The static site header.
 
@@ -4137,7 +4134,8 @@ Global mixins.
     width: 100%;
     height: 7px;
     background: rgba(102, 204, 51, 0.6);
-    position: relative; }
+    position: relative;
+    display: block; }
   #site-header .primary-nav:before {
     top: -7px; }
   #site-header .primary-nav:after {
@@ -4209,7 +4207,8 @@ Global mixins.
     width: 100%;
     height: 7px;
     background: rgba(255, 255, 255, 0.6);
-    position: relative; }
+    position: relative;
+    display: block; }
   #site-footer:before {
     top: -7px; }
   #site-footer:after {
@@ -4331,6 +4330,49 @@ Global mixins.
 @since 1.0.0
 */
 /*
+The single book landing page.
+
+@since 1.0.0
+*/
+/*
+Sets up the theme's styling properties and makes some variables already set in Foundation available for easy use
+throughout this theme's SASS files.
+
+@since 1.0.0
+*/
+/*
+Global mixins.
+
+@since 1.0.0
+*/
+body.single-book .book-snippet {
+  margin-top: 7px;
+  margin-bottom: 7px;
+  background: #fff;
+  margin: 30px 0; }
+  body.single-book .book-snippet:before, body.single-book .book-snippet:after {
+    content: '';
+    width: 100%;
+    height: 7px;
+    background: rgba(102, 204, 51, 0.6);
+    position: relative;
+    display: block; }
+  body.single-book .book-snippet:before {
+    top: -7px; }
+  body.single-book .book-snippet:after {
+    bottom: -7px; }
+  body.single-book .book-snippet > .row {
+    padding: 30px 0; }
+  body.single-book .book-snippet .book-copy {
+    font-size: 3em;
+    font-weight: bold;
+    line-height: 1.3; }
+    body.single-book .book-snippet .book-copy p {
+      line-height: inherit;
+      font-size: inherit;
+      font-weight: inherit; }
+
+/*
 Styles page.php.
 
 @since 1.0.0
@@ -4372,7 +4414,8 @@ body.home .home-welcome {
   color: #8B8D0C;
   padding: 20px; }
   body.home .home-welcome h2 {
-    color: #041D37; }
+    color: #041D37;
+    margin-bottom: 0; }
   body.home .home-welcome p {
     font-size: 2em;
     margin: 0; }
@@ -4382,59 +4425,6 @@ body.home #site-content {
   padding-right: 0; }
 body.home .home-featured-products {
   background: #fff; }
-  body.home .home-featured-products li {
-    list-style: none; }
-    body.home .home-featured-products li > .container {
-      border: 1px solid #ccc;
-      padding: 5px; }
-      body.home .home-featured-products li > .container:after {
-        content: ' ';
-        display: table;
-        clear: both; }
-  body.home .home-featured-products .product-image {
-    float: left;
-    width: 40%; }
-  body.home .home-featured-products .product-content {
-    float: left;
-    width: 60%;
-    font-size: 0.9em; }
-    body.home .home-featured-products .product-content p {
-      font-size: 1em; }
-    body.home .home-featured-products .product-content .product-title {
-      color: #66cc33;
-      font-size: 1.3em;
-      line-height: 1;
-      font-family: "Helvetica", sans-serif; }
-    body.home .home-featured-products .product-content .add_to_cart_button {
-      background: transparent;
-      color: #66cc33;
-      padding: 0 10px 0 0;
-      margin: 0 10px 0 0;
-      border: 0 solid #ccc;
-      border-right-width: 1px; }
-body.home .home-about-author {
-  background: #F8F8F8;
-  border-style: solid;
-  border-color: #66cc33;
-  border-width: 5px 0;
-  margin-top: 80px; }
-  body.home .home-about-author .home-author-meta {
-    text-align: center; }
-  body.home .home-about-author .home-author-image {
-    border-radius: 50%;
-    border: 5px solid #66cc33;
-    overflow: hidden;
-    background: #fff;
-    margin-top: -73px;
-    width: 140px;
-    height: 140px;
-    display: inline-block; }
-  body.home .home-about-author .home-author-name {
-    color: #555; }
-  body.home .home-about-author .home-author-content {
-    color: #555; }
-  body.home .home-about-author .home-author-social {
-    margin-top: 30px; }
 body.home .post-comment-count {
   font-weight: bold;
   color: #aaa; }
@@ -4465,6 +4455,94 @@ Global mixins.
     margin-bottom: 0; }
   .post-list .post .read-more {
     margin: 10px 0 0 0; }
+
+/*
+Product loop.
+
+@since 1.0.0
+*/
+/*
+Sets up the theme's styling properties and makes some variables already set in Foundation available for easy use
+throughout this theme's SASS files.
+
+@since 1.0.0
+*/
+/*
+Global mixins.
+
+@since 1.0.0
+*/
+.product-loop li {
+  list-style: none; }
+  .product-loop li > .container {
+    border: 1px solid #ccc;
+    padding: 5px; }
+    .product-loop li > .container:after {
+      content: ' ';
+      display: table;
+      clear: both; }
+.product-loop .product-image {
+  float: left;
+  margin-right: 1em;
+  max-width: 35%; }
+.product-loop .product-content {
+  font-size: 0.9em;
+  overflow: auto; }
+  .product-loop .product-content p {
+    font-size: 1em; }
+  .product-loop .product-content .product-title {
+    color: #66cc33;
+    font-size: 1.3em;
+    line-height: 1;
+    font-family: "Helvetica", sans-serif; }
+  .product-loop .product-content .add_to_cart_button {
+    background: transparent;
+    color: #66cc33;
+    padding: 0 10px 0 0;
+    margin: 0 10px 0 0;
+    border: 0 solid #ccc;
+    border-right-width: 1px; }
+
+/*
+About the author section.
+
+@since 1.0.0
+*/
+/*
+Sets up the theme's styling properties and makes some variables already set in Foundation available for easy use
+throughout this theme's SASS files.
+
+@since 1.0.0
+*/
+/*
+Global mixins.
+
+@since 1.0.0
+*/
+.about-the-author {
+  background: #F8F8F8;
+  border-style: solid;
+  border-color: #66cc33;
+  border-width: 5px 0;
+  padding: 30px;
+  margin-top: 80px !important; }
+  .about-the-author .author-meta {
+    text-align: center; }
+  .about-the-author .author-image {
+    border-radius: 50%;
+    border: 5px solid #66cc33;
+    overflow: hidden;
+    background: #fff;
+    margin-top: -103px;
+    width: 140px;
+    height: 140px;
+    display: inline-block; }
+  .about-the-author .author-name {
+    color: #555; }
+  .about-the-author .author-content {
+    color: #555; }
+  .about-the-author .author-social {
+    margin-top: 30px; }
 
 /*
 Styles the testimonial widget.
@@ -4657,6 +4735,9 @@ Global mixins.
 .added_to_cart {
   text-align: center;
   width: 100%; }
+
+.button.secondary, input.secondary[type="submit"], .woocommerce .secondary.button:not(.alt), .woocommerce input.secondary[type="submit"]:not(.alt), .woocommerce .alt.button, .woocommerce input.alt[type="submit"], .woocommerce a.alt.button, .woocommerce button.alt.button, .woocommerce input.alt.button {
+  color: #222; }
 
 /*
 Overrides WooCommerce styles.

@@ -1,0 +1,43 @@
+/*
+About the author section.
+
+@since 1.0.0
+*/
+
+@import "../settings";
+
+.about-the-author {
+  background: #F8F8F8;
+  border-style: solid;
+  border-color: $primary-color;
+  border-width: 5px 0;
+  padding: $gutter;
+  margin-top: 80px !important;
+
+  .author-meta {
+    text-align: center;
+  }
+
+  .author-image {
+    border-radius: 50%;
+    border: 5px solid $primary-color;
+    overflow: hidden;
+    background: #fff;
+    margin-top: -73px - $gutter;
+    width: 140px;
+    height: 140px;
+    display: inline-block;
+  }
+
+  .author-name {
+    color: #555;
+  }
+
+  .author-content {
+    color: #555;
+  }
+
+  .author-social {
+    margin-top: 30px;
+  }
+}

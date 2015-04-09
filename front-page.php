@@ -41,53 +41,18 @@ $featured_products = get_posts( array(
 if ( ! empty( $featured_products ) ) {
 	global $post;
 
-	add_filter( 'woocommerce_loop_add_to_cart_link', function () {
-
-		global $product;
-
-		return sprintf( '<a href="%s" rel="nofollow" data-product_id="%s" data-product_sku="%s" data-quantity="%s" class="button %s product_type_%s">%s</a>',
-			esc_url( $product->add_to_cart_url() ),
-			esc_attr( $product->id ),
-			esc_attr( $product->get_sku() ),
-			esc_attr( isset( $quantity ) ? $quantity : 1 ),
-			$product->is_purchasable() && $product->is_in_stock() ? 'add_to_cart_button' : '',
-			esc_attr( $product->product_type ),
-			'<span class="icon-cart"></span>'
-		);
-	} );
+	add_filter( 'woocommerce_loop_add_to_cart_link', 'kniche_woocommerce_add_to_cart_link_icon' );
 	?>
 	<section class="home-featured-products row">
 		<div class="columns small-12">
 			<h3 class="section-title">Featured Books</h3>
-			<ul class="products row">
+			<ul class="product-loop row">
 				<?php
+					global $post_count;
 				foreach ( $featured_products as $post ) {
 					setup_postdata( $post );
-					?>
-					<li class="columns small-12 medium-4">
-
-						<div class="container">
-							<div class="product-image">
-								<?php the_post_thumbnail( 'thumbnail' ); ?>
-							</div>
-
-							<div class="product-content">
-								<h4 class="product-title">
-									<?php the_title(); ?>
-								</h4>
-
-								<p>
-									<?php echo custom_excerpt_length(); ?>
-								</p>
-
-								<div class="product-buy">
-									<?php wc_get_template( 'loop/add-to-cart.php' ); ?>
-									<?php wc_get_template( 'loop/price.php' ); ?>
-								</div>
-							</div>
-						</div>
-					</li>
-				<?php
+					$post_count = count( $featured_products );
+					include __DIR__ . '/partials/product-loop-single.php';
 				}
 				wp_reset_postdata();
 				?>
@@ -95,6 +60,7 @@ if ( ! empty( $featured_products ) ) {
 		</div>
 	</section>
 <?php
+	remove_filter( 'woocommerce_loop_add_to_cart_link', 'kniche_woocommerce_add_to_cart_link_icon' );
 }
 
 kidniche_page_start();
@@ -102,39 +68,10 @@ kidniche_page_start();
 
 	<div class="page-content columns small-12 medium-9">
 
-		<div class="home-about-author row">
-			<div class="home-author-meta columns small-12 medium-3">
-				<div class="home-author-image">
-					<?php
-					echo wp_get_attachment_image(
-						get_post_meta( get_the_ID(), '_kidniche_home_author_image', true )
-					);
-					?>
-				</div>
-
-				<div class="home-author-social">
-					<?php echo do_shortcode( get_post_meta( get_the_id(), '_kidniche_home_author_social', true ) ); ?>
-				</div>
-			</div>
-
-			<div class="home-author-info columns small-12 medium-9">
-				<h3 class="home-author-title">About the author</h3>
-
-				<h4 class="home-author-name">Susan case Bonner</h4>
-
-				<div class="home-author-content">
-					<?php
-					echo apply_filters(
-						'the_content',
-						get_post_meta( get_the_ID(), '_kidniche_home_about_the_author', true )
-					);
-					?>
-				</div>
-			</div>
-		</div>
-
-
 		<?php
+		$author_ID = get_post_meta( get_the_ID(), '_kidniche_home_author_user_id', true );
+		include __DIR__ . '/partials/about-the-author.php';
+
 		$blog_post_count = get_post_meta( get_the_ID(), '_kidniche_home_blog_post_count', true );
 		$posts           = get_posts( array(
 			'numberposts' => $blog_post_count ? $blog_post_count : 3,

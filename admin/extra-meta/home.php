@@ -41,9 +41,6 @@ function _kidniche_mb_home_extra_callback() {
 
 	$welcome_blurb_title = get_post_meta( $post->ID, '_kidniche_home_welcome_blurb_title', true );
 	$welcome_blurb       = get_post_meta( $post->ID, '_kidniche_home_welcome_blurb', true );
-	$author_image        = get_post_meta( $post->ID, '_kidniche_home_author_image', true );
-	$about_the_author    = get_post_meta( $post->ID, '_kidniche_home_about_the_author', true );
-	$author_social       = get_post_meta( $post->ID, '_kidniche_home_author_social', true );
 	$blog_post_count     = get_post_meta( $post->ID, '_kidniche_home_blog_post_count', true );
 	?>
 
@@ -64,39 +61,6 @@ function _kidniche_mb_home_extra_callback() {
 			<br/>
 			<input type="text" class="widefat" name="_kidniche_home_welcome_blurb"
 			       value="<?php echo $welcome_blurb; ?>"/>
-		</label>
-	</p>
-
-	<h2>About the Author</h2>
-
-	<p>
-		<label>
-			Author Image:
-			<br/>
-			<img class="image-preview" style="max-width: 100%; max-height: 300px;"
-			     src="<?php $image = wp_get_attachment_image_src( $author_image, 'medium' ); echo $image[0]; ?>"/>
-			<input type="hidden" class="image-id" name="_kidniche_home_author_image"
-			       value="<?php echo $author_image; ?>"/>
-			<input type="button" class="button image-button"
-			       value="<?php _e( 'Choose or Upload an Image', 'KidNiche' ) ?>"/>
-		</label>
-	</p>
-
-	<p>
-		<label>
-			About the Author:
-			<br/>
-			<textarea class="widefat" style="height: 60px;"
-			          name="_kidniche_home_about_the_author"><?php echo $about_the_author; ?></textarea>
-		</label>
-	</p>
-
-	<p>
-		<label>
-			Author social:
-			<br/>
-			<textarea class="widefat" style="height: 60px;"
-			          name="_kidniche_home_author_social"><?php echo $author_social; ?></textarea>
 		</label>
 	</p>
 
@@ -134,9 +98,6 @@ function _kidniche_save_metaboxes_home( $post_ID ) {
 	$options = array(
 		'_kidniche_home_welcome_blurb_title',
 		'_kidniche_home_welcome_blurb',
-		'_kidniche_home_author_image',
-		'_kidniche_home_about_the_author',
-		'_kidniche_home_author_social',
 		'_kidniche_home_blog_post_count',
 	);
 

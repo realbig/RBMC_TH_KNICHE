@@ -39,6 +39,11 @@ class KidNicheWidget_Subscribe extends WP_Widget {
 		if ( ! empty( $instance['title'] ) ) {
 			echo $args['before_title'] . apply_filters( 'widget_title', $instance['title'] ) . $args['after_title'];
 		}
+
+		if ( ! empty( $instance['description'] ) ) {
+			echo wpautop( do_shortcode( $instance['description'] ) );
+		}
+
 		?>
 
 		<!-- Begin MailChimp Signup Form -->
@@ -51,7 +56,8 @@ class KidNicheWidget_Subscribe extends WP_Widget {
 
 					<div class="mc-field-group">
 						<label for="mce-EMAIL">Email Address</label>
-						<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="email@example.com">
+						<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL"
+						       placeholder="email@example.com">
 					</div>
 
 					<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
@@ -73,13 +79,20 @@ class KidNicheWidget_Subscribe extends WP_Widget {
 
 	public function form( $instance ) {
 
-		$title = ! empty( $instance['title'] ) ? $instance['title'] : __( 'Subscribe', 'KidNiche' );
+		$title       = ! empty( $instance['title'] ) ? $instance['title'] : __( 'Subscribe', 'KidNiche' );
+		$description = ! empty( $instance['description'] ) ? $instance['description'] : '';
 		?>
 		<p>
 			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label>
 			<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>"
 			       name="<?php echo $this->get_field_name( 'title' ); ?>" type="text"
 			       value="<?php echo esc_attr( $title ); ?>">
+		</p>
+
+		<p>
+			<label for="<?php echo $this->get_field_id( 'description' ); ?>"><?php _e( 'Description:' ); ?></label>
+			<textarea class="widefat" id="<?php echo $this->get_field_id( 'description' ); ?>"
+			          name="<?php echo $this->get_field_name( 'description' ); ?>"><?php echo esc_attr( $description ); ?></textarea>
 		</p>
 	<?php
 	}
@@ -121,7 +134,7 @@ class KidNicheWidget_Testimonials extends WP_Widget {
 		$count = isset( $instance['count'] ) && ! empty( $instance['count'] ) ? (int) $instance['count'] : 3;
 
 		$testimonials = get_posts( array(
-			'post_type' => 'testimonial',
+			'post_type'   => 'testimonial',
 			'numberposts' => $count,
 		) );
 
@@ -139,7 +152,7 @@ class KidNicheWidget_Testimonials extends WP_Widget {
 					$i = 0;
 					foreach ( $testimonials as $post ) {
 						setup_postdata( $post );
-						$i++;
+						$i ++;
 
 						$role = get_post_meta( get_the_ID(), '_testimonial_role', true );
 						?>
@@ -169,7 +182,7 @@ class KidNicheWidget_Testimonials extends WP_Widget {
 
 						</li>
 
-						<?php
+					<?php
 					}
 					wp_reset_postdata();
 					?>

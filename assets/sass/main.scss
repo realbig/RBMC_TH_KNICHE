@@ -35,11 +35,14 @@ Author URI: http://realbigmarketing.com/staff/joel-worsham
 // Templates
 @import "templates/common";
 @import "templates/single-post";
+@import "templates/single-book";
 @import "templates/page";
 @import "templates/home";
 
 // Partials
 @import "partials/post";
+@import "partials/product-loop";
+@import "partials/about-the-author";
 
 // Widgets
 @import "widgets/testimonials";

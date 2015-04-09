@@ -38,7 +38,7 @@ global $woocommerce;
 
 		<?php
 		global $post;
-		$show_feature = is_front_page() || $post->post_type == 'book';
+		$show_feature = is_front_page();
 		?>
 
 		<section class="top-header">

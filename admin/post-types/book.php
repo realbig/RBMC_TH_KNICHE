@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 add_action( 'init', function () {
 	easy_register_post_type( 'book', 'Book', 'Books', array(
 		'menu_icon' => 'dashicons-book',
-		'supports'  => array( 'title' ),
+		'supports' => array( 'title', 'editor', 'thumbnail' ),
 		'rewrite'   => array( 'slug' => 'books' ),
 	) );
 } );
@@ -25,6 +25,13 @@ add_action( 'add_meta_boxes', function () {
 		'kidniche-book-product-link',
 		'Product Link',
 		'_kidniche_metabox_book_product_link',
+		'book'
+	);
+
+	add_meta_box(
+		'kidniche-book-snippet',
+		'Snippet',
+		'_kidniche_metabox_book_snippet',
 		'book'
 	);
 } );
@@ -59,7 +66,7 @@ function _kidniche_metabox_book_product_link( $post ) {
 					<option value="<?php echo $product->ID; ?>" <?php selected( $product->ID, $product_link ); ?>>
 						<?php echo $product->post_title; ?>
 					</option>
-					<?php
+				<?php
 				}
 				?>
 			</select>
@@ -70,13 +77,37 @@ function _kidniche_metabox_book_product_link( $post ) {
 <?php
 }
 
+/**
+ * The form callback for the testimonial role.
+ *
+ * @since  1.0.0
+ * @access Private.
+ *
+ * @param object $post The current post object.
+ */
+function _kidniche_metabox_book_snippet( $post ) {
+
+	wp_nonce_field( __FILE__, 'book_snippet_nonce' );
+
+	$snippet = get_post_meta( $post->ID, '_snippet', true );
+	?>
+	<label>
+		Snippet:
+		<br/>
+		<textarea name="_snippet" class="widefat"><?php echo $snippet ? $snippet : ''; ?></textarea>
+	</label>
+<?php
+}
+
 add_action( 'save_post', function ( $post_ID ) {
 
-	if ( ! isset( $_POST['book_product_link_nonce'] ) ) {
+	if ( ! isset( $_POST['book_product_link_nonce'] ) && ! isset( $_POST['book_snippet_nonce'] ) ) {
 		return;
 	}
 
-	if ( ! wp_verify_nonce( $_POST['book_product_link_nonce'], __FILE__ ) ) {
+	if ( ! wp_verify_nonce( $_POST['book_product_link_nonce'], __FILE__ ) &&
+	     ! wp_verify_nonce( $_POST['book_snippet_nonce'], __FILE__ )
+	) {
 		return;
 	}
 
@@ -90,6 +121,7 @@ add_action( 'save_post', function ( $post_ID ) {
 
 	$options = array(
 		'_product_link',
+		'_snippet',
 	);
 
 	foreach ( $options as $option ) {

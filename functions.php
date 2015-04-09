@@ -239,7 +239,9 @@ function kidniche_post_loop_content() {
 		if ( has_post_thumbnail() ) {
 			?>
 			<div class="post-image columns small-12 medium-3">
-				<?php the_post_thumbnail( 'medium' ); ?>
+				<a href="<?php the_permalink(); ?>">
+					<?php the_post_thumbnail( 'medium' ); ?>
+				</a>
 			</div>
 			<?php
 			$column_class = 'medium-9';
@@ -290,8 +292,34 @@ function custom_excerpt_length( $length = 15, $append = '...' ) {
 	return $excerpt . $append;
 }
 
+function kniche_woocommerce_add_to_cart_link_icon() {
+
+	global $product;
+
+	return sprintf( '<a href="%s" rel="nofollow" data-product_id="%s" data-product_sku="%s" data-quantity="%s" class="button %s product_type_%s">%s</a>',
+		esc_url( $product->add_to_cart_url() ),
+		esc_attr( $product->id ),
+		esc_attr( $product->get_sku() ),
+		esc_attr( isset( $quantity ) ? $quantity : 1 ),
+		$product->is_purchasable() && $product->is_in_stock() ? 'add_to_cart_button' : '',
+		esc_attr( $product->product_type ),
+		'<span class="icon-cart"></span>'
+	);
+}
+
+function _kidniche_modify_contact_methods( $profile_fields ) {
+
+	$profile_fields['twitter'] = 'Twitter Username';
+	$profile_fields['facebook'] = 'Facebook URL';
+	$profile_fields['linkedin'] = 'LinkedIn';
+
+	return $profile_fields;
+}
+add_filter('user_contactmethods', '_kidniche_modify_contact_methods');
+
 // Include other static files
 require_once __DIR__ . '/includes/shortcodes.php';
 require_once __DIR__ . '/includes/widgets.php';
 require_once __DIR__ . '/includes/login.php';
 require_once __DIR__ . '/admin/admin.php';
+require_once __DIR__ . '/woocommerce/overrides.php';
