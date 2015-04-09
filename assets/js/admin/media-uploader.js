@@ -1,7 +1,7 @@
 /**
  Allows media uploader to be used in the backend.
 
- @since 0.1.0
+ @since 1.0.0
  @package KidNiche
  */
 (function ($) {

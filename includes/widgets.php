@@ -2,7 +2,7 @@
 /**
  * The theme's widgets.
  *
- * @since   0.1.0
+ * @since   1.0.0
  * @package KidNiche
  */
 
@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * Widget for the MailChimp subscription form.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 class KidNicheWidget_Subscribe extends WP_Widget {
 
@@ -94,7 +94,7 @@ add_action( 'widgets_init', function () {
  *
  * Widget for showing Testimonials.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 class KidNicheWidget_Testimonials extends WP_Widget {
 

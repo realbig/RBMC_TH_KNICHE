@@ -2,7 +2,7 @@
 /**
  * Home extra meta.
  *
- * @since   0.1.0
+ * @since   1.0.0
  * @package Render
  */
 

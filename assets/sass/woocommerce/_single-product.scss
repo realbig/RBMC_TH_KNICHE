@@ -1,0 +1,15 @@
+/*
+Single product page.
+
+@since 1.0.0
+*/
+
+@import "../settings";
+
+body.single-product {
+  .price {
+    .amount {
+      font-size: 2em;
+    }
+  }
+}

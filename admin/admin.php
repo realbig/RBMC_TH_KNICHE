@@ -2,7 +2,7 @@
 /**
  * The theme's admin file for providing additional admin-related functionality.
  *
- * @since   0.1.0
+ * @since   1.0.0
  * @package Render
  */
 
@@ -13,6 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 // Require files
 require_once __DIR__ . '/post-types/testimonial.php';
+require_once __DIR__ . '/post-types/book.php';
 require_once __DIR__ . '/extra-meta/home.php';
 
 /**

@@ -1,7 +1,7 @@
 /*
 The static site header.
 
-@since 0.1.0
+@since 1.0.0
 */
 @import "../settings";
 
@@ -79,16 +79,25 @@ $primary-nav-height: 50px;
     @include trim($primary-color);
     color: $primary-color;
     background: #fff;
-    margin-top: 160px;
     position: relative;
+    margin-top: 100px;
+
+    &.large {
+      margin-top: 160px;
+    }
 
     // Logo
     .site-logo {
       position: absolute;
-      bottom: -100px;
-      left: 20px;
-      width: 50%;
       z-index: 10;
+      left: 20px;
+      bottom: -30px;
+      width: 30%;
+
+      &.large {
+        bottom: -100px;
+        width: 50%;
+      }
     }
 
     // Nav

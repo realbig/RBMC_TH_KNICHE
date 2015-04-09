@@ -1,0 +1,29 @@
+/*
+Posts within a loop.
+
+@since 1.0.0
+*/
+
+@import "../settings";
+
+.post-list {
+  .post {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+
+    &:last-of-type {
+      border-bottom-width: 0;
+    }
+
+    .post-excerpt {
+      p {
+        margin-bottom: 0;
+      }
+    }
+
+    .read-more {
+      margin: 10px 0 0 0;
+    }
+  }
+}

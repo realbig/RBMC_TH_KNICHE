@@ -1820,14 +1820,13 @@ td, th {
 Sets up the theme's styling properties and makes some variables already set in Foundation available for easy use
 throughout this theme's SASS files.
 
-@since 0.1.0
+@since 1.0.0
 */
-.button.secondary {
-  color: #222; }
-
 /*
- * Mixins
- */
+Global mixins.
+
+@since 1.0.0
+*/
 meta.foundation-version {
   font-family: "/{{VERSION}}/"; }
 
@@ -1877,7 +1876,7 @@ html, body {
   box-sizing: border-box; }
 
 html, body {
-  font-size: 13px; }
+  font-size: 14px; }
 
 body {
   background: #fff;
@@ -2377,7 +2376,7 @@ th.hide-for-touch {
   margin-right: auto;
   margin-top: 0;
   margin-bottom: 0;
-  max-width: 76.9230769231rem; }
+  max-width: 71.4285714286rem; }
   .row:before, .row:after {
     content: " ";
     display: table; }
@@ -2391,8 +2390,8 @@ th.hide-for-touch {
     margin-right: 0; }
   .row .row {
     width: auto;
-    margin-left: -1.1538461538rem;
-    margin-right: -1.1538461538rem;
+    margin-left: -1.0714285714rem;
+    margin-right: -1.0714285714rem;
     margin-top: 0;
     margin-bottom: 0;
     max-width: none; }
@@ -2412,8 +2411,8 @@ th.hide-for-touch {
         clear: both; }
 
 .column, .columns {
-  padding-left: 1.1538461538rem;
-  padding-right: 1.1538461538rem;
+  padding-left: 1.0714285714rem;
+  padding-right: 1.0714285714rem;
   width: 100%;
   float: left; }
 
@@ -2522,8 +2521,8 @@ th.hide-for-touch {
     left: auto; }
   .column, .columns {
     position: relative;
-    padding-left: 1.1538461538rem;
-    padding-right: 1.1538461538rem;
+    padding-left: 1.0714285714rem;
+    padding-right: 1.0714285714rem;
     float: left; }
   .small-1 {
     width: 8.3333333333%; }
@@ -2600,8 +2599,8 @@ th.hide-for-touch {
     margin-left: 0;
     margin-right: 0; }
   .row.small-uncollapse > .column, .row.small-uncollapse > .columns {
-    padding-left: 1.1538461538rem;
-    padding-right: 1.1538461538rem;
+    padding-left: 1.0714285714rem;
+    padding-right: 1.0714285714rem;
     float: left; } }
 
 @media only screen and (min-width:40.063em) {
@@ -2703,8 +2702,8 @@ th.hide-for-touch {
     left: auto; }
   .column, .columns {
     position: relative;
-    padding-left: 1.1538461538rem;
-    padding-right: 1.1538461538rem;
+    padding-left: 1.0714285714rem;
+    padding-right: 1.0714285714rem;
     float: left; }
   .medium-1 {
     width: 8.3333333333%; }
@@ -2781,8 +2780,8 @@ th.hide-for-touch {
     margin-left: 0;
     margin-right: 0; }
   .row.medium-uncollapse > .column, .row.medium-uncollapse > .columns {
-    padding-left: 1.1538461538rem;
-    padding-right: 1.1538461538rem;
+    padding-left: 1.0714285714rem;
+    padding-right: 1.0714285714rem;
     float: left; }
   .push-0 {
     position: relative;
@@ -2980,8 +2979,8 @@ th.hide-for-touch {
     left: auto; }
   .column, .columns {
     position: relative;
-    padding-left: 1.1538461538rem;
-    padding-right: 1.1538461538rem;
+    padding-left: 1.0714285714rem;
+    padding-right: 1.0714285714rem;
     float: left; }
   .large-1 {
     width: 8.3333333333%; }
@@ -3058,8 +3057,8 @@ th.hide-for-touch {
     margin-left: 0;
     margin-right: 0; }
   .row.large-uncollapse > .column, .row.large-uncollapse > .columns {
-    padding-left: 1.1538461538rem;
-    padding-right: 1.1538461538rem;
+    padding-left: 1.0714285714rem;
+    padding-right: 1.0714285714rem;
     float: left; }
   .push-0 {
     position: relative;
@@ -3158,182 +3157,182 @@ th.hide-for-touch {
     right: 91.6666666667%;
     left: auto; } }
 
-button, .button {
+button, .button, input[type="submit"], .woocommerce .button:not(.alt), .woocommerce input[type="submit"]:not(.alt), .woocommerce a.button:not(.alt), .woocommerce button.button:not(.alt), .woocommerce input.button:not(.alt), .woocommerce .button.alt, .woocommerce input.alt[type="submit"], .woocommerce a.alt.button, .woocommerce button.alt.button, .woocommerce input.alt.button {
   border-style: solid;
   border-width: 1px;
   cursor: pointer;
   font-family: 'Architects Daughter', cursive;
   font-weight: normal;
   line-height: normal;
-  margin: 0 0 1.5384615385rem;
+  margin: 0 0 1.4285714286rem;
   position: relative;
   text-decoration: none;
   text-align: center;
   -webkit-appearance: none;
   border-radius: 0;
   display: inline-block;
-  padding-top: 1.2307692308rem;
-  padding-right: 2.4615384615rem;
-  padding-bottom: 1.3076923077rem;
-  padding-left: 2.4615384615rem;
-  font-size: 1.5384615385rem;
+  padding-top: 1.1428571429rem;
+  padding-right: 2.2857142857rem;
+  padding-bottom: 1.2142857143rem;
+  padding-left: 2.2857142857rem;
+  font-size: 1.4285714286rem;
   background: #66cc33;
   border-color: #999;
   color: #222;
   transition: background-color 300ms ease-out; }
-  button:hover, button:focus, .button:hover, .button:focus {
+  button:hover, button:focus, .button:hover, input[type="submit"]:hover, .woocommerce .button:hover:not(.alt), .woocommerce input[type="submit"]:hover:not(.alt), .woocommerce .button.alt:hover, .woocommerce input.alt[type="submit"]:hover, .button:focus, input[type="submit"]:focus, .woocommerce .button:focus:not(.alt), .woocommerce input[type="submit"]:focus:not(.alt), .woocommerce .button.alt:focus, .woocommerce input.alt[type="submit"]:focus {
     background: #52a329; }
-  button:hover, button:focus, .button:hover, .button:focus {
+  button:hover, button:focus, .button:hover, input[type="submit"]:hover, .woocommerce .button:hover:not(.alt), .woocommerce input[type="submit"]:hover:not(.alt), .woocommerce .button.alt:hover, .woocommerce input.alt[type="submit"]:hover, .button:focus, input[type="submit"]:focus, .woocommerce .button:focus:not(.alt), .woocommerce input[type="submit"]:focus:not(.alt), .woocommerce .button.alt:focus, .woocommerce input.alt[type="submit"]:focus {
     color: #222; }
-  button.secondary, .button.secondary {
+  button.secondary, .button.secondary, input.secondary[type="submit"], .woocommerce .secondary.button:not(.alt), .woocommerce input.secondary[type="submit"]:not(.alt), .woocommerce .alt.button, .woocommerce input.alt[type="submit"], .woocommerce a.alt.button, .woocommerce button.alt.button, .woocommerce input.alt.button {
     background: #FFC55B;
     border-color: #ffad16;
     color: #222; }
-    button.secondary:hover, button.secondary:focus, .button.secondary:hover, .button.secondary:focus {
+    button.secondary:hover, button.secondary:focus, .button.secondary:hover, input.secondary[type="submit"]:hover, .woocommerce a.secondary.button:hover:not(.alt), .woocommerce button.secondary.button:hover:not(.alt), .woocommerce input.secondary.button:hover:not(.alt), .woocommerce .alt.button:hover, .woocommerce input.alt[type="submit"]:hover, .button.secondary:focus, input.secondary[type="submit"]:focus, .woocommerce a.secondary.button:focus:not(.alt), .woocommerce button.secondary.button:focus:not(.alt), .woocommerce input.secondary.button:focus:not(.alt), .woocommerce .alt.button:focus, .woocommerce input.alt[type="submit"]:focus {
       background: #ffad16; }
-    button.secondary:hover, button.secondary:focus, .button.secondary:hover, .button.secondary:focus {
+    button.secondary:hover, button.secondary:focus, .button.secondary:hover, input.secondary[type="submit"]:hover, .woocommerce a.secondary.button:hover:not(.alt), .woocommerce button.secondary.button:hover:not(.alt), .woocommerce input.secondary.button:hover:not(.alt), .woocommerce .alt.button:hover, .woocommerce input.alt[type="submit"]:hover, .button.secondary:focus, input.secondary[type="submit"]:focus, .woocommerce a.secondary.button:focus:not(.alt), .woocommerce button.secondary.button:focus:not(.alt), .woocommerce input.secondary.button:focus:not(.alt), .woocommerce .alt.button:focus, .woocommerce input.alt[type="submit"]:focus {
       color: #222; }
-  button.success, .button.success {
+  button.success, .button.success, input.success[type="submit"], .woocommerce .success.button:not(.alt), .woocommerce input.success[type="submit"]:not(.alt), .woocommerce .success.button.alt, .woocommerce input.success.alt[type="submit"] {
     background: #43AC6A;
     border-color: #368a55;
     color: #222; }
-    button.success:hover, button.success:focus, .button.success:hover, .button.success:focus {
+    button.success:hover, button.success:focus, .button.success:hover, input.success[type="submit"]:hover, .woocommerce a.success.button:hover:not(.alt), .woocommerce button.success.button:hover:not(.alt), .woocommerce input.success.button:hover:not(.alt), .woocommerce a.success.alt.button:hover, .woocommerce button.success.alt.button:hover, .woocommerce input.success.alt.button:hover, .button.success:focus, input.success[type="submit"]:focus, .woocommerce a.success.button:focus:not(.alt), .woocommerce button.success.button:focus:not(.alt), .woocommerce input.success.button:focus:not(.alt), .woocommerce a.success.alt.button:focus, .woocommerce button.success.alt.button:focus, .woocommerce input.success.alt.button:focus {
       background: #368a55; }
-    button.success:hover, button.success:focus, .button.success:hover, .button.success:focus {
+    button.success:hover, button.success:focus, .button.success:hover, input.success[type="submit"]:hover, .woocommerce a.success.button:hover:not(.alt), .woocommerce button.success.button:hover:not(.alt), .woocommerce input.success.button:hover:not(.alt), .woocommerce a.success.alt.button:hover, .woocommerce button.success.alt.button:hover, .woocommerce input.success.alt.button:hover, .button.success:focus, input.success[type="submit"]:focus, .woocommerce a.success.button:focus:not(.alt), .woocommerce button.success.button:focus:not(.alt), .woocommerce input.success.button:focus:not(.alt), .woocommerce a.success.alt.button:focus, .woocommerce button.success.alt.button:focus, .woocommerce input.success.alt.button:focus {
       color: #222; }
-  button.alert, .button.alert {
+  button.alert, .button.alert, input.alert[type="submit"], .woocommerce .alert.button:not(.alt), .woocommerce input.alert[type="submit"]:not(.alt), .woocommerce .alert.button.alt, .woocommerce input.alert.alt[type="submit"] {
     background: #f04124;
     border-color: #cf2a0e;
     color: #222; }
-    button.alert:hover, button.alert:focus, .button.alert:hover, .button.alert:focus {
+    button.alert:hover, button.alert:focus, .button.alert:hover, input.alert[type="submit"]:hover, .woocommerce a.alert.button:hover:not(.alt), .woocommerce button.alert.button:hover:not(.alt), .woocommerce input.alert.button:hover:not(.alt), .woocommerce a.alert.alt.button:hover, .woocommerce button.alert.alt.button:hover, .woocommerce input.alert.alt.button:hover, .button.alert:focus, input.alert[type="submit"]:focus, .woocommerce a.alert.button:focus:not(.alt), .woocommerce button.alert.button:focus:not(.alt), .woocommerce input.alert.button:focus:not(.alt), .woocommerce a.alert.alt.button:focus, .woocommerce button.alert.alt.button:focus, .woocommerce input.alert.alt.button:focus {
       background: #cf2a0e; }
-    button.alert:hover, button.alert:focus, .button.alert:hover, .button.alert:focus {
+    button.alert:hover, button.alert:focus, .button.alert:hover, input.alert[type="submit"]:hover, .woocommerce a.alert.button:hover:not(.alt), .woocommerce button.alert.button:hover:not(.alt), .woocommerce input.alert.button:hover:not(.alt), .woocommerce a.alert.alt.button:hover, .woocommerce button.alert.alt.button:hover, .woocommerce input.alert.alt.button:hover, .button.alert:focus, input.alert[type="submit"]:focus, .woocommerce a.alert.button:focus:not(.alt), .woocommerce button.alert.button:focus:not(.alt), .woocommerce input.alert.button:focus:not(.alt), .woocommerce a.alert.alt.button:focus, .woocommerce button.alert.alt.button:focus, .woocommerce input.alert.alt.button:focus {
       color: #222; }
-  button.warning, .button.warning {
+  button.warning, .button.warning, input.warning[type="submit"], .woocommerce .warning.button:not(.alt), .woocommerce input.warning[type="submit"]:not(.alt), .woocommerce .warning.button.alt, .woocommerce input.warning.alt[type="submit"] {
     background: #f08a24;
     border-color: #cf6e0e;
     color: #222; }
-    button.warning:hover, button.warning:focus, .button.warning:hover, .button.warning:focus {
+    button.warning:hover, button.warning:focus, .button.warning:hover, input.warning[type="submit"]:hover, .woocommerce a.warning.button:hover:not(.alt), .woocommerce button.warning.button:hover:not(.alt), .woocommerce input.warning.button:hover:not(.alt), .woocommerce a.warning.alt.button:hover, .woocommerce button.warning.alt.button:hover, .woocommerce input.warning.alt.button:hover, .button.warning:focus, input.warning[type="submit"]:focus, .woocommerce a.warning.button:focus:not(.alt), .woocommerce button.warning.button:focus:not(.alt), .woocommerce input.warning.button:focus:not(.alt), .woocommerce a.warning.alt.button:focus, .woocommerce button.warning.alt.button:focus, .woocommerce input.warning.alt.button:focus {
       background: #cf6e0e; }
-    button.warning:hover, button.warning:focus, .button.warning:hover, .button.warning:focus {
+    button.warning:hover, button.warning:focus, .button.warning:hover, input.warning[type="submit"]:hover, .woocommerce a.warning.button:hover:not(.alt), .woocommerce button.warning.button:hover:not(.alt), .woocommerce input.warning.button:hover:not(.alt), .woocommerce a.warning.alt.button:hover, .woocommerce button.warning.alt.button:hover, .woocommerce input.warning.alt.button:hover, .button.warning:focus, input.warning[type="submit"]:focus, .woocommerce a.warning.button:focus:not(.alt), .woocommerce button.warning.button:focus:not(.alt), .woocommerce input.warning.button:focus:not(.alt), .woocommerce a.warning.alt.button:focus, .woocommerce button.warning.alt.button:focus, .woocommerce input.warning.alt.button:focus {
       color: #222; }
-  button.info, .button.info {
+  button.info, .button.info, input.info[type="submit"], .woocommerce .info.button:not(.alt), .woocommerce input.info[type="submit"]:not(.alt), .woocommerce .info.button.alt, .woocommerce input.info.alt[type="submit"] {
     background: #a0d3e8;
     border-color: #61b6d9;
     color: #333333; }
-    button.info:hover, button.info:focus, .button.info:hover, .button.info:focus {
+    button.info:hover, button.info:focus, .button.info:hover, input.info[type="submit"]:hover, .woocommerce a.info.button:hover:not(.alt), .woocommerce button.info.button:hover:not(.alt), .woocommerce input.info.button:hover:not(.alt), .woocommerce a.info.alt.button:hover, .woocommerce button.info.alt.button:hover, .woocommerce input.info.alt.button:hover, .button.info:focus, input.info[type="submit"]:focus, .woocommerce a.info.button:focus:not(.alt), .woocommerce button.info.button:focus:not(.alt), .woocommerce input.info.button:focus:not(.alt), .woocommerce a.info.alt.button:focus, .woocommerce button.info.alt.button:focus, .woocommerce input.info.alt.button:focus {
       background: #61b6d9; }
-    button.info:hover, button.info:focus, .button.info:hover, .button.info:focus {
+    button.info:hover, button.info:focus, .button.info:hover, input.info[type="submit"]:hover, .woocommerce a.info.button:hover:not(.alt), .woocommerce button.info.button:hover:not(.alt), .woocommerce input.info.button:hover:not(.alt), .woocommerce a.info.alt.button:hover, .woocommerce button.info.alt.button:hover, .woocommerce input.info.alt.button:hover, .button.info:focus, input.info[type="submit"]:focus, .woocommerce a.info.button:focus:not(.alt), .woocommerce button.info.button:focus:not(.alt), .woocommerce input.info.button:focus:not(.alt), .woocommerce a.info.alt.button:focus, .woocommerce button.info.alt.button:focus, .woocommerce input.info.alt.button:focus {
       color: #222; }
-  button.large, .button.large {
-    padding-top: 1.3846153846rem;
-    padding-right: 2.7692307692rem;
-    padding-bottom: 1.4615384615rem;
-    padding-left: 2.7692307692rem;
-    font-size: 1.9230769231rem; }
-  button.small, .button.small {
-    padding-top: 1.0769230769rem;
-    padding-right: 2.1538461538rem;
-    padding-bottom: 1.1538461538rem;
-    padding-left: 2.1538461538rem;
-    font-size: 1.2307692308rem; }
-  button.tiny, .button.tiny {
-    padding-top: 0.7692307692rem;
-    padding-right: 1.5384615385rem;
-    padding-bottom: 0.8461538462rem;
-    padding-left: 1.5384615385rem;
-    font-size: 1rem; }
-  button.expand, .button.expand {
+  button.large, .button.large, input.large[type="submit"], .woocommerce .large.button:not(.alt), .woocommerce input.large[type="submit"]:not(.alt), .woocommerce .large.button.alt, .woocommerce input.large.alt[type="submit"] {
+    padding-top: 1.2857142857rem;
+    padding-right: 2.5714285714rem;
+    padding-bottom: 1.3571428571rem;
+    padding-left: 2.5714285714rem;
+    font-size: 1.7857142857rem; }
+  button.small, .button.small, input.small[type="submit"], .woocommerce .small.button:not(.alt), .woocommerce input.small[type="submit"]:not(.alt), .woocommerce .small.button.alt, .woocommerce input.small.alt[type="submit"] {
+    padding-top: 1rem;
+    padding-right: 2rem;
+    padding-bottom: 1.0714285714rem;
+    padding-left: 2rem;
+    font-size: 1.1428571429rem; }
+  button.tiny, .button.tiny, input.tiny[type="submit"], .woocommerce .tiny.button:not(.alt), .woocommerce input.tiny[type="submit"]:not(.alt), .woocommerce .tiny.button.alt, .woocommerce input.tiny.alt[type="submit"] {
+    padding-top: 0.7142857143rem;
+    padding-right: 1.4285714286rem;
+    padding-bottom: 0.7857142857rem;
+    padding-left: 1.4285714286rem;
+    font-size: 0.9285714286rem; }
+  button.expand, .button.expand, input.expand[type="submit"], .woocommerce .expand.button:not(.alt), .woocommerce input.expand[type="submit"]:not(.alt), .woocommerce .expand.button.alt, .woocommerce input.expand.alt[type="submit"] {
     padding-right: 0;
     padding-left: 0;
     width: 100%; }
-  button.left-align, .button.left-align {
+  button.left-align, .button.left-align, input.left-align[type="submit"], .woocommerce .left-align.button:not(.alt), .woocommerce input.left-align[type="submit"]:not(.alt), .woocommerce .left-align.button.alt, .woocommerce input.left-align.alt[type="submit"] {
     text-align: left;
-    text-indent: 0.9230769231rem; }
-  button.right-align, .button.right-align {
+    text-indent: 0.8571428571rem; }
+  button.right-align, .button.right-align, input.right-align[type="submit"], .woocommerce .right-align.button:not(.alt), .woocommerce input.right-align[type="submit"]:not(.alt), .woocommerce .right-align.button.alt, .woocommerce input.right-align.alt[type="submit"] {
     text-align: right;
-    padding-right: 0.9230769231rem; }
-  button.radius, .button.radius {
+    padding-right: 0.8571428571rem; }
+  button.radius, .button.radius, input.radius[type="submit"], .woocommerce .radius.button:not(.alt), .woocommerce input.radius[type="submit"]:not(.alt), .woocommerce .radius.button.alt, .woocommerce input.radius.alt[type="submit"] {
     border-radius: 3px; }
-  button.round, .button.round {
+  button.round, .button.round, input.round[type="submit"], .woocommerce .round.button:not(.alt), .woocommerce input.round[type="submit"]:not(.alt), .woocommerce .round.button.alt, .woocommerce input.round.alt[type="submit"] {
     border-radius: 1000px; }
-  button.disabled, button[disabled], .button.disabled, .button[disabled] {
+  button.disabled, button[disabled], .button.disabled, input.disabled[type="submit"], .woocommerce .disabled.button:not(.alt), .woocommerce input.disabled[type="submit"]:not(.alt), .woocommerce .disabled.button.alt, .woocommerce input.disabled.alt[type="submit"], .button[disabled], input[disabled][type="submit"], .woocommerce [disabled].button:not(.alt), .woocommerce input[disabled][type="submit"]:not(.alt), .woocommerce [disabled].button.alt, .woocommerce input[disabled].alt[type="submit"] {
     background: #66cc33;
     border-color: #999;
     color: #222;
     cursor: default;
     opacity: 0.7;
     box-shadow: none; }
-    button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
+    button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, input.disabled[type="submit"]:hover, .woocommerce a.disabled.button:hover:not(.alt), .woocommerce button.disabled.button:hover:not(.alt), .woocommerce input.disabled.button:hover:not(.alt), .woocommerce a.disabled.alt.button:hover, .woocommerce button.disabled.alt.button:hover, .woocommerce input.disabled.alt.button:hover, .button.disabled:focus, input.disabled[type="submit"]:focus, .woocommerce a.disabled.button:focus:not(.alt), .woocommerce button.disabled.button:focus:not(.alt), .woocommerce input.disabled.button:focus:not(.alt), .woocommerce a.disabled.alt.button:focus, .woocommerce button.disabled.alt.button:focus, .woocommerce input.disabled.alt.button:focus, .button[disabled]:hover, input[disabled][type="submit"]:hover, .woocommerce a[disabled].button:hover:not(.alt), .woocommerce button[disabled].button:hover:not(.alt), .woocommerce input[disabled].button:hover:not(.alt), .woocommerce a[disabled].alt.button:hover, .woocommerce button[disabled].alt.button:hover, .woocommerce input[disabled].alt.button:hover, .button[disabled]:focus, input[disabled][type="submit"]:focus, .woocommerce a[disabled].button:focus:not(.alt), .woocommerce button[disabled].button:focus:not(.alt), .woocommerce input[disabled].button:focus:not(.alt), .woocommerce a[disabled].alt.button:focus, .woocommerce button[disabled].alt.button:focus, .woocommerce input[disabled].alt.button:focus {
       background: #52a329; }
-    button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
+    button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, input.disabled[type="submit"]:hover, .woocommerce a.disabled.button:hover:not(.alt), .woocommerce button.disabled.button:hover:not(.alt), .woocommerce input.disabled.button:hover:not(.alt), .woocommerce a.disabled.alt.button:hover, .woocommerce button.disabled.alt.button:hover, .woocommerce input.disabled.alt.button:hover, .button.disabled:focus, input.disabled[type="submit"]:focus, .woocommerce a.disabled.button:focus:not(.alt), .woocommerce button.disabled.button:focus:not(.alt), .woocommerce input.disabled.button:focus:not(.alt), .woocommerce a.disabled.alt.button:focus, .woocommerce button.disabled.alt.button:focus, .woocommerce input.disabled.alt.button:focus, .button[disabled]:hover, input[disabled][type="submit"]:hover, .woocommerce a[disabled].button:hover:not(.alt), .woocommerce button[disabled].button:hover:not(.alt), .woocommerce input[disabled].button:hover:not(.alt), .woocommerce a[disabled].alt.button:hover, .woocommerce button[disabled].alt.button:hover, .woocommerce input[disabled].alt.button:hover, .button[disabled]:focus, input[disabled][type="submit"]:focus, .woocommerce a[disabled].button:focus:not(.alt), .woocommerce button[disabled].button:focus:not(.alt), .woocommerce input[disabled].button:focus:not(.alt), .woocommerce a[disabled].alt.button:focus, .woocommerce button[disabled].alt.button:focus, .woocommerce input[disabled].alt.button:focus {
       color: #222; }
-    button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
+    button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, input.disabled[type="submit"]:hover, .woocommerce a.disabled.button:hover:not(.alt), .woocommerce button.disabled.button:hover:not(.alt), .woocommerce input.disabled.button:hover:not(.alt), .woocommerce a.disabled.alt.button:hover, .woocommerce button.disabled.alt.button:hover, .woocommerce input.disabled.alt.button:hover, .button.disabled:focus, input.disabled[type="submit"]:focus, .woocommerce a.disabled.button:focus:not(.alt), .woocommerce button.disabled.button:focus:not(.alt), .woocommerce input.disabled.button:focus:not(.alt), .woocommerce a.disabled.alt.button:focus, .woocommerce button.disabled.alt.button:focus, .woocommerce input.disabled.alt.button:focus, .button[disabled]:hover, input[disabled][type="submit"]:hover, .woocommerce a[disabled].button:hover:not(.alt), .woocommerce button[disabled].button:hover:not(.alt), .woocommerce input[disabled].button:hover:not(.alt), .woocommerce a[disabled].alt.button:hover, .woocommerce button[disabled].alt.button:hover, .woocommerce input[disabled].alt.button:hover, .button[disabled]:focus, input[disabled][type="submit"]:focus, .woocommerce a[disabled].button:focus:not(.alt), .woocommerce button[disabled].button:focus:not(.alt), .woocommerce input[disabled].button:focus:not(.alt), .woocommerce a[disabled].alt.button:focus, .woocommerce button[disabled].alt.button:focus, .woocommerce input[disabled].alt.button:focus {
       background: #66cc33; }
-    button.disabled.secondary, button[disabled].secondary, .button.disabled.secondary, .button[disabled].secondary {
+    button.disabled.secondary, button[disabled].secondary, .button.disabled.secondary, input.disabled.secondary[type="submit"], .woocommerce a.disabled.secondary.button:not(.alt), .woocommerce button.disabled.secondary.button:not(.alt), .woocommerce input.disabled.secondary.button:not(.alt), .woocommerce .disabled.alt.button, .woocommerce input.disabled.alt[type="submit"], .button[disabled].secondary, input[disabled].secondary[type="submit"], .woocommerce a[disabled].secondary.button:not(.alt), .woocommerce button[disabled].secondary.button:not(.alt), .woocommerce input[disabled].secondary.button:not(.alt), .woocommerce [disabled].alt.button, .woocommerce input[disabled].alt[type="submit"] {
       background: #FFC55B;
       border-color: #ffad16;
       color: #222;
       cursor: default;
       opacity: 0.7;
       box-shadow: none; }
-      button.disabled.secondary:hover, button.disabled.secondary:focus, button[disabled].secondary:hover, button[disabled].secondary:focus, .button.disabled.secondary:hover, .button.disabled.secondary:focus, .button[disabled].secondary:hover, .button[disabled].secondary:focus {
+      button.disabled.secondary:hover, button.disabled.secondary:focus, button[disabled].secondary:hover, button[disabled].secondary:focus, .button.disabled.secondary:hover, input.disabled.secondary[type="submit"]:hover, .woocommerce .disabled.alt.button:hover, .woocommerce input.disabled.alt[type="submit"]:hover, .button.disabled.secondary:focus, input.disabled.secondary[type="submit"]:focus, .woocommerce .disabled.alt.button:focus, .woocommerce input.disabled.alt[type="submit"]:focus, .button[disabled].secondary:hover, input[disabled].secondary[type="submit"]:hover, .woocommerce [disabled].alt.button:hover, .woocommerce input[disabled].alt[type="submit"]:hover, .button[disabled].secondary:focus, input[disabled].secondary[type="submit"]:focus, .woocommerce [disabled].alt.button:focus, .woocommerce input[disabled].alt[type="submit"]:focus {
         background: #ffad16; }
-      button.disabled.secondary:hover, button.disabled.secondary:focus, button[disabled].secondary:hover, button[disabled].secondary:focus, .button.disabled.secondary:hover, .button.disabled.secondary:focus, .button[disabled].secondary:hover, .button[disabled].secondary:focus {
+      button.disabled.secondary:hover, button.disabled.secondary:focus, button[disabled].secondary:hover, button[disabled].secondary:focus, .button.disabled.secondary:hover, input.disabled.secondary[type="submit"]:hover, .woocommerce .disabled.alt.button:hover, .woocommerce input.disabled.alt[type="submit"]:hover, .button.disabled.secondary:focus, input.disabled.secondary[type="submit"]:focus, .woocommerce .disabled.alt.button:focus, .woocommerce input.disabled.alt[type="submit"]:focus, .button[disabled].secondary:hover, input[disabled].secondary[type="submit"]:hover, .woocommerce [disabled].alt.button:hover, .woocommerce input[disabled].alt[type="submit"]:hover, .button[disabled].secondary:focus, input[disabled].secondary[type="submit"]:focus, .woocommerce [disabled].alt.button:focus, .woocommerce input[disabled].alt[type="submit"]:focus {
         color: #222; }
-      button.disabled.secondary:hover, button.disabled.secondary:focus, button[disabled].secondary:hover, button[disabled].secondary:focus, .button.disabled.secondary:hover, .button.disabled.secondary:focus, .button[disabled].secondary:hover, .button[disabled].secondary:focus {
+      button.disabled.secondary:hover, button.disabled.secondary:focus, button[disabled].secondary:hover, button[disabled].secondary:focus, .button.disabled.secondary:hover, input.disabled.secondary[type="submit"]:hover, .woocommerce .disabled.alt.button:hover, .woocommerce input.disabled.alt[type="submit"]:hover, .button.disabled.secondary:focus, input.disabled.secondary[type="submit"]:focus, .woocommerce .disabled.alt.button:focus, .woocommerce input.disabled.alt[type="submit"]:focus, .button[disabled].secondary:hover, input[disabled].secondary[type="submit"]:hover, .woocommerce [disabled].alt.button:hover, .woocommerce input[disabled].alt[type="submit"]:hover, .button[disabled].secondary:focus, input[disabled].secondary[type="submit"]:focus, .woocommerce [disabled].alt.button:focus, .woocommerce input[disabled].alt[type="submit"]:focus {
         background: #FFC55B; }
-    button.disabled.success, button[disabled].success, .button.disabled.success, .button[disabled].success {
+    button.disabled.success, button[disabled].success, .button.disabled.success, input.disabled.success[type="submit"], .woocommerce a.disabled.success.button:not(.alt), .woocommerce button.disabled.success.button:not(.alt), .woocommerce input.disabled.success.button:not(.alt), .woocommerce a.disabled.success.alt.button, .woocommerce button.disabled.success.alt.button, .woocommerce input.disabled.success.alt.button, .button[disabled].success, input[disabled].success[type="submit"], .woocommerce a[disabled].success.button:not(.alt), .woocommerce button[disabled].success.button:not(.alt), .woocommerce input[disabled].success.button:not(.alt), .woocommerce a[disabled].success.alt.button, .woocommerce button[disabled].success.alt.button, .woocommerce input[disabled].success.alt.button {
       background: #43AC6A;
       border-color: #368a55;
       color: #222;
       cursor: default;
       opacity: 0.7;
       box-shadow: none; }
-      button.disabled.success:hover, button.disabled.success:focus, button[disabled].success:hover, button[disabled].success:focus, .button.disabled.success:hover, .button.disabled.success:focus, .button[disabled].success:hover, .button[disabled].success:focus {
+      button.disabled.success:hover, button.disabled.success:focus, button[disabled].success:hover, button[disabled].success:focus, .button.disabled.success:hover, input.disabled.success[type="submit"]:hover, .button.disabled.success:focus, input.disabled.success[type="submit"]:focus, .button[disabled].success:hover, input[disabled].success[type="submit"]:hover, .button[disabled].success:focus, input[disabled].success[type="submit"]:focus {
         background: #368a55; }
-      button.disabled.success:hover, button.disabled.success:focus, button[disabled].success:hover, button[disabled].success:focus, .button.disabled.success:hover, .button.disabled.success:focus, .button[disabled].success:hover, .button[disabled].success:focus {
+      button.disabled.success:hover, button.disabled.success:focus, button[disabled].success:hover, button[disabled].success:focus, .button.disabled.success:hover, input.disabled.success[type="submit"]:hover, .button.disabled.success:focus, input.disabled.success[type="submit"]:focus, .button[disabled].success:hover, input[disabled].success[type="submit"]:hover, .button[disabled].success:focus, input[disabled].success[type="submit"]:focus {
         color: #222; }
-      button.disabled.success:hover, button.disabled.success:focus, button[disabled].success:hover, button[disabled].success:focus, .button.disabled.success:hover, .button.disabled.success:focus, .button[disabled].success:hover, .button[disabled].success:focus {
+      button.disabled.success:hover, button.disabled.success:focus, button[disabled].success:hover, button[disabled].success:focus, .button.disabled.success:hover, input.disabled.success[type="submit"]:hover, .button.disabled.success:focus, input.disabled.success[type="submit"]:focus, .button[disabled].success:hover, input[disabled].success[type="submit"]:hover, .button[disabled].success:focus, input[disabled].success[type="submit"]:focus {
         background: #43AC6A; }
-    button.disabled.alert, button[disabled].alert, .button.disabled.alert, .button[disabled].alert {
+    button.disabled.alert, button[disabled].alert, .button.disabled.alert, input.disabled.alert[type="submit"], .woocommerce a.disabled.alert.button:not(.alt), .woocommerce button.disabled.alert.button:not(.alt), .woocommerce input.disabled.alert.button:not(.alt), .woocommerce a.disabled.alert.alt.button, .woocommerce button.disabled.alert.alt.button, .woocommerce input.disabled.alert.alt.button, .button[disabled].alert, input[disabled].alert[type="submit"], .woocommerce a[disabled].alert.button:not(.alt), .woocommerce button[disabled].alert.button:not(.alt), .woocommerce input[disabled].alert.button:not(.alt), .woocommerce a[disabled].alert.alt.button, .woocommerce button[disabled].alert.alt.button, .woocommerce input[disabled].alert.alt.button {
       background: #f04124;
       border-color: #cf2a0e;
       color: #222;
       cursor: default;
       opacity: 0.7;
       box-shadow: none; }
-      button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert:hover, button[disabled].alert:focus, .button.disabled.alert:hover, .button.disabled.alert:focus, .button[disabled].alert:hover, .button[disabled].alert:focus {
+      button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert:hover, button[disabled].alert:focus, .button.disabled.alert:hover, input.disabled.alert[type="submit"]:hover, .button.disabled.alert:focus, input.disabled.alert[type="submit"]:focus, .button[disabled].alert:hover, input[disabled].alert[type="submit"]:hover, .button[disabled].alert:focus, input[disabled].alert[type="submit"]:focus {
         background: #cf2a0e; }
-      button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert:hover, button[disabled].alert:focus, .button.disabled.alert:hover, .button.disabled.alert:focus, .button[disabled].alert:hover, .button[disabled].alert:focus {
+      button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert:hover, button[disabled].alert:focus, .button.disabled.alert:hover, input.disabled.alert[type="submit"]:hover, .button.disabled.alert:focus, input.disabled.alert[type="submit"]:focus, .button[disabled].alert:hover, input[disabled].alert[type="submit"]:hover, .button[disabled].alert:focus, input[disabled].alert[type="submit"]:focus {
         color: #222; }
-      button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert:hover, button[disabled].alert:focus, .button.disabled.alert:hover, .button.disabled.alert:focus, .button[disabled].alert:hover, .button[disabled].alert:focus {
+      button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert:hover, button[disabled].alert:focus, .button.disabled.alert:hover, input.disabled.alert[type="submit"]:hover, .button.disabled.alert:focus, input.disabled.alert[type="submit"]:focus, .button[disabled].alert:hover, input[disabled].alert[type="submit"]:hover, .button[disabled].alert:focus, input[disabled].alert[type="submit"]:focus {
         background: #f04124; }
-    button.disabled.warning, button[disabled].warning, .button.disabled.warning, .button[disabled].warning {
+    button.disabled.warning, button[disabled].warning, .button.disabled.warning, input.disabled.warning[type="submit"], .woocommerce a.disabled.warning.button:not(.alt), .woocommerce button.disabled.warning.button:not(.alt), .woocommerce input.disabled.warning.button:not(.alt), .woocommerce a.disabled.warning.alt.button, .woocommerce button.disabled.warning.alt.button, .woocommerce input.disabled.warning.alt.button, .button[disabled].warning, input[disabled].warning[type="submit"], .woocommerce a[disabled].warning.button:not(.alt), .woocommerce button[disabled].warning.button:not(.alt), .woocommerce input[disabled].warning.button:not(.alt), .woocommerce a[disabled].warning.alt.button, .woocommerce button[disabled].warning.alt.button, .woocommerce input[disabled].warning.alt.button {
       background: #f08a24;
       border-color: #cf6e0e;
       color: #222;
       cursor: default;
       opacity: 0.7;
       box-shadow: none; }
-      button.disabled.warning:hover, button.disabled.warning:focus, button[disabled].warning:hover, button[disabled].warning:focus, .button.disabled.warning:hover, .button.disabled.warning:focus, .button[disabled].warning:hover, .button[disabled].warning:focus {
+      button.disabled.warning:hover, button.disabled.warning:focus, button[disabled].warning:hover, button[disabled].warning:focus, .button.disabled.warning:hover, input.disabled.warning[type="submit"]:hover, .button.disabled.warning:focus, input.disabled.warning[type="submit"]:focus, .button[disabled].warning:hover, input[disabled].warning[type="submit"]:hover, .button[disabled].warning:focus, input[disabled].warning[type="submit"]:focus {
         background: #cf6e0e; }
-      button.disabled.warning:hover, button.disabled.warning:focus, button[disabled].warning:hover, button[disabled].warning:focus, .button.disabled.warning:hover, .button.disabled.warning:focus, .button[disabled].warning:hover, .button[disabled].warning:focus {
+      button.disabled.warning:hover, button.disabled.warning:focus, button[disabled].warning:hover, button[disabled].warning:focus, .button.disabled.warning:hover, input.disabled.warning[type="submit"]:hover, .button.disabled.warning:focus, input.disabled.warning[type="submit"]:focus, .button[disabled].warning:hover, input[disabled].warning[type="submit"]:hover, .button[disabled].warning:focus, input[disabled].warning[type="submit"]:focus {
         color: #222; }
-      button.disabled.warning:hover, button.disabled.warning:focus, button[disabled].warning:hover, button[disabled].warning:focus, .button.disabled.warning:hover, .button.disabled.warning:focus, .button[disabled].warning:hover, .button[disabled].warning:focus {
+      button.disabled.warning:hover, button.disabled.warning:focus, button[disabled].warning:hover, button[disabled].warning:focus, .button.disabled.warning:hover, input.disabled.warning[type="submit"]:hover, .button.disabled.warning:focus, input.disabled.warning[type="submit"]:focus, .button[disabled].warning:hover, input[disabled].warning[type="submit"]:hover, .button[disabled].warning:focus, input[disabled].warning[type="submit"]:focus {
         background: #f08a24; }
-    button.disabled.info, button[disabled].info, .button.disabled.info, .button[disabled].info {
+    button.disabled.info, button[disabled].info, .button.disabled.info, input.disabled.info[type="submit"], .woocommerce a.disabled.info.button:not(.alt), .woocommerce button.disabled.info.button:not(.alt), .woocommerce input.disabled.info.button:not(.alt), .woocommerce a.disabled.info.alt.button, .woocommerce button.disabled.info.alt.button, .woocommerce input.disabled.info.alt.button, .button[disabled].info, input[disabled].info[type="submit"], .woocommerce a[disabled].info.button:not(.alt), .woocommerce button[disabled].info.button:not(.alt), .woocommerce input[disabled].info.button:not(.alt), .woocommerce a[disabled].info.alt.button, .woocommerce button[disabled].info.alt.button, .woocommerce input[disabled].info.alt.button {
       background: #a0d3e8;
       border-color: #61b6d9;
       color: #333333;
       cursor: default;
       opacity: 0.7;
       box-shadow: none; }
-      button.disabled.info:hover, button.disabled.info:focus, button[disabled].info:hover, button[disabled].info:focus, .button.disabled.info:hover, .button.disabled.info:focus, .button[disabled].info:hover, .button[disabled].info:focus {
+      button.disabled.info:hover, button.disabled.info:focus, button[disabled].info:hover, button[disabled].info:focus, .button.disabled.info:hover, input.disabled.info[type="submit"]:hover, .button.disabled.info:focus, input.disabled.info[type="submit"]:focus, .button[disabled].info:hover, input[disabled].info[type="submit"]:hover, .button[disabled].info:focus, input[disabled].info[type="submit"]:focus {
         background: #61b6d9; }
-      button.disabled.info:hover, button.disabled.info:focus, button[disabled].info:hover, button[disabled].info:focus, .button.disabled.info:hover, .button.disabled.info:focus, .button[disabled].info:hover, .button[disabled].info:focus {
+      button.disabled.info:hover, button.disabled.info:focus, button[disabled].info:hover, button[disabled].info:focus, .button.disabled.info:hover, input.disabled.info[type="submit"]:hover, .button.disabled.info:focus, input.disabled.info[type="submit"]:focus, .button[disabled].info:hover, input[disabled].info[type="submit"]:hover, .button[disabled].info:focus, input[disabled].info[type="submit"]:focus {
         color: #222; }
-      button.disabled.info:hover, button.disabled.info:focus, button[disabled].info:hover, button[disabled].info:focus, .button.disabled.info:hover, .button.disabled.info:focus, .button[disabled].info:hover, .button[disabled].info:focus {
+      button.disabled.info:hover, button.disabled.info:focus, button[disabled].info:hover, button[disabled].info:focus, .button.disabled.info:hover, input.disabled.info[type="submit"]:hover, .button.disabled.info:focus, input.disabled.info[type="submit"]:focus, .button[disabled].info:hover, input[disabled].info[type="submit"]:hover, .button[disabled].info:focus, input[disabled].info[type="submit"]:focus {
         background: #a0d3e8; }
 
 button::-moz-focus-inner {
@@ -3341,7 +3340,7 @@ button::-moz-focus-inner {
   padding: 0; }
 
 @media only screen and (min-width:40.063em) {
-  button, .button {
+  button, .button, input[type="submit"], .woocommerce .button:not(.alt), .woocommerce input[type="submit"]:not(.alt), .woocommerce a.button:not(.alt), .woocommerce button.button:not(.alt), .woocommerce input.button:not(.alt), .woocommerce .button.alt, .woocommerce input.alt[type="submit"], .woocommerce a.alt.button, .woocommerce button.alt.button, .woocommerce input.alt.button {
     display: inline-block; } }
 
 .text-left {
@@ -3477,13 +3476,13 @@ p {
   font-weight: normal;
   font-size: 1rem;
   line-height: 1.6;
-  margin-bottom: 1.5384615385rem;
+  margin-bottom: 1.4285714286rem;
   text-rendering: optimizeLegibility; }
   p.lead {
-    font-size: 1.2692307692rem;
+    font-size: 1.25rem;
     line-height: 1.6; }
   p aside {
-    font-size: 1.0769230769rem;
+    font-size: 1rem;
     line-height: 1.35;
     font-style: italic; }
 
@@ -3503,19 +3502,19 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 0; }
 
 h1 {
-  font-size: 2.6153846154rem; }
+  font-size: 2.4285714286rem; }
 
 h2 {
-  font-size: 2.0769230769rem; }
+  font-size: 1.9285714286rem; }
 
 h3 {
-  font-size: 1.6923076923rem; }
+  font-size: 1.5714285714rem; }
 
 h4 {
-  font-size: 1.3846153846rem; }
+  font-size: 1.2857142857rem; }
 
 h5 {
-  font-size: 1.3846153846rem; }
+  font-size: 1.2857142857rem; }
 
 h6 {
   font-size: 1rem; }
@@ -3531,7 +3530,7 @@ hr {
   border: solid #DDDDDD;
   border-width: 1px 0 0;
   clear: both;
-  margin: 1.5384615385rem 0 1.4615384615rem;
+  margin: 1.4285714286rem 0 1.3571428571rem;
   height: 0; }
 
 /* Helpful Typography Defaults */
@@ -3555,13 +3554,13 @@ code {
   border-width: 1px;
   border-style: solid;
   border-color: #ffdda0;
-  padding: 0.1538461538rem 0.3846153846rem 0.0769230769rem; }
+  padding: 0.1428571429rem 0.3571428571rem 0.0714285714rem; }
 
 /* Lists */
 ul, ol, dl {
   font-size: 1rem;
   line-height: 1.6;
-  margin-bottom: 1.5384615385rem;
+  margin-bottom: 1.4285714286rem;
   list-style-position: outside;
   font-family: inherit; }
 
@@ -3570,13 +3569,13 @@ ul {
   ul.no-bullet {
     margin-left: 0; }
     ul.no-bullet li ul, ul.no-bullet li ol {
-      margin-left: 1.5384615385rem;
+      margin-left: 1.4285714286rem;
       margin-bottom: 0;
       list-style: none; }
 
 /* Unordered Lists */
 ul li ul, ul li ol {
-  margin-left: 1.5384615385rem;
+  margin-left: 1.4285714286rem;
   margin-bottom: 0; }
 ul.square li ul, ul.circle li ul, ul.disc li ul {
   list-style: inherit; }
@@ -3596,7 +3595,7 @@ ul.no-bullet {
 ol {
   margin-left: 1.4rem; }
   ol li ul, ol li ol {
-    margin-left: 1.5384615385rem;
+    margin-left: 1.4285714286rem;
     margin-bottom: 0; }
 
 /* Definition Lists */
@@ -3604,7 +3603,7 @@ dl dt {
   margin-bottom: 0.3rem;
   font-weight: bold; }
 dl dd {
-  margin-bottom: 0.9230769231rem; }
+  margin-bottom: 0.8571428571rem; }
 
 /* Abbreviations */
 abbr, acronym {
@@ -3620,12 +3619,12 @@ abbr {
 
 /* Blockquotes */
 blockquote {
-  margin: 0 0 1.5384615385rem;
-  padding: 0.6923076923rem 1.5384615385rem 0 1.4615384615rem;
+  margin: 0 0 1.4285714286rem;
+  padding: 0.6428571429rem 1.4285714286rem 0 1.3571428571rem;
   border-left: 1px solid #DDDDDD; }
   blockquote cite {
     display: block;
-    font-size: 1rem;
+    font-size: 0.9285714286rem;
     color: #555555; }
     blockquote cite:before {
       content: "\2014 \0020"; }
@@ -3639,15 +3638,15 @@ blockquote, blockquote p {
 /* Microformats */
 .vcard {
   display: inline-block;
-  margin: 0 0 1.5384615385rem 0;
+  margin: 0 0 1.4285714286rem 0;
   border: 1px solid #DDDDDD;
-  padding: 0.7692307692rem 0.9230769231rem; }
+  padding: 0.7142857143rem 0.8571428571rem; }
   .vcard li {
     margin: 0;
     display: block; }
   .vcard .fn {
     font-weight: bold;
-    font-size: 1.1538461538rem; }
+    font-size: 1.0714285714rem; }
 
 .vevent .summary {
   font-weight: bold; }
@@ -3656,21 +3655,21 @@ blockquote, blockquote p {
   text-decoration: none;
   font-weight: bold;
   border: none;
-  padding: 0 0.0769230769rem; }
+  padding: 0 0.0714285714rem; }
 
 @media only screen and (min-width:40.063em) {
   h1, h2, h3, h4, h5, h6 {
     line-height: 1.4; }
   h1 {
-    font-size: 3.3846153846rem; }
+    font-size: 3.1428571429rem; }
   h2 {
-    font-size: 2.8461538462rem; }
+    font-size: 2.6428571429rem; }
   h3 {
-    font-size: 2.0769230769rem; }
+    font-size: 1.9285714286rem; }
   h4 {
-    font-size: 1.7692307692rem; }
+    font-size: 1.6428571429rem; }
   h5 {
-    font-size: 1.3846153846rem; }
+    font-size: 1.2857142857rem; }
   h6 {
     font-size: 1rem; } }
 
@@ -3727,13 +3726,13 @@ blockquote, blockquote p {
 
 /* Standard Forms */
 form {
-  margin: 0 0 1.2307692308rem; }
+  margin: 0 0 1.1428571429rem; }
 
 /* Using forms within rows, we need to set some defaults */
 form .row .row {
-  margin: 0 -0.6153846154rem; }
+  margin: 0 -0.5714285714rem; }
   form .row .row .column, form .row .row .columns {
-    padding: 0 0.6153846154rem; }
+    padding: 0 0.5714285714rem; }
   form .row .row.collapse {
     margin: 0; }
     form .row .row.collapse .column, form .row .row.collapse .columns {
@@ -3744,11 +3743,11 @@ form .row .row {
       border-bottom-right-radius: 0;
       border-top-right-radius: 0; }
 form .row input.column, form .row input.columns, form .row textarea.column, form .row textarea.columns {
-  padding-left: 0.6153846154rem; }
+  padding-left: 0.5714285714rem; }
 
 /* Label Styles */
 label {
-  font-size: 1.0769230769rem;
+  font-size: 1rem;
   color: #4d4d4d;
   cursor: pointer;
   display: block;
@@ -3760,8 +3759,8 @@ label {
     float: none !important;
     text-align: right; }
   label.inline {
-    margin: 0 0 1.2307692308rem 0;
-    padding: 0.6923076923rem 0; }
+    margin: 0 0 1.1428571429rem 0;
+    padding: 0.6428571429rem 0; }
   label small {
     text-transform: capitalize;
     color: #676767; }
@@ -3778,12 +3777,12 @@ label {
   border-style: solid;
   border-width: 1px;
   overflow: hidden;
-  font-size: 1.0769230769rem;
-  height: 2.8461538462rem;
-  line-height: 2.8461538462rem; }
+  font-size: 1rem;
+  height: 2.6428571429rem;
+  line-height: 2.6428571429rem; }
 
 /* Adjust padding, alignment and radius if pre/post element is a button */
-.postfix.button {
+.postfix.button, input.postfix[type="submit"], .woocommerce .postfix.button:not(.alt), .woocommerce input.postfix[type="submit"]:not(.alt), .woocommerce .postfix.button.alt, .woocommerce input.postfix.alt[type="submit"] {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
@@ -3791,7 +3790,7 @@ label {
   text-align: center;
   border: none; }
 
-.prefix.button {
+.prefix.button, input.prefix[type="submit"], .woocommerce .prefix.button:not(.alt), .woocommerce input.prefix[type="submit"]:not(.alt), .woocommerce .prefix.button.alt, .woocommerce input.prefix.alt[type="submit"] {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
@@ -3799,28 +3798,28 @@ label {
   text-align: center;
   border: none; }
 
-.prefix.button.radius {
+.prefix.button.radius, input.prefix.radius[type="submit"], .woocommerce a.prefix.radius.button:not(.alt), .woocommerce button.prefix.radius.button:not(.alt), .woocommerce input.prefix.radius.button:not(.alt), .woocommerce a.prefix.radius.alt.button, .woocommerce button.prefix.radius.alt.button, .woocommerce input.prefix.radius.alt.button {
   border-radius: 0;
   -webkit-border-bottom-left-radius: 3px;
   -webkit-border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
   border-top-left-radius: 3px; }
 
-.postfix.button.radius {
+.postfix.button.radius, input.postfix.radius[type="submit"], .woocommerce a.postfix.radius.button:not(.alt), .woocommerce button.postfix.radius.button:not(.alt), .woocommerce input.postfix.radius.button:not(.alt), .woocommerce a.postfix.radius.alt.button, .woocommerce button.postfix.radius.alt.button, .woocommerce input.postfix.radius.alt.button {
   border-radius: 0;
   -webkit-border-bottom-right-radius: 3px;
   -webkit-border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
   border-top-right-radius: 3px; }
 
-.prefix.button.round {
+.prefix.button.round, input.prefix.round[type="submit"], .woocommerce a.prefix.round.button:not(.alt), .woocommerce button.prefix.round.button:not(.alt), .woocommerce input.prefix.round.button:not(.alt), .woocommerce a.prefix.round.alt.button, .woocommerce button.prefix.round.alt.button, .woocommerce input.prefix.round.alt.button {
   border-radius: 0;
   -webkit-border-bottom-left-radius: 1000px;
   -webkit-border-top-left-radius: 1000px;
   border-bottom-left-radius: 1000px;
   border-top-left-radius: 1000px; }
 
-.postfix.button.round {
+.postfix.button.round, input.postfix.round[type="submit"], .woocommerce a.postfix.round.button:not(.alt), .woocommerce button.postfix.round.button:not(.alt), .woocommerce input.postfix.round.button:not(.alt), .woocommerce a.postfix.round.alt.button, .woocommerce button.postfix.round.alt.button, .woocommerce input.postfix.round.alt.button {
   border-radius: 0;
   -webkit-border-bottom-right-radius: 1000px;
   -webkit-border-top-right-radius: 1000px;
@@ -3852,10 +3851,10 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   color: rgba(0, 0, 0, 0.75);
   display: block;
-  font-size: 1.0769230769rem;
-  margin: 0 0 1.2307692308rem 0;
-  padding: 0.6153846154rem;
-  height: 2.8461538462rem;
+  font-size: 1rem;
+  margin: 0 0 1.1428571429rem 0;
+  padding: 0.5714285714rem;
+  height: 2.6428571429rem;
   width: 100%;
   box-sizing: border-box;
   transition: box-shadow 0.45s, border-color 0.45s ease-in-out; }
@@ -3947,13 +3946,13 @@ select {
   border-style: solid;
   border-width: 1px;
   border-color: #cccccc;
-  padding: 0.6153846154rem;
-  font-size: 1.0769230769rem;
+  padding: 0.5714285714rem;
+  font-size: 1rem;
   font-family: "Helvetica", sans-serif;
   color: rgba(0, 0, 0, 0.75);
   line-height: normal;
   border-radius: 0;
-  height: 2.8461538462rem; }
+  height: 2.6428571429rem; }
   select::-ms-expand {
     display: none; }
   select.radius {
@@ -3967,12 +3966,12 @@ select {
 
 /* Adjust margin for form elements below */
 input[type="file"], input[type="checkbox"], input[type="radio"], select {
-  margin: 0 0 1.2307692308rem 0; }
+  margin: 0 0 1.1428571429rem 0; }
 
 input[type="checkbox"] + label, input[type="radio"] + label {
   display: inline-block;
-  margin-left: 0.6153846154rem;
-  margin-right: 1.2307692308rem;
+  margin-left: 0.5714285714rem;
+  margin-right: 1.1428571429rem;
   margin-bottom: 0;
   vertical-align: baseline; }
 
@@ -3984,22 +3983,22 @@ input[type="file"] {
 /* We add basic fieldset styling */
 fieldset {
   border: 1px solid #DDDDDD;
-  padding: 1.5384615385rem;
-  margin: 1.3846153846rem 0; }
+  padding: 1.4285714286rem;
+  margin: 1.2857142857rem 0; }
   fieldset legend {
     font-weight: bold;
     background: #FFFFFF;
-    padding: 0 0.2307692308rem;
+    padding: 0 0.2142857143rem;
     margin: 0;
-    margin-left: -0.2307692308rem; }
+    margin-left: -0.2142857143rem; }
 
 /* Error Handling */
 [data-abide] .error small.error, [data-abide] .error span.error, [data-abide] span.error, [data-abide] small.error {
   display: block;
-  padding: 0.4615384615rem 0.6923076923rem 0.6923076923rem;
+  padding: 0.4285714286rem 0.6428571429rem 0.6428571429rem;
   margin-top: -1px;
-  margin-bottom: 1.2307692308rem;
-  font-size: 0.9230769231rem;
+  margin-bottom: 1.1428571429rem;
+  font-size: 0.8571428571rem;
   font-weight: normal;
   font-style: italic;
   background: #f04124;
@@ -4009,10 +4008,10 @@ fieldset {
 
 span.error, small.error {
   display: block;
-  padding: 0.4615384615rem 0.6923076923rem 0.6923076923rem;
+  padding: 0.4285714286rem 0.6428571429rem 0.6428571429rem;
   margin-top: -1px;
-  margin-bottom: 1.2307692308rem;
-  font-size: 0.9230769231rem;
+  margin-bottom: 1.1428571429rem;
+  font-size: 0.8571428571rem;
   font-weight: normal;
   font-style: italic;
   background: #f04124;
@@ -4021,15 +4020,15 @@ span.error, small.error {
 .error input, .error textarea, .error select {
   margin-bottom: 0; }
 .error input[type="checkbox"], .error input[type="radio"] {
-  margin-bottom: 1.2307692308rem; }
+  margin-bottom: 1.1428571429rem; }
 .error label, .error label.error {
   color: #f04124; }
 .error small.error {
   display: block;
-  padding: 0.4615384615rem 0.6923076923rem 0.6923076923rem;
+  padding: 0.4285714286rem 0.6428571429rem 0.6428571429rem;
   margin-top: -1px;
-  margin-bottom: 1.2307692308rem;
-  font-size: 0.9230769231rem;
+  margin-bottom: 1.1428571429rem;
+  font-size: 0.8571428571rem;
   font-weight: normal;
   font-style: italic;
   background: #f04124;
@@ -4055,20 +4054,19 @@ label.error {
 /*
 Base element settings (no classes or id's).
 
-@since 0.1.0
+@since 1.0.0
 */
 /*
 Sets up the theme's styling properties and makes some variables already set in Foundation available for easy use
 throughout this theme's SASS files.
 
-@since 0.1.0
+@since 1.0.0
 */
-.button.secondary {
-  color: #222; }
-
 /*
- * Mixins
- */
+Global mixins.
+
+@since 1.0.0
+*/
 a.color-invert, #site-header .top-header .menu-item a, #site-header .primary-nav #site-nav .menu-item a {
   color: inherit; }
   a.color-invert:hover, #site-header .top-header .menu-item a:hover, #site-header .primary-nav #site-nav .menu-item a:hover {
@@ -4080,20 +4078,19 @@ h1, h2, h3, h4, h5, h6 {
 /*
 The static site header.
 
-@since 0.1.0
+@since 1.0.0
 */
 /*
 Sets up the theme's styling properties and makes some variables already set in Foundation available for easy use
 throughout this theme's SASS files.
 
-@since 0.1.0
+@since 1.0.0
 */
-.button.secondary {
-  color: #222; }
-
 /*
- * Mixins
- */
+Global mixins.
+
+@since 1.0.0
+*/
 #site-header .top-header {
   background: #202020;
   color: #ddd;
@@ -4133,8 +4130,8 @@ throughout this theme's SASS files.
   margin-bottom: 7px;
   color: #66cc33;
   background: #fff;
-  margin-top: 160px;
-  position: relative; }
+  position: relative;
+  margin-top: 100px; }
   #site-header .primary-nav:before, #site-header .primary-nav:after {
     content: '';
     width: 100%;
@@ -4145,12 +4142,17 @@ throughout this theme's SASS files.
     top: -7px; }
   #site-header .primary-nav:after {
     bottom: -7px; }
+  #site-header .primary-nav.large {
+    margin-top: 160px; }
   #site-header .primary-nav .site-logo {
     position: absolute;
-    bottom: -100px;
+    z-index: 10;
     left: 20px;
-    width: 50%;
-    z-index: 10; }
+    bottom: -30px;
+    width: 30%; }
+    #site-header .primary-nav .site-logo.large {
+      bottom: -100px;
+      width: 50%; }
   #site-header .primary-nav #site-nav .menu {
     margin: 0;
     text-align: right; }
@@ -4173,7 +4175,7 @@ throughout this theme's SASS files.
     #site-header .feature .feature-right .container {
       color: #fff;
       padding: 20px; }
-    #site-header .feature .feature-right p, #site-header .feature .feature-right .button {
+    #site-header .feature .feature-right p, #site-header .feature .feature-right .button, #site-header .feature .feature-right input[type="submit"] {
       margin-bottom: 0; }
     #site-header .feature .feature-right p {
       font-size: 2em;
@@ -4182,20 +4184,19 @@ throughout this theme's SASS files.
 /*
 The static site footer.
 
-@since 0.1.0
+@since 1.0.0
 */
 /*
 Sets up the theme's styling properties and makes some variables already set in Foundation available for easy use
 throughout this theme's SASS files.
 
-@since 0.1.0
+@since 1.0.0
 */
-.button.secondary {
-  color: #222; }
-
 /*
- * Mixins
- */
+Global mixins.
+
+@since 1.0.0
+*/
 #site-footer {
   margin-top: 7px;
   margin-bottom: 7px;
@@ -4221,20 +4222,19 @@ throughout this theme's SASS files.
 /*
 The static site content.
 
-@since 0.1.0
+@since 1.0.0
 */
 /*
 Sets up the theme's styling properties and makes some variables already set in Foundation available for easy use
 throughout this theme's SASS files.
 
-@since 0.1.0
+@since 1.0.0
 */
-.button.secondary {
-  color: #222; }
-
 /*
- * Mixins
- */
+Global mixins.
+
+@since 1.0.0
+*/
 #site-content {
   margin-top: 20px;
   margin-bottom: 20px;
@@ -4242,22 +4242,37 @@ throughout this theme's SASS files.
   background: #fff; }
 
 /*
-Content sidebar.
+The comments template.
 
-@since 0.1.0
+@since 1.0.0
 */
 /*
 Sets up the theme's styling properties and makes some variables already set in Foundation available for easy use
 throughout this theme's SASS files.
 
-@since 0.1.0
+@since 1.0.0
 */
-.button.secondary {
-  color: #222; }
-
 /*
- * Mixins
- */
+Global mixins.
+
+@since 1.0.0
+*/
+/*
+Content sidebar.
+
+@since 1.0.0
+*/
+/*
+Sets up the theme's styling properties and makes some variables already set in Foundation available for easy use
+throughout this theme's SASS files.
+
+@since 1.0.0
+*/
+/*
+Global mixins.
+
+@since 1.0.0
+*/
 #site-sidebar .widgets {
   list-style: none; }
 #site-sidebar .widget-title {
@@ -4266,20 +4281,19 @@ throughout this theme's SASS files.
 /*
 Styles shared among all templates.
 
-@since 0.1.0
+@since 1.0.0
 */
 /*
 Sets up the theme's styling properties and makes some variables already set in Foundation available for easy use
 throughout this theme's SASS files.
 
-@since 0.1.0
+@since 1.0.0
 */
-.button.secondary {
-  color: #222; }
-
 /*
- * Mixins
- */
+Global mixins.
+
+@since 1.0.0
+*/
 body {
   background: url("assets/images/site-background.jpg") no-repeat center center fixed;
   background-size: cover; }
@@ -4287,7 +4301,10 @@ body {
 .page-title, .section-title, .widget-title {
   border-top: 1px solid #aaa;
   border-bottom: 1px solid #aaa;
-  position: relative; }
+  position: relative;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-bottom: 30px; }
   .page-title:after, .section-title:after, .widget-title:after {
     content: '';
     position: absolute;
@@ -4300,54 +4317,51 @@ body {
 /*
 Styles single.php.
 
-@since 0.1.0
+@since 1.0.0
 */
 /*
 Sets up the theme's styling properties and makes some variables already set in Foundation available for easy use
 throughout this theme's SASS files.
 
-@since 0.1.0
+@since 1.0.0
 */
-.button.secondary {
-  color: #222; }
-
 /*
- * Mixins
- */
+Global mixins.
+
+@since 1.0.0
+*/
 /*
 Styles page.php.
 
-@since 0.1.0
+@since 1.0.0
 */
 /*
 Sets up the theme's styling properties and makes some variables already set in Foundation available for easy use
 throughout this theme's SASS files.
 
-@since 0.1.0
+@since 1.0.0
 */
-.button.secondary {
-  color: #222; }
-
 /*
- * Mixins
- */
+Global mixins.
+
+@since 1.0.0
+*/
 /*
 Styles front-page.php.
 
-@since 0.1.0
+@since 1.0.0
 */
 /*
 Sets up the theme's styling properties and makes some variables already set in Foundation available for easy use
 throughout this theme's SASS files.
 
-@since 0.1.0
+@since 1.0.0
 */
-.button.secondary {
-  color: #222; }
-
 /*
- * Mixins
- */
+Global mixins.
+
+@since 1.0.0
+*/
 body.home .section-title {
   margin: 20px 0; }
 body.home .home-welcome {
@@ -4366,36 +4380,38 @@ body.home #site-content {
   margin-top: 0;
   padding-left: 0;
   padding-right: 0; }
-body.home .home-featured-products li {
-  list-style: none; }
-  body.home .home-featured-products li > .container {
-    border: 1px solid #ccc;
-    padding: 5px; }
-    body.home .home-featured-products li > .container:after {
-      content: ' ';
-      display: table;
-      clear: both; }
-body.home .home-featured-products .product-image {
-  float: left;
-  width: 40%; }
-body.home .home-featured-products .product-content {
-  float: left;
-  width: 60%;
-  font-size: 0.9em; }
-  body.home .home-featured-products .product-content p {
-    font-size: 1em; }
-  body.home .home-featured-products .product-content .product-title {
-    color: #66cc33;
-    font-size: 1.3em;
-    line-height: 1;
-    font-family: "Helvetica", sans-serif; }
-  body.home .home-featured-products .product-content .add_to_cart_button {
-    background: transparent;
-    color: #66cc33;
-    padding: 0 10px 0 0;
-    margin: 0 10px 0 0;
-    border: 0 solid #ccc;
-    border-right-width: 1px; }
+body.home .home-featured-products {
+  background: #fff; }
+  body.home .home-featured-products li {
+    list-style: none; }
+    body.home .home-featured-products li > .container {
+      border: 1px solid #ccc;
+      padding: 5px; }
+      body.home .home-featured-products li > .container:after {
+        content: ' ';
+        display: table;
+        clear: both; }
+  body.home .home-featured-products .product-image {
+    float: left;
+    width: 40%; }
+  body.home .home-featured-products .product-content {
+    float: left;
+    width: 60%;
+    font-size: 0.9em; }
+    body.home .home-featured-products .product-content p {
+      font-size: 1em; }
+    body.home .home-featured-products .product-content .product-title {
+      color: #66cc33;
+      font-size: 1.3em;
+      line-height: 1;
+      font-family: "Helvetica", sans-serif; }
+    body.home .home-featured-products .product-content .add_to_cart_button {
+      background: transparent;
+      color: #66cc33;
+      padding: 0 10px 0 0;
+      margin: 0 10px 0 0;
+      border: 0 solid #ccc;
+      border-right-width: 1px; }
 body.home .home-about-author {
   background: #F8F8F8;
   border-style: solid;
@@ -4424,22 +4440,83 @@ body.home .post-comment-count {
   color: #aaa; }
 
 /*
-Styles the testimonial widget.
+Posts within a loop.
 
-@since 0.1.0
+@since 1.0.0
 */
 /*
 Sets up the theme's styling properties and makes some variables already set in Foundation available for easy use
 throughout this theme's SASS files.
 
-@since 0.1.0
+@since 1.0.0
 */
-.button.secondary {
-  color: #222; }
+/*
+Global mixins.
+
+@since 1.0.0
+*/
+.post-list .post {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 20px;
+  padding-bottom: 20px; }
+  .post-list .post:last-of-type {
+    border-bottom-width: 0; }
+  .post-list .post .post-excerpt p {
+    margin-bottom: 0; }
+  .post-list .post .read-more {
+    margin: 10px 0 0 0; }
 
 /*
- * Mixins
- */
+Styles the testimonial widget.
+
+@since 1.0.0
+*/
+/*
+Sets up the theme's styling properties and makes some variables already set in Foundation available for easy use
+throughout this theme's SASS files.
+
+@since 1.0.0
+*/
+/*
+Global mixins.
+
+@since 1.0.0
+*/
+@-webkit-keyframes testimonial_transition_in {
+  0% {
+    -webkit-transform: perspective(100px) rotateY(-10deg);
+            transform: perspective(100px) rotateY(-10deg); }
+
+  100% {
+    -webkit-transform: perspective(100px) rotateY(0deg);
+            transform: perspective(100px) rotateY(0deg); } }
+@keyframes testimonial_transition_in {
+  0% {
+    -webkit-transform: perspective(100px) rotateY(-10deg);
+            transform: perspective(100px) rotateY(-10deg); }
+
+  100% {
+    -webkit-transform: perspective(100px) rotateY(0deg);
+            transform: perspective(100px) rotateY(0deg); } }
+
+@-webkit-keyframes testimonial_transition_out {
+  0% {
+    -webkit-transform: perspective(100px) rotateY(0deg);
+            transform: perspective(100px) rotateY(0deg); }
+
+  100% {
+    -webkit-transform: perspective(100px) rotateY(10deg);
+            transform: perspective(100px) rotateY(10deg); } }
+
+@keyframes testimonial_transition_out {
+  0% {
+    -webkit-transform: perspective(100px) rotateY(0deg);
+            transform: perspective(100px) rotateY(0deg); }
+
+  100% {
+    -webkit-transform: perspective(100px) rotateY(10deg);
+            transform: perspective(100px) rotateY(10deg); } }
+
 .testimonials-container {
   position: relative;
   overflow: hidden; }
@@ -4466,9 +4543,13 @@ throughout this theme's SASS files.
       .testimonials-container .testimonials.js .testimonial {
         float: left;
         opacity: 0;
-        transition: opacity 300ms; }
+        transition: opacity 300ms;
+        -webkit-animation: testimonial_transition_out 500ms;
+                animation: testimonial_transition_out 500ms; }
         .testimonials-container .testimonials.js .testimonial.active {
-          opacity: 1; }
+          opacity: 1;
+          -webkit-animation: testimonial_transition_in 500ms;
+                  animation: testimonial_transition_in 500ms; }
   .testimonials-container .testimonial {
     color: #777; }
     .testimonials-container .testimonial .testimonial-image {
@@ -4504,20 +4585,19 @@ throughout this theme's SASS files.
 /*
 Social shortcodes.
 
-@since 0.1.0
+@since 1.0.0
 */
 /*
 Sets up the theme's styling properties and makes some variables already set in Foundation available for easy use
 throughout this theme's SASS files.
 
-@since 0.1.0
+@since 1.0.0
 */
-.button.secondary {
-  color: #222; }
-
 /*
- * Mixins
- */
+Global mixins.
+
+@since 1.0.0
+*/
 [class*="social-icon"] {
   background: #E8E8E8;
   box-shadow: 0 0 20px #D0D0D0 inset;
@@ -4536,9 +4616,94 @@ throughout this theme's SASS files.
     display: block; }
 
 /*
+Global WooCommerce styles.
+
+@since 1.0.0
+*/
+/*
+Sets up the theme's styling properties and makes some variables already set in Foundation available for easy use
+throughout this theme's SASS files.
+
+@since 1.0.0
+*/
+/*
+Global mixins.
+
+@since 1.0.0
+*/
+.product h3 {
+  font-family: "Helvetica", sans-serif; }
+
+.add_to_cart_button.loading {
+  opacity: 1 !important;
+  position: relative; }
+  .add_to_cart_button.loading:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #fff;
+    opacity: 0.8;
+    z-index: 10; }
+  .add_to_cart_button.loading:after {
+    top: 50% !important;
+    right: 50% !important;
+    margin-right: -5px;
+    margin-top: -5px;
+    z-index: 11; }
+
+.added_to_cart {
+  text-align: center;
+  width: 100%; }
+
+/*
+Overrides WooCommerce styles.
+
+@since 1.0.0
+*/
+/*
+Sets up the theme's styling properties and makes some variables already set in Foundation available for easy use
+throughout this theme's SASS files.
+
+@since 1.0.0
+*/
+/*
+Global mixins.
+
+@since 1.0.0
+*/
+.woocommerce .button:not(.alt):hover, .woocommerce input[type="submit"]:not(.alt):hover, .woocommerce .button:not(.alt):hover, .woocommerce input[type="submit"]:not(.alt):hover, .woocommerce a.button:not(.alt):hover, .woocommerce button.button:not(.alt):hover, .woocommerce input[type="submit"]:not(.alt):hover, .woocommerce input.button:not(.alt):hover {
+  background-color: #52a329;
+  color: #222; }
+.woocommerce .button.alt:hover, .woocommerce .alt.button:hover, .woocommerce input.alt[type="submit"]:hover, .woocommerce .button.alt:hover, .woocommerce .alt.button:hover, .woocommerce input.alt[type="submit"]:hover, .woocommerce a.button.alt:hover, .woocommerce a.alt.button:hover, .woocommerce button.button.alt:hover, .woocommerce button.alt.button:hover, .woocommerce input.button.alt:hover, .woocommerce input.alt[type="submit"]:hover, .woocommerce input.alt.button:hover {
+  background-color: #ffad16;
+  color: #333333; }
+
+/*
+Single product page.
+
+@since 1.0.0
+*/
+/*
+Sets up the theme's styling properties and makes some variables already set in Foundation available for easy use
+throughout this theme's SASS files.
+
+@since 1.0.0
+*/
+/*
+Global mixins.
+
+@since 1.0.0
+*/
+body.single-product .price .amount {
+  font-size: 2em; }
+
+/*
 This provides overrides for some WP stuff (not much at all).
 
-@since 0.1.0
+@since 1.0.0
 */
 #wpadminbar {
   position: fixed !important; }

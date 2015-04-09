@@ -1,8 +1,8 @@
 <?php
 /**
- * The theme's index file used for displaying an archive of blog posts.
+ * The theme's index file for displaying a list of blog posts.
  *
- * @since 0.1.0
+ * @since   1.0.0
  * @package KidNiche
  */
 
@@ -12,9 +12,30 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 get_header();
-?>
 
-<!-- Index HTML -->
+the_post();
 
+kidniche_page_start();
+
+kidniche_page_title( __( 'Blog', 'KidNiche' ) );
+
+if ( have_posts() ) :
+	?>
+	<div class="page-content columns small-12 medium-9">
+		<div class="post-list">
+			<?php
+			while ( have_posts() ) :
+				the_post();
+				kidniche_post_loop_content();
+			endwhile;
+			?>
+		</div>
+	</div>
 <?php
+endif;
+
+get_sidebar();
+
+kidniche_page_end();
+
 get_footer();

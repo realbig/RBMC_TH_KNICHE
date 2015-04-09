@@ -2,7 +2,7 @@
 /**
  * The theme's sidebar file that appears on most pages.
  *
- * @since   0.1.0
+ * @since   1.0.0
  * @package KidNiche
  */
 

@@ -2,7 +2,7 @@
 /**
  * The theme's header file that appears on EVERY page.
  *
- * @since   0.1.0
+ * @since   1.0.0
  * @package KidNiche
  */
 
@@ -36,6 +36,11 @@ global $woocommerce;
 
 	<header id="site-header">
 
+		<?php
+		global $post;
+		$show_feature = is_front_page() || $post->post_type == 'book';
+		?>
+
 		<section class="top-header">
 
 			<div class="row">
@@ -67,7 +72,7 @@ global $woocommerce;
 
 				<div class="cart">
 					<p class="cart-link">
-						<a href="<?php echo $woocommerce->cart->get_checkout_url(); ?>">
+						<a href="<?php echo $woocommerce->cart->get_cart_url(); ?>">
 							<span class="icon-cart"></span>
 							Cart
 						</a>
@@ -87,10 +92,11 @@ global $woocommerce;
 
 		</section>
 
-		<section class="primary-nav row">
+		<section class="primary-nav row <?php echo $show_feature ? 'large' : ''; ?>">
 
 			<a href="<?php bloginfo( 'url' ); ?>">
-				<img class="site-logo" src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-header.png"/>
+				<img class="site-logo <?php echo $show_feature ? 'large' : ''; ?>"
+				     src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-header.png"/>
 			</a>
 
 			<nav id="site-nav" class="columns small-12 medium-6 push-6">
@@ -104,39 +110,43 @@ global $woocommerce;
 
 		</section>
 
-		<section class="feature row">
+		<?php if ( $show_feature ) : ?>
 
-			<div class="columns small-12">
+			<section class="feature row">
 
-				<div class="row">
+				<div class="columns small-12">
 
-					<div class="feature-left columns small-12 medium-6">
-						<?php // FIXME make admin accessible ?>
-						<img src="<?php echo get_template_directory_uri(); ?>/assets/images/temp-home.png"/>
-					</div>
+					<div class="row">
 
-					<div class="feature-right columns small-12 medium-6">
+						<div class="feature-left columns small-12 medium-6">
+							<?php // FIXME make admin accessible ?>
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/images/temp-home.png"/>
+						</div>
 
-						<div class="container">
-							<div class="feature-statement">
-								<p>
-									Teach your children the skill with eternal benefits.
-								</p>
+						<div class="feature-right columns small-12 medium-6">
 
-								<p>
-									Teach your children to pray.
-								</p>
+							<div class="container">
+								<div class="feature-statement">
+									<p>
+										Teach your children the skill with eternal benefits.
+									</p>
+
+									<p>
+										Teach your children to pray.
+									</p>
+								</div>
+
+								<a href="#" class="button secondary expand">Buy Here</a>
 							</div>
 
-							<a href="#" class="button secondary expand">Buy Here</a>
 						</div>
 
 					</div>
 
 				</div>
 
-			</div>
+			</section>
 
-		</section>
+		<?php endif; ?>
 
 	</header>

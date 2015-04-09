@@ -1,12 +1,17 @@
 /**
  Main functions file.
 
- @since 0.1.0
+ @since 1.0.0
  @package KidNiche
  */
 (function ($) {
     'use strict';
 
-    $(document).foundation();
+    $(document).foundation({
+        abide: {
+            validate_on_blur: false,
+            focus_on_invalid: false
+        }
+    });
 
 })(jQuery);

@@ -1,16 +1,24 @@
 /*
 Styles shared among all templates.
 
-@since 0.1.0
+@since 1.0.0
 */
 
 @import "../settings";
 
+// Body background
 body {
   background: url("assets/images/site-background.jpg") no-repeat center center fixed;
   background-size: cover;
 }
 
+// Titles
 .page-title, .section-title, .widget-title {
   @include header-border;
+  margin-bottom: 30px;
+}
+
+// Extend button to input submit
+input[type="submit"] {
+  @extend .button
 }

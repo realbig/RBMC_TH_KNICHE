@@ -14,12 +14,16 @@ module.exports = function (grunt) {
                 livereload: true
             },
             sass: {
-                files: ['assets/sass/**/*.scss', '!assets/sass/admin/**/*.scss'],
+                files: ['assets/sass/**/*.scss', '!assets/sass/admin/**/*.scss', '!assets/sass/login/**/*.scss'],
                 tasks: ['sass:front', 'autoprefixer:front', 'notify:sass']
             },
             sass_admin: {
                 files: ['assets/sass/admin/**/*.scss'],
                 tasks: ['sass:admin', 'autoprefixer:admin', 'notify:sass_admin']
+            },
+            sass_login: {
+                files: ['assets/sass/login/**/*.scss'],
+                tasks: ['sass:login', 'autoprefixer:login', 'notify:sass_login']
             },
             js: {
                 files: ['assets/js/*.js'],
@@ -48,6 +52,11 @@ module.exports = function (grunt) {
                 files: {
                     'admin.css': 'assets/sass/admin/admin.scss'
                 }
+            },
+            login: {
+                files: {
+                    'login.css': 'assets/sass/login/login.scss'
+                }
             }
         },
 
@@ -61,6 +70,9 @@ module.exports = function (grunt) {
             },
             admin: {
                 src: 'admin.css'
+            },
+            login: {
+                src: 'login.css'
             }
         },
 
@@ -77,8 +89,8 @@ module.exports = function (grunt) {
                         'assets/vendor/js/fastclick.js',
                         'assets/vendor/js/placeholder.js',
                         'assets/vendor/js/jquery.cookie.js',
-                        'assets/vendor/js/jquery.easing.js',
                         'assets/vendor/js/foundation.js',
+                        'assets/vendor/js/foundation.abide.js',
 
                         // Included dynamically in header.php
                         '!assets/vendor/js/html5.js',
@@ -120,6 +132,12 @@ module.exports = function (grunt) {
                 options: {
                     title: '<%= pkg.name %>',
                     message: 'SASS Admin Complete'
+                }
+            },
+            sass_login: {
+                options: {
+                    title: '<%= pkg.name %>',
+                    message: 'SASS Login Complete'
                 }
             }
         }

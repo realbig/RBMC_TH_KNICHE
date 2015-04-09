@@ -2,7 +2,7 @@
 Sets up the theme's styling properties and makes some variables already set in Foundation available for easy use
 throughout this theme's SASS files.
 
-@since 0.1.0
+@since 1.0.0
 */
 
 @import "../vendor/sass/foundation/functions";
@@ -24,8 +24,9 @@ $font-family-sans-serif: "Helvetica", sans-serif;
 $font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif;
 $font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
 $body-font-color: #222;
-$base-font-size: 13px;
+$base-font-size: 14px;
 $rem-base: $base-font-size;
+$body-font-family: $font-family-sans-serif;
 
 // Sizes
 $header-height: 80px;
@@ -53,10 +54,6 @@ $anchor-text-decoration-hover: none;
 $anchor-font-color: $primary-color;
 $anchor-font-color-hover: scale-color($anchor-font-color, $lightness: -14%);
 
-// Buttons
-.button.secondary {
-  color: $body-font-color;
-}
 
 // Grid
 $row-width: rem-calc(1000);
@@ -88,51 +85,4 @@ $xlarge-only: "#{$screen} and (min-width:#{lower-bound($xlarge-range)}) and (max
 $xxlarge-up: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)})";
 $xxlarge-only: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)}) and (max-width:#{upper-bound($xxlarge-range)})";
 
-/*
- * Mixins
- */
-
-@mixin clearfix {
-  &:after {
-    content: ' ';
-    display: table;
-    clear: both;
-  }
-}
-
-@mixin trim($color: #fff) {
-  margin-top: 7px;
-  margin-bottom: 7px;
-
-  &:before, &:after {
-    content: '';
-    width: 100%;
-    height: 7px;
-    background: rgba($color, 0.6);
-    position: relative;
-  }
-
-  &:before {
-    top: -7px;
-  }
-
-  &:after {
-    bottom: -7px;
-  }
-}
-
-@mixin header-border {
-  border-top: 1px solid #aaa;
-  border-bottom: 1px solid #aaa;
-  position: relative;
-
-  &:after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -2px;
-    height: 4px;
-    width: 30px;
-    background: $primary-color;
-  }
-}
+@import "mixins";

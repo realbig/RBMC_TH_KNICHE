@@ -4,7 +4,7 @@
  *
  * Feel free to remove any un-wanted support (most is already commented out)
  *
- * @since   0.1.0
+ * @since   1.0.0
  * @package KidNiche
  */
 
@@ -12,6 +12,11 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	die;
 }
+
+/**
+ * Adds support for integration with WooCommerce.
+ */
+add_theme_support( 'woocommerce' );
 
 /**
  * Adds support for the "Featured Image". Pass the second argument to only allow for specified post types.

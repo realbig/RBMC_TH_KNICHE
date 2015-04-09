@@ -1,0 +1,50 @@
+/*
+Global WooCommerce styles.
+
+@since 1.0.0
+*/
+
+@import "../settings";
+
+.product {
+  h3 {
+    font-family: $body-font-family;
+  }
+}
+
+.add_to_cart_button {
+  &.loading {
+    opacity: 1 !important;
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: #fff;
+      opacity: 0.8;
+      z-index: 10;
+    }
+
+    &:after {
+      top: 50% !important;
+      right: 50% !important;
+      margin-right: -5px;
+      margin-top: -5px;
+      z-index: 11;
+    }
+  }
+}
+
+.added_to_cart {
+  text-align: center;
+  width: 100%;
+}
+
+// Buttons
+.button.secondary {
+  color: $body-font-color;
+}

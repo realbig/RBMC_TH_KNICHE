@@ -29,6 +29,7 @@ Author URI: http://realbigmarketing.com/staff/joel-worsham
 @import "static/header";
 @import "static/footer";
 @import "static/content";
+@import "static/comments";
 @import "static/sidebar";
 
 // Templates
@@ -37,11 +38,19 @@ Author URI: http://realbigmarketing.com/staff/joel-worsham
 @import "templates/page";
 @import "templates/home";
 
+// Partials
+@import "partials/post";
+
 // Widgets
 @import "widgets/testimonials";
 
 // Shortcodes
 @import "shortcodes/social";
+
+// WooCommerce
+@import "woocommerce/common";
+@import "woocommerce/overrides";
+@import "woocommerce/single-product";
 
 // Overrides
 @import "wp";

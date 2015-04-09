@@ -2,7 +2,7 @@
 /**
  * The theme's front-page file use for displaying the home page.
  *
- * @since   0.1.0
+ * @since   1.0.0
  * @package KidNiche
  */
 
@@ -31,8 +31,6 @@ get_header();
 	</div>
 
 <?php
-page_start();
-
 $featured_products = get_posts( array(
 	'post_type'      => 'product',
 	'meta_key'       => '_featured',
@@ -58,144 +56,117 @@ if ( ! empty( $featured_products ) ) {
 		);
 	} );
 	?>
-	<section class="home-featured-products">
-		<h3 class="section-title">Featured Books</h3>
-		<ul class="products row">
-			<?php
-			foreach ( $featured_products as $post ) {
-				setup_postdata( $post );
-				?>
-				<li class="columns small-12 medium-4">
+	<section class="home-featured-products row">
+		<div class="columns small-12">
+			<h3 class="section-title">Featured Books</h3>
+			<ul class="products row">
+				<?php
+				foreach ( $featured_products as $post ) {
+					setup_postdata( $post );
+					?>
+					<li class="columns small-12 medium-4">
 
-					<div class="container">
-						<div class="product-image">
-							<?php the_post_thumbnail( 'thumbnail' ); ?>
-						</div>
+						<div class="container">
+							<div class="product-image">
+								<?php the_post_thumbnail( 'thumbnail' ); ?>
+							</div>
 
-						<div class="product-content">
-							<h4 class="product-title">
-								<?php the_title(); ?>
-							</h4>
+							<div class="product-content">
+								<h4 class="product-title">
+									<?php the_title(); ?>
+								</h4>
 
-							<p>
-								<?php echo custom_excerpt_length(); ?>
-							</p>
+								<p>
+									<?php echo custom_excerpt_length(); ?>
+								</p>
 
-							<div class="product-buy">
-								<?php wc_get_template( 'loop/add-to-cart.php' ); ?>
-								<?php wc_get_template( 'loop/price.php' ); ?>
+								<div class="product-buy">
+									<?php wc_get_template( 'loop/add-to-cart.php' ); ?>
+									<?php wc_get_template( 'loop/price.php' ); ?>
+								</div>
 							</div>
 						</div>
-					</div>
-				</li>
-			<?php
-			}
-			wp_reset_postdata();
-			?>
-		</ul>
+					</li>
+				<?php
+				}
+				wp_reset_postdata();
+				?>
+			</ul>
+		</div>
 	</section>
 <?php
 }
+
+kidniche_page_start();
 ?>
 
-	<section id="site-content" class="row">
+	<div class="page-content columns small-12 medium-9">
 
-		<div class="content columns small-12 medium-9">
-
-			<div class="home-about-author row">
-				<div class="home-author-meta columns small-12 medium-3">
-					<div class="home-author-image">
-						<?php
-						echo wp_get_attachment_image(
-							get_post_meta( get_the_ID(), '_kidniche_home_author_image', true )
-						);
-						?>
-					</div>
-
-					<div class="home-author-social">
-						<?php echo do_shortcode( get_post_meta( get_the_id(), '_kidniche_home_author_social' , true ) ); ?>
-					</div>
+		<div class="home-about-author row">
+			<div class="home-author-meta columns small-12 medium-3">
+				<div class="home-author-image">
+					<?php
+					echo wp_get_attachment_image(
+						get_post_meta( get_the_ID(), '_kidniche_home_author_image', true )
+					);
+					?>
 				</div>
 
-				<div class="home-author-info columns small-12 medium-9">
-					<h3 class="home-author-title">About the author</h3>
-
-					<h4 class="home-author-name">Susan case Bonner</h4>
-
-					<div class="home-author-content">
-						<?php
-						echo apply_filters(
-							'the_content',
-							get_post_meta( get_the_ID(), '_kidniche_home_about_the_author', true )
-						);
-						?>
-					</div>
+				<div class="home-author-social">
+					<?php echo do_shortcode( get_post_meta( get_the_id(), '_kidniche_home_author_social', true ) ); ?>
 				</div>
 			</div>
 
+			<div class="home-author-info columns small-12 medium-9">
+				<h3 class="home-author-title">About the author</h3>
 
-			<?php
-			$blog_post_count = get_post_meta( get_the_ID(), '_kidniche_home_blog_post_count', true );
-			$posts = get_posts( array(
-				'numberposts' => $blog_post_count ? $blog_post_count : 3,
-			) );
+				<h4 class="home-author-name">Susan case Bonner</h4>
 
-			if ( ! empty( $posts ) ) {
-				global $post;
-				?>
-				<div class="home-blog row">
-					<div class="columns small-12">
-
-						<h3 class="section-title">From the Blog</h3>
-
-						<?php
-						foreach ( $posts as $post ) {
-							setup_postdata( $post );
-							?>
-							<article id="post-<?php the_ID(); ?>" <?php post_class( array( 'row' ) ); ?>>
-
-								<div class="post-image columns small-12 medium-3">
-									<?php the_post_thumbnail( 'medium' ); ?>
-								</div>
-
-								<div class="post-content columns small-12 medium-9">
-
-									<h4 class="post-title">
-										<a href="<?php the_permalink(); ?>" class="color-invert">
-											<?php the_title(); ?>
-										</a>
-									</h4>
-
-									<p class="post-comment-count">
-										<span class="icon-bubble"></span>
-										<?php $comment_count = wp_count_comments()->approved; ?>
-										<?php echo $comment_count . _n( ' comment', ' comments', $comment_count ); ?>
-									</p>
-
-									<p class="post-excerpt">
-										<?php the_excerpt(); ?>
-									</p>
-
-								</div>
-
-							</article>
-						<?php
-						}
-						wp_reset_postdata();
-						?>
-					</div>
+				<div class="home-author-content">
+					<?php
+					echo apply_filters(
+						'the_content',
+						get_post_meta( get_the_ID(), '_kidniche_home_about_the_author', true )
+					);
+					?>
 				</div>
-			<?php
-			}
-			?>
-
+			</div>
 		</div>
 
-		<?php get_sidebar(); ?>
 
-	</section>
+		<?php
+		$blog_post_count = get_post_meta( get_the_ID(), '_kidniche_home_blog_post_count', true );
+		$posts           = get_posts( array(
+			'numberposts' => $blog_post_count ? $blog_post_count : 3,
+		) );
+
+		if ( ! empty( $posts ) ) {
+			global $post;
+			?>
+			<div class="home-blog columns small-12">
+
+				<h3 class="section-title">From the Blog</h3>
+
+				<div class="post-list">
+					<?php
+					foreach ( $posts as $post ) {
+						setup_postdata( $post );
+						kidniche_post_loop_content();
+					}
+					wp_reset_postdata();
+					?>
+				</div>
+
+			</div>
+		<?php
+		}
+		?>
+
+	</div>
+
+<?php get_sidebar(); ?>
 
 <?php
-page_end();
+kidniche_page_end();
 
 get_footer();

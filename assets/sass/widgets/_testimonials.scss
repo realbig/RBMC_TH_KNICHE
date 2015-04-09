@@ -1,10 +1,28 @@
 /*
 Styles the testimonial widget.
 
-@since 0.1.0
+@since 1.0.0
 */
 
 @import "../settings";
+
+@keyframes testimonial_transition_in {
+  0% {
+    transform: perspective(100px) rotateY(-10deg);
+  }
+  100% {
+    transform: perspective(100px) rotateY(0deg);
+  }
+}
+
+@keyframes testimonial_transition_out {
+  0% {
+    transform: perspective(100px) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(100px) rotateY(10deg);
+  }
+}
 
 .testimonials-container {
   position: relative;
@@ -46,9 +64,11 @@ Styles the testimonial widget.
         float: left;
         opacity: 0;
         transition: opacity 300ms;
+        animation: testimonial_transition_out 500ms;
 
         &.active {
           opacity: 1;
+          animation: testimonial_transition_in 500ms;
         }
       }
     }

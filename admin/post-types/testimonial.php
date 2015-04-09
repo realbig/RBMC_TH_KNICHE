@@ -2,7 +2,7 @@
 /**
  * Testimonial post type.
  *
- * @since   0.1.0
+ * @since   1.0.0
  * @package Render
  */
 
@@ -32,7 +32,7 @@ add_action( 'add_meta_boxes', function () {
 /**
  * The form callback for the testimonial role.
  *
- * @since  0.1.0
+ * @since  1.0.0
  * @access Private.
  *
  * @param object $post The current post object.

@@ -2,7 +2,7 @@
 /**
  * The theme's footer file that appears on EVERY page.
  *
- * @since 0.1.0
+ * @since 1.0.0
  * @package KidNiche
  */
 

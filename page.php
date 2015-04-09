@@ -2,7 +2,7 @@
 /**
  * The theme's page file use for displaying pages.
  *
- * @since 0.1.0
+ * @since   1.0.0
  * @package KidNiche
  */
 
@@ -15,21 +15,18 @@ get_header();
 
 the_post();
 
-page_start();
+kidniche_page_start();
 ?>
 
-	<div class="row">
-		<div class="page-content columns small-12 medium-9">
-			<h1 class="page-title">
-				<?php the_title(); ?>
-			</h1>
+	<div class="page-content columns small-12 medium-9">
+		<?php kidniche_page_title(); ?>
 
-			<?php the_content(); ?>
-		</div>
+		<?php the_content(); ?>
+	</div>
 
-		<?php get_sidebar(); ?>
-</div>
 <?php
-page_end();
+get_sidebar();
+
+kidniche_page_end();
 
 get_footer();

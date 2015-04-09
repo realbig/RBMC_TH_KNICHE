@@ -1,0 +1,37 @@
+/*
+Overrides WooCommerce styles.
+
+@since 1.0.0
+*/
+
+@import "../settings";
+@import "../../vendor/sass/foundation/components/buttons";
+
+// Button overrides
+.woocommerce {
+  .button,
+  .button,
+  a.button,
+  button.button,
+  input.button {
+
+    &:not(.alt) {
+      @extend .button;
+
+      &:hover {
+        background-color: $button-bg-hover;
+        color: $button-font-color;
+      }
+    }
+
+    &.alt {
+      @extend .button;
+      @extend .button.secondary;
+
+      &:hover {
+        background-color: $secondary-button-bg-hover;
+        color: $button-font-color-alt;
+      }
+    }
+  }
+}
