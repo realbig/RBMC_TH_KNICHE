@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 add_action( 'init', function () {
 	easy_register_post_type( 'book', 'Book', 'Books', array(
 		'menu_icon' => 'dashicons-book',
-		'supports' => array( 'title', 'editor', 'thumbnail' ),
+		'supports' => array( 'title', 'editor', 'thumbnail', 'author' ),
 		'rewrite'   => array( 'slug' => 'books' ),
 	) );
 } );

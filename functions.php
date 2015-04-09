@@ -309,9 +309,9 @@ function kniche_woocommerce_add_to_cart_link_icon() {
 
 function _kidniche_modify_contact_methods( $profile_fields ) {
 
-	$profile_fields['twitter'] = 'Twitter Username';
+	$profile_fields['twitter'] = 'Twitter URL';
 	$profile_fields['facebook'] = 'Facebook URL';
-	$profile_fields['linkedin'] = 'LinkedIn';
+	$profile_fields['linkedin'] = 'LinkedIn URL';
 
 	return $profile_fields;
 }

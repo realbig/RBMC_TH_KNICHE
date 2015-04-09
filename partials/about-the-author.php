@@ -25,7 +25,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<div class="author-image">
 			<?php
 			if ( function_exists( 'get_wp_user_avatar' ) ) {
-				echo get_wp_user_avatar( $author_ID, 'large' );
+				echo get_wp_user_avatar( $author_ID, 'thumbnail' );
 			} else {
 				echo get_avatar( $author_ID, 500 );
 			}
