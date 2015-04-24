@@ -14,4 +14,52 @@ a {
       color: $anchor-font-color-hover;
     }
   }
+
+  &.normal-color {
+    color: inherit;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+// Body background
+body {
+  background: url("assets/images/site-background.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+// Extend button to input submit
+input[type="submit"] {
+  @extend .button
+}
+
+// Expand section in page content to be full-width
+.columns.small-12.expand {
+  width: auto;
+  float: none;
+  margin-left: -$column-gutter !important;
+  margin-right: -$column-gutter !important;
+  padding-left: $column-gutter !important;
+  padding-right: $column-gutter !important;
+}
+
+.alignleft {
+  float: left;
+  margin-right: 0.5em;
+}
+
+.alignright {
+  float: right;
+  margin-left: 0.5em;
+}
+
+.aligncenter {
+  display: block;
+  margin: 0.5em auto;
+}
+
+.clear {
+  clear: both;
 }

@@ -11,6 +11,9 @@
         abide: {
             validate_on_blur: false,
             focus_on_invalid: false
+        },
+        equalizer : {
+            equalize_on_stack: true
         }
     });
 

@@ -11,7 +11,7 @@ About the author section.
   border-style: solid;
   border-color: $primary-color;
   border-width: 5px 0;
-  padding: $gutter;
+  padding: ($column-gutter / 2);
   margin-top: 80px !important;
 
   .author-meta {

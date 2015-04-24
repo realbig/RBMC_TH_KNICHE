@@ -12,23 +12,23 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 get_header();
+
+kidniche_page_start();
 ?>
 
-	<div class="home-welcome row">
-		<div class="columns small-12">
-			<h2>
-				<?php
-				echo get_post_meta( get_the_ID(), '_kidniche_home_welcome_blurb_title', true );
-				?>
-			</h2>
+	<section class="home-welcome expand columns small-12">
+		<h2>
+			<?php
+			echo get_post_meta( get_the_ID(), '_kidniche_home_welcome_blurb_title', true );
+			?>
+		</h2>
 
-			<p class="home-welcome-blurb">
-				<?php
-				echo get_post_meta( get_the_ID(), '_kidniche_home_welcome_blurb', true );
-				?>
-			</p>
-		</div>
-	</div>
+		<p class="home-welcome-blurb">
+			<?php
+			echo get_post_meta( get_the_ID(), '_kidniche_home_welcome_blurb', true );
+			?>
+		</p>
+	</section>
 
 <?php
 $featured_products = get_posts( array(
@@ -43,30 +43,26 @@ if ( ! empty( $featured_products ) ) {
 
 	add_filter( 'woocommerce_loop_add_to_cart_link', 'kniche_woocommerce_add_to_cart_link_icon' );
 	?>
-	<section class="home-featured-products row">
-		<div class="columns small-12">
-			<h3 class="section-title">Featured Books</h3>
-			<ul class="product-loop row">
-				<?php
-					global $post_count;
-				foreach ( $featured_products as $post ) {
-					setup_postdata( $post );
-					$post_count = count( $featured_products );
-					include __DIR__ . '/partials/product-loop-single.php';
-				}
-				wp_reset_postdata();
-				?>
-			</ul>
-		</div>
+	<section class="home-featured-products columns small-12">
+		<h3 class="section-title">Featured Books</h3>
+		<ul class="product-loop row" data-equalizer>
+			<?php
+			global $post_count;
+			foreach ( $featured_products as $post ) {
+				setup_postdata( $post );
+				$post_count = count( $featured_products );
+				include __DIR__ . '/partials/product-loop-single.php';
+			}
+			wp_reset_postdata();
+			?>
+		</ul>
 	</section>
-<?php
+	<?php
 	remove_filter( 'woocommerce_loop_add_to_cart_link', 'kniche_woocommerce_add_to_cart_link_icon' );
 }
-
-kidniche_page_start();
 ?>
 
-	<div class="page-content columns small-12 medium-9">
+	<section class="page-content columns small-12 medium-9">
 
 		<?php
 		$author_ID = get_post_meta( get_the_ID(), '_kidniche_home_author_user_id', true );
@@ -80,7 +76,7 @@ kidniche_page_start();
 		if ( ! empty( $posts ) ) {
 			global $post;
 			?>
-			<div class="home-blog columns small-12">
+			<div class="home-blog">
 
 				<h3 class="section-title">From the Blog</h3>
 
@@ -99,7 +95,7 @@ kidniche_page_start();
 		}
 		?>
 
-	</div>
+	</section>
 
 <?php get_sidebar(); ?>
 

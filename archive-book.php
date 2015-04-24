@@ -43,7 +43,7 @@ if ( have_posts() ) :
 				$post = $linked_post;
 				setup_postdata( $post )
 				?>
-				<ul class="products row">
+				<ul class="products row <?php echo $wp_query->post_count === 1 ? 'collapse' : ''; ?>">
 					<?php include __DIR__ . '/partials/product-loop-single.php'; ?>
 				</ul>
 				<?php

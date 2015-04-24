@@ -14,6 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 add_shortcode( 'facebook', '_kidniche_sc_facebook' );
 add_shortcode( 'linkedin', '_kidniche_sc_linkedin' );
 add_shortcode( 'twitter', '_kidniche_sc_twitter' );
+add_shortcode( 'clear', '_kidniche_sc_clear' );
 
 function _kidniche_sc_facebook( $atts = array() ) {
 
@@ -40,4 +41,8 @@ function _kidniche_sc_twitter( $atts = array() ) {
 	), $atts );
 
 	return "<a href=\"$atts[link]\" class=\"social-icon-twitter icon-twitter\"></a>";
+}
+
+function _kidniche_sc_clear() {
+	return '<div class="clear"></div>';
 }

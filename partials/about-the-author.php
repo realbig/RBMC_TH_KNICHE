@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 
-<div class="about-the-author row">
+<div class="about-the-author row collapse">
 
 	<?php
 	$author_info = get_userdata( $author_ID );

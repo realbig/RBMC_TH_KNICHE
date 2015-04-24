@@ -21,6 +21,8 @@ Author URI: http://realbigmarketing.com/staff/joel-worsham
 @import "../vendor/sass/foundation/components/buttons";
 @import "../vendor/sass/foundation/components/type";
 @import "../vendor/sass/foundation/components/forms";
+@import "../vendor/sass/foundation/components/alert-boxes";
+@import "../vendor/sass/foundation/components/reveal";
 
 // Setup
 @import "base";
@@ -54,6 +56,7 @@ Author URI: http://realbigmarketing.com/staff/joel-worsham
 @import "woocommerce/common";
 @import "woocommerce/overrides";
 @import "woocommerce/single-product";
+@import "woocommerce/archive-product";
 
 // Overrides
 @import "wp";

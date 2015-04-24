@@ -9,9 +9,10 @@ The single book landing page.
 body.single-book {
 
   .book-snippet {
-    @include trim($primary-color);
+    @include trim(#fff);
 
-    background: #fff;
+    background: url("http://www.transparenttextures.com/patterns/black-linen.png") $primary-color repeat;
+    color: #fff;
     margin: $gutter 0;
 
     > .row {
@@ -19,7 +20,7 @@ body.single-book {
     }
 
     .book-copy {
-      font-size: 3em;
+      font-size: 1.5em;
       font-weight: bold;
       line-height: 1.3;
 

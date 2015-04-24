@@ -43,19 +43,10 @@ global $woocommerce;
 
 		<section class="top-header">
 
-			<div class="row">
-
-				<nav class="top-nav columns small-12 medium-6">
-					<?php
-					wp_nav_menu( array(
-						'theme_location' => 'top_nav',
-						'container'      => false,
-					) );
-					?>
-				</nav>
+			<div class="row collapse">
 
 				<div class="user-menu columns small-12 medium-6">
-					<?php if ( is_user_logged_in() ) : ?>
+					<?php if ( ! is_user_logged_in() ) : ?>
 						<p>
 							<?php
 							printf(
@@ -69,6 +60,15 @@ global $woocommerce;
 						</p>
 					<?php endif; ?>
 				</div>
+
+				<nav class="top-nav columns small-12 medium-6">
+					<?php
+					wp_nav_menu( array(
+						'theme_location' => 'top_nav',
+						'container'      => false,
+					) );
+					?>
+				</nav>
 
 				<div class="cart">
 					<p class="cart-link">

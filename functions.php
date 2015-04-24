@@ -37,13 +37,12 @@ define( 'THEME_ID', 'kidniche' );
 $theme_fonts = array(
 	'architects-daughter' => 'http://fonts.googleapis.com/css?family=Architects+Daughter',
 );
-
 /**
  * Setup theme properties and stuff.
  *
  * @since 1.0.0
  */
-add_action( 'after_theme_setup', function () {
+add_action( 'after_setup_theme', function () {
 
 	// Add theme support
 	require_once __DIR__ . '/includes/theme-support.php';
@@ -280,7 +279,7 @@ function custom_excerpt_length( $length = 15, $append = '...' ) {
 
 	global $post;
 
-	$excerpt = explode( ' ', strip_tags( get_the_excerpt( $post ) ) );
+	$excerpt = explode( ' ', strip_tags( $post->post_excerpt ) );
 
 	// Determine if appending is necessary
 	if ( count( $excerpt ) <= $length ) {

@@ -37,7 +37,7 @@ if ( $snippet ) : ?>
 
 				<?php if ( $product_link ) : ?>
 					<p class="text-center">
-						<a href="<?php echo $product_link; ?>" class="button large">
+						<a href="<?php echo $product_link; ?>" class="button large secondary">
 							Order Now
 						</a>
 					</p>

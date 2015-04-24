@@ -31,6 +31,7 @@ $body-font-family: $font-family-sans-serif;
 // Sizes
 $header-height: 80px;
 $gutter: 30px;
+$reveal-default-width: 50%;
 
 // We use these to control header font styles
 $header-font-family: 'Architects Daughter', cursive;;
@@ -54,9 +55,9 @@ $anchor-text-decoration-hover: none;
 $anchor-font-color: $primary-color;
 $anchor-font-color-hover: scale-color($anchor-font-color, $lightness: -14%);
 
-
 // Grid
 $row-width: rem-calc(1000);
+$column-gutter: rem-calc(50);
 
 // Media query ranges
 $small-range: (0em, 40em);

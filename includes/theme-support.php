@@ -21,22 +21,12 @@ add_theme_support( 'woocommerce' );
 /**
  * Adds support for the "Featured Image". Pass the second argument to only allow for specified post types.
  */
-add_theme_support( 'post-thumbnails', array(
-//	'post',
-//	'page',
-//	'etc',
-) );
+add_theme_support( 'post-thumbnails' );
 
 /**
  * Declares the use of HTML5 in WP templates. Pass the second argument to only allow for specified templates.
  */
-add_theme_support( 'html5', array(
-//	'comment-list',
-//	'comment-form',
-//	'search-form',
-//	'gallery',
-//	'caption',
-) );
+add_theme_support( 'html5' );
 
 /**
  * If enabled, WP will deal with providing the title tag, instead of the theme (since 4.1).

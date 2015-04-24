@@ -1,1 +1,1 @@
-<section id="site-content" class="row">
+<section id="site-content" class="row collapse">

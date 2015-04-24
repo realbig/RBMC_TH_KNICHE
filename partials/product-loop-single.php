@@ -20,7 +20,7 @@ $columns = 12 / $post_count;
 $columns = $columns < 3 ? $columns == 3 : $columns;
 
 ?>
-<li class="columns small-12 medium-<?php echo $columns; ?>">
+<li class="columns small-12 medium-<?php echo $columns; ?>" <?php echo is_front_page() ? 'data-equalizer-watch' : ''; ?>>
 
 	<div class="container">
 		<div class="product-image">

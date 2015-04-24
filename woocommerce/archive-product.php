@@ -36,9 +36,38 @@ add_filter( 'woocommerce_loop_add_to_cart_link', function () {
 	<div class="page-content columns small-12 medium-9">
 		<?php
 
-		kidniche_page_title( __( 'Blog', 'KidNiche' ) );
+		kidniche_page_title( __( 'Shop', 'KidNiche' ) );
 
-		do_action( 'woocommerce_archive_description' );
+		$shop_page_ID = get_option( 'woocommerce_shop_page_id' );
+		if ( $shop_form_ID = get_post_meta( $shop_page_ID, '_kidniche_shop_form', true ) ) :
+		?>
+
+			<div data-alert class="alert-box">
+				Sign up for wholesale! <a href="#" data-reveal-id="wholesale-form" class="normal-color">Signup Now</a>
+				<a href="#" class="close">&times;</a>
+			</div>
+
+			<div id="wholesale-form" class="reveal-modal" data-reveal aria-labelledby="wholesale-form-title" aria-hidden="true" role="dialog">
+				<h2 id="wholesale-form-title">Wholesale Signup</h2>
+
+				<?php
+				if ( function_exists( 'gravity_form' ) ) {
+					gravity_form(
+						$shop_form_ID,
+						$display_title = false,
+						$display_description = false,
+						$display_inactive = false,
+						$field_values = null,
+						$ajax = true
+					);
+				}
+				?>
+
+				<a class="close-reveal-modal" aria-label="Close">&#215;</a>
+			</div>
+
+		<?php
+		endif;
 
 		if ( have_posts() ) {
 

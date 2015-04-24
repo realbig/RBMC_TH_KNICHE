@@ -8,18 +8,23 @@ Styles front-page.php.
 
 body.home {
 
+  // Vertical gutters
+  #site-content > .columns {
+    margin-top: $column-gutter / 2;
+    margin-bottom: $column-gutter / 2;
+  }
+
   .section-title {
-    margin: 20px 0;
+    margin: 0 0 $column-gutter 0;
   }
 
   // Welcome
   .home-welcome {
-    background: #fff;
     border-style: solid;
     border-color: $primary-color;
     border-width: 5px 0;
     color: $fourth-color;
-    padding: 20px;
+    margin-top: 0 !important;
 
     h2 {
       color: $third-color;
@@ -32,21 +37,46 @@ body.home {
     }
   }
 
+  // About the author
+  .about-the-author {
+    margin-left: -$column-gutter !important;
+    margin-bottom: $column-gutter;
+  }
+
   // Content
   #site-content {
     margin-top: 0;
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  // Featured Products
-  .home-featured-products {
-    background: #fff;
+    padding-top: 0; // Blurb green line needs to be flush with top of content box
   }
 
   // Blog
   .post-comment-count {
     font-weight: bold;
     color: #aaa;
+  }
+
+  // Featured products
+  .home-featured-products {
+    li {
+      > .container {
+        position: relative;
+        padding-bottom: 20px; // Bottom has room for .product-buy
+        height: 100%;
+      }
+    }
+
+    .product-buy {
+      position: absolute;
+      bottom: 10px;
+      height: 20px;
+      line-height: 20px;
+
+      .add_to_cart_button, .price, .amount {
+        vertical-align: middle;
+        display: inline-block;
+        height: 20px;
+        line-height: 20px;
+      }
+    }
   }
 }

@@ -6,19 +6,18 @@ Styles shared among all templates.
 
 @import "../settings";
 
-// Body background
-body {
-  background: url("assets/images/site-background.jpg") no-repeat center center fixed;
-  background-size: cover;
-}
-
 // Titles
 .page-title, .section-title, .widget-title {
   @include header-border;
   margin-bottom: 30px;
 }
 
-// Extend button to input submit
-input[type="submit"] {
-  @extend .button
+// Site content section
+#site-content {
+  padding: $column-gutter;
+}
+
+// Page content
+.page-content {
+  padding-right: $column-gutter !important;
 }

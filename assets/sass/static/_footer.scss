@@ -18,4 +18,16 @@ The static site footer.
     font-family: $header-font-family;
     font-size: 1.5em;
   }
+
+  a {
+    color: inherit;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .privacy-policy {
+    font-size: 1em;
+  }
 }

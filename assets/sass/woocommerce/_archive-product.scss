@@ -1,0 +1,29 @@
+/*
+Shop page.
+
+@since 1.0.0
+*/
+
+@import "../settings";
+
+body.post-type-archive-product {
+  .product {
+    > a {
+      display: block;
+    }
+
+    .price {
+      margin-bottom: 0 !important;
+      text-align: center;
+      font-size: 1em !important;
+
+      del {
+        display: inline !important;
+      }
+    }
+
+    .button {
+      margin-top: 0 !important;
+    }
+  }
+}

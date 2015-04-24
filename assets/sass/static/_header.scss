@@ -17,22 +17,29 @@ $primary-nav-height: 50px;
     line-height: $top-header-height;
 
     // Nav
-    .menu {
-      margin: 0;
-    }
+    .top-nav {
+      text-align: right;
+      padding-right: 120px + ($gutter / 2);
 
-    .menu-item {
-      display: inline-block;
-      padding: 0 10px;
-      line-height: $top-header-height;
+      .menu {
+        margin: 0;
 
-      a {
-        @extend a.color-invert;
+        .menu-item {
+          display: inline-block;
+          padding: 0 10px;
+          line-height: $top-header-height;
+
+          a {
+            @extend a.color-invert;
+          }
+        }
       }
     }
 
     // User
     .user-menu {
+      min-height: 1px; // Fixes column disappearing issue
+
       p {
         margin: 0;
         line-height: $top-header-height;
@@ -49,7 +56,7 @@ $primary-nav-height: 50px;
       background: #fff;
       position: absolute;
       top: 0;
-      right: 50px;
+      right: 0;
       text-align: center;
       border-top: 5px solid $primary-color;
 
@@ -91,7 +98,7 @@ $primary-nav-height: 50px;
       position: absolute;
       z-index: 10;
       left: 20px;
-      bottom: -30px;
+      bottom: -60px;
       width: 30%;
 
       &.large {
@@ -102,6 +109,7 @@ $primary-nav-height: 50px;
 
     // Nav
     #site-nav {
+      padding: 0;
 
       .menu {
         margin: 0;
@@ -124,11 +132,17 @@ $primary-nav-height: 50px;
 
   // Feature
   .feature {
+    @include trim(#fff);
     margin-top: 27px; // Compensate for green border (7px tall)
     margin-bottom: 20px;
-    background: url("assets/images/feature-back.png");
-    background-size: cover;
-    padding-top: 50px;
+//    background: url("http://www.transparenttextures.com/patterns/45-degree-fabric-dark.png") $primary-color repeat;
+//    background: url("http://www.transparenttextures.com/patterns/arches.png") $primary-color repeat;
+//    background: url("http://www.transparenttextures.com/patterns/az-subtle.png") $primary-color repeat;
+    background: url("http://www.transparenttextures.com/patterns/black-linen.png") $primary-color repeat;
+
+    > .columns {
+      padding-top: 50px;
+    }
 
     .feature-left {
       padding: 20px;
