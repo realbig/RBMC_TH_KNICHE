@@ -26,10 +26,7 @@
 // FIXED fix Captcha error.
 // FIXED Add workflow for client to request wholesaler order status. Place link in footer for now. This should be a form with questions and a check box that they agree to the T&C  available here. Questions required - Name - Email - Company - Address - Phone - Tax ID
 // FIXED Store page notification for wholesale, as well as the notification containing a button to pop-up an AJAX form to submit. (NO REDIRECT)
-
-// MAYBETODO Style About page
-
-// TODO Add purchase workflow for digital download of Workbook requiring the end user to sign off on T&C available here
+// FIXED Add purchase workflow for digital download of Workbook requiring the end user to sign off on T&C available here
 
 // Don't load directly
 if ( ! defined( 'ABSPATH' ) ) {

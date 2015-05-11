@@ -319,6 +319,5 @@ add_filter('user_contactmethods', '_kidniche_modify_contact_methods');
 // Include other static files
 require_once __DIR__ . '/includes/shortcodes.php';
 require_once __DIR__ . '/includes/widgets.php';
-require_once __DIR__ . '/includes/login.php';
 require_once __DIR__ . '/admin/admin.php';
 require_once __DIR__ . '/woocommerce/overrides.php';
