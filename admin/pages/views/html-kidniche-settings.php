@@ -39,7 +39,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 					<label>
 						Anchor
 						<input type="text" name="kidniche_about_page_anchor" class="regular-text"
-						       value="<?php esc_attr( get_option( 'kidniche_about_page_anchor' ) ); ?>"/>
+						       value="<?php echo esc_attr( get_option( 'kidniche_about_page_anchor' ) ); ?>"/>
 					</label>
 				</td>
 			</tr>
