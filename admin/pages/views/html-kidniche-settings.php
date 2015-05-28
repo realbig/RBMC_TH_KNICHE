@@ -35,6 +35,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 						'show_option_none' => '- Select a Page -',
 					));
 					?>
+					<br/>
+					<label>
+						Anchor
+						<input type="text" name="kidniche_about_page_anchor" class="regular-text"
+						       value="<?php esc_attr( get_option( 'kidniche_about_page_anchor' ) ); ?>"/>
+					</label>
 				</td>
 			</tr>
 

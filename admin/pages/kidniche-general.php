@@ -31,4 +31,5 @@ function _kidniche_page_kidniche_settings_output() {
 add_action( 'admin_init', function() {
 
 	register_setting( 'kidniche-settings', 'kidniche_about_page' );
+	register_setting( 'kidniche-settings', 'kidniche_about_page_anchor' );
 });
