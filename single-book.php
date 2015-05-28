@@ -53,7 +53,7 @@ if ( $snippet ) : ?>
 
 		<div class="page-content columns small-12 medium-9">
 
-			<h1>About This Book</h1>
+			<h1><?php the_title(); ?></h1>
 
 			<?php the_content(); ?>
 
