@@ -18,7 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<?php
 	$author_info = get_userdata( $author_ID );
-	$author_link = get_author_posts_url( $author_ID );
+	$author_link = get_permalink( get_option( 'kidniche_about_page', 0 ) );
 	$author_name = $author_info->data->display_name ? $author_info->data->display_name : '';
 	?>
 	<div class="author-meta columns small-12 medium-3">

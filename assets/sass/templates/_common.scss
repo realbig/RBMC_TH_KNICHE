@@ -19,5 +19,7 @@ Styles shared among all templates.
 
 // Page content
 .page-content {
-  padding-right: $column-gutter !important;
+  @media #{$medium-up} {
+    padding-right: $column-gutter !important;
+  }
 }

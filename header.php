@@ -110,33 +110,36 @@ global $woocommerce;
 
 		</section>
 
-		<?php if ( $show_feature ) : ?>
+		<?php
+		if ( $show_feature ) :
 
-			<section class="feature row">
+			$background = get_post_meta( get_option( 'page_on_front' ), '_kidniche_home_featured_background', true );
+			$background_preview = $background ? wp_get_attachment_image_src( $background, 'full' ) : '';
+		?>
+
+			<section class="feature row"
+				<?php echo $background ? "style=\"background-image: url('$background_preview[0]');\"" : ''; ?>>
 
 				<div class="columns small-12">
 
 					<div class="row">
 
 						<div class="feature-left columns small-12 medium-6">
-							<?php // FIXME make admin accessible ?>
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/images/temp-home.png"/>
+							<?php
+							if ( $image = get_post_meta( get_option( 'page_on_front' ), '_kidniche_home_featured_image', true ) ) {
+								echo wp_get_attachment_image( $image, 'full' );
+							}
+							?>
 						</div>
 
 						<div class="feature-right columns small-12 medium-6">
 
 							<div class="container">
-								<div class="feature-statement">
-									<p>
-										Teach your children the skill with eternal benefits.
-									</p>
-
-									<p>
-										Teach your children to pray.
-									</p>
-								</div>
-
-								<a href="#" class="button secondary expand">Buy Here</a>
+								<?php
+								if ( $blurb = get_post_meta( get_option( 'page_on_front' ), '_kidniche_home_featured_blurb', true ) ) {
+									echo wpautop( do_shortcode( $blurb ) );
+								}
+								?>
 							</div>
 
 						</div>

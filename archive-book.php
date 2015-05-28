@@ -26,34 +26,40 @@ if ( have_posts() ) :
 		<p>Browse the books created by Susan Case Bonner.</p>
 
 		<div class="product-loop">
-			<?php
 
-			// Filter output
-			add_filter( 'woocommerce_loop_add_to_cart_link', 'kniche_woocommerce_add_to_cart_link_book' );
-			add_filter( 'woocommerce_price_html', '__return_false' );
+			<ul class="products row <?php echo $wp_query->post_count === 1 ? 'collapse' : ''; ?>">
 
-			while ( have_posts() ) :
-				the_post();
+				<?php
 
-				$linked_post = get_post( get_post_meta( get_the_ID(), '_product_link', true ) );
-				if ( $linked_post === null ) {
-					continue;
+				// Filter output
+				add_filter( 'woocommerce_loop_add_to_cart_link', 'kniche_woocommerce_add_to_cart_link_book' );
+				add_filter( 'woocommerce_price_html', '__return_false' );
+
+				while ( have_posts() ) {
+
+					the_post();
+
+					$linked_post = get_post( get_post_meta( get_the_ID(), '_product_link', true ) );
+					if ( $linked_post === null ) {
+						continue;
+					}
+
+					$post = $linked_post;
+					setup_postdata( $post );
+
+					$max_columns = 1;
+					include __DIR__ . '/partials/product-loop-single.php';
+
 				}
 
-				$post = $linked_post;
-				setup_postdata( $post )
+				// Reset settings from loop
+				wp_reset_postdata();
+				remove_filter( 'woocommerce_loop_add_to_cart_link', 'kniche_woocommerce_add_to_cart_link_book' );
+				remove_filter( 'woocommerce_price_html', '__return_false' );
 				?>
-				<ul class="products row <?php echo $wp_query->post_count === 1 ? 'collapse' : ''; ?>">
-					<?php include __DIR__ . '/partials/product-loop-single.php'; ?>
-				</ul>
-				<?php
-			endwhile;
 
-			// Reset settings from loop
-			wp_reset_postdata();
-			remove_filter( 'woocommerce_loop_add_to_cart_link', 'kniche_woocommerce_add_to_cart_link_book' );
-			remove_filter( 'woocommerce_price_html', '__return_false' );
-			?>
+			</ul>
+
 		</div>
 	</div>
 <?php

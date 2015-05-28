@@ -5,8 +5,9 @@
  * @since   1.0.0
  * @package KidNiche
  *
- * @global $wp_query
- * @global $post_count
+ * @global WP_Query $wp_query
+ * @global int $post_count
+ * @global int $max_columns
  */
 
 // Don't load directly
@@ -16,9 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 $post_count = $post_count ? $post_count : $wp_query->post_count;
 
-$columns = 12 / $post_count;
-$columns = $columns < 3 ? $columns == 3 : $columns;
-
+$columns = 12 / min( $max_columns ? $max_columns : $post_count, $post_count );
 ?>
 <li class="columns small-12 medium-<?php echo $columns; ?>" <?php echo is_front_page() ? 'data-equalizer-watch' : ''; ?>>
 

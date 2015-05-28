@@ -160,7 +160,16 @@ class KidNicheWidget_Testimonials extends WP_Widget {
 						<li class="testimonial <?php echo $i === 1 ? 'active' : ''; ?>">
 
 							<div class="testimonial-image">
-								<?php the_post_thumbnail( 'thumbnail' ); ?>
+								<?php
+								if ( has_post_thumbnail( get_the_ID() ) ) {
+									the_post_thumbnail( 'thumbnail' );
+								} else {
+									?>
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/mystery-man.png"
+									     alt="mystery man"/>
+								<?php
+								}
+								?>
 							</div>
 
 							<h4 class="testimonial-author">

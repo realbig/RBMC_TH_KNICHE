@@ -24,9 +24,14 @@ About the author section.
     overflow: hidden;
     background: #fff;
     margin-top: -73px - $gutter;
-    width: 140px;
-    height: 140px;
     display: inline-block;
+    width: 100px;
+    height: 100px;
+
+    @media #{$large-up} {
+      width: 140px;
+      height: 140px;
+    }
   }
 
   .author-name {

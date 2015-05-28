@@ -15,7 +15,7 @@ get_header();
 
 kidniche_page_start();
 
-kidniche_page_title( __( 'Blog', 'KidNiche' ) );
+kidniche_page_title( post_type_archive_title( '', false ) );
 
 if ( have_posts() ) :
 	?>

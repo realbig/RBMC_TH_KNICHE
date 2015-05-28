@@ -24,7 +24,7 @@ if ( defined( 'THEME_VERSION' ) || defined( 'THEME_ID' ) || isset( $theme_fonts 
 /**
  * The theme's current version (make sure to keep this up to date!)
  */
-define( 'THEME_VERSION', '1.0.0' );
+define( 'THEME_VERSION', '1.0.1' );
 
 /**
  * The theme's ID (used in handlers).
@@ -231,7 +231,7 @@ function kidniche_page_end() {
  */
 function kidniche_post_loop_content() {
 	?>
-	<article id="post-<?php the_ID(); ?>" <?php post_class( array( 'row' ) ); ?>>
+	<article id="post-<?php the_ID(); ?>" <?php post_class( array( 'row', 'collapse' ) ); ?>>
 
 		<?php
 		$column_class = 'medium-12';

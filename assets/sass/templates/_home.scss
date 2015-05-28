@@ -3,7 +3,6 @@ Styles front-page.php.
 
 @since 1.0.0
 */
-
 @import "../settings";
 
 body.home {
@@ -41,6 +40,10 @@ body.home {
   .about-the-author {
     margin-left: -$column-gutter !important;
     margin-bottom: $column-gutter;
+
+    @media #{$small-only} {
+      margin-right: -$column-gutter !important;
+    }
   }
 
   // Content
@@ -50,6 +53,13 @@ body.home {
   }
 
   // Blog
+  .post-list {
+    .post-content {
+      @media #{$medium-up} {
+        padding-left: $column-gutter / 2;
+      }
+    }
+  }
   .post-comment-count {
     font-weight: bold;
     color: #aaa;

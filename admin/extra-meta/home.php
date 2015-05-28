@@ -39,10 +39,56 @@ function _kidniche_mb_home_extra_callback() {
 
 	wp_nonce_field( __FILE__, 'kidniche_mb_home_extra_nonce' );
 
+	$featured_background         = get_post_meta( $post->ID, '_kidniche_home_featured_background', true );
+	$featured_background_preview = $featured_background ? wp_get_attachment_image_src( $featured_background, 'medium' ) : '';
+	$featured_image              = get_post_meta( $post->ID, '_kidniche_home_featured_image', true );
+	$featured_image_preview      = $featured_image ? wp_get_attachment_image_src( $featured_image, 'medium' ) : '';
+	$featured_blurb              = get_post_meta( $post->ID, '_kidniche_home_featured_blurb', true );
 	$welcome_blurb_title = get_post_meta( $post->ID, '_kidniche_home_welcome_blurb_title', true );
 	$welcome_blurb       = get_post_meta( $post->ID, '_kidniche_home_welcome_blurb', true );
 	$blog_post_count     = get_post_meta( $post->ID, '_kidniche_home_blog_post_count', true );
 	?>
+
+	<h2>Featured Product Section</h2>
+
+	<p>
+		<label>
+			Section Background:
+			<br/>
+			<img src="<?php echo $featured_background_preview[0]; ?>" class="image-preview"
+			     style="max-width: 100%; width: 300px;"/>
+			<br/>
+			<input type="hidden" class="image-id" name="_kidniche_home_featured_background"
+			       value="<?php echo $featured_background; ?>"/>
+			<a class="image-button button">Upload / Choose Image</a>
+		</label>
+	</p>
+
+	<p>
+		<label>
+			Product Image:
+			<br/>
+			<img src="<?php echo $featured_image_preview[0]; ?>" class="image-preview"
+			     style="max-width: 100%; width: 300px;"/>
+			<br/>
+			<input type="hidden" class="image-id" name="_kidniche_home_featured_image"
+			       value="<?php echo $featured_image; ?>"/>
+			<a class="image-button button">Upload / Choose Image</a>
+		</label>
+	</p>
+
+	<label for="_kidniche_home_featured_blurb">
+		Blurb:
+	</label>
+
+		<?php
+		wp_editor( $featured_blurb, '_kidniche_home_featured_blurb', array(
+			'teeny' => true,
+			'id'    => '_kidniche_home_featured_blurb',
+			'textarea_rows' => 6,
+			'name'  => '_kidniche_home_featured_blurb,'
+		) );
+		?>
 
 	<h2>Welcome Blurb</h2>
 
@@ -96,6 +142,9 @@ function _kidniche_save_metaboxes_home( $post_ID ) {
 	}
 
 	$options = array(
+		'_kidniche_home_featured_background',
+		'_kidniche_home_featured_image',
+		'_kidniche_home_featured_blurb',
 		'_kidniche_home_welcome_blurb_title',
 		'_kidniche_home_welcome_blurb',
 		'_kidniche_home_blog_post_count',

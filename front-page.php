@@ -70,6 +70,7 @@ if ( ! empty( $featured_products ) ) {
 
 		$blog_post_count = get_post_meta( get_the_ID(), '_kidniche_home_blog_post_count', true );
 		$posts           = get_posts( array(
+			'post_type' => 'lesson',
 			'numberposts' => $blog_post_count ? $blog_post_count : 3,
 		) );
 
@@ -78,7 +79,7 @@ if ( ! empty( $featured_products ) ) {
 			?>
 			<div class="home-blog">
 
-				<h3 class="section-title">From the Blog</h3>
+				<h3 class="section-title">Lessons</h3>
 
 				<div class="post-list">
 					<?php

@@ -1,7 +1,7 @@
 /*!
 Theme Name: Kid Niche
 Description: The theme designed for Kid Niche by Real Big Marketing.
-Version: 1.0.0
+Version: 1.0.1
 Author: Joel Worsham
 Author URI: http://realbigmarketing.com/staff/joel-worsham
 */
@@ -4451,7 +4451,6 @@ Global mixins.
     bottom: -7px; }
   #site-footer p {
     margin: 0;
-    font-family: 'Architects Daughter', cursive;
     font-size: 1.5em; }
   #site-footer a {
     color: inherit; }
@@ -4555,8 +4554,9 @@ Global mixins.
 #site-content {
   padding: 3.5714285714rem; }
 
-.page-content {
-  padding-right: 3.5714285714rem !important; }
+@media only screen and (min-width:40.063em) {
+  .page-content {
+    padding-right: 3.5714285714rem !important; } }
 
 /*
 Styles single.php.
@@ -4659,7 +4659,7 @@ body.home .home-welcome {
   border-style: solid;
   border-color: #66cc33;
   border-width: 5px 0;
-  color: #8B8D0C;
+  color: #7D4900;
   margin-top: 0 !important; }
   body.home .home-welcome h2 {
     color: #041D37;
@@ -4670,9 +4670,15 @@ body.home .home-welcome {
 body.home .about-the-author {
   margin-left: -3.5714285714rem !important;
   margin-bottom: 3.5714285714rem; }
+  @media only screen and (max-width: 40em) {
+    body.home .about-the-author {
+      margin-right: -3.5714285714rem !important; } }
 body.home #site-content {
   margin-top: 0;
   padding-top: 0; }
+@media only screen and (min-width:40.063em) {
+  body.home .post-list .post-content {
+    padding-left: 1.7857142857rem; } }
 body.home .post-comment-count {
   font-weight: bold;
   color: #aaa; }
@@ -4800,9 +4806,13 @@ Global mixins.
     overflow: hidden;
     background: #fff;
     margin-top: -103px;
-    width: 140px;
-    height: 140px;
-    display: inline-block; }
+    display: inline-block;
+    width: 100px;
+    height: 100px; }
+    @media only screen and (min-width:64.063em) {
+      .about-the-author .author-image {
+        width: 140px;
+        height: 140px; } }
   .about-the-author .author-name {
     color: #555; }
   .about-the-author .author-content {
