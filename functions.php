@@ -176,6 +176,15 @@ add_action( 'widgets_init', function () {
 		'after_title'  => '</h3>',
 	) );
 
+	// Book
+	register_sidebar( array(
+		'name'         => 'Book',
+		'id'           => 'book',
+		'description'  => 'Displays on the side of the single-book template.',
+		'before_title' => '<h3 class="widget-title">',
+		'after_title'  => '</h3>',
+	) );
+
 	// Footer
 	register_sidebar( array(
 		'name'          => 'Footer',

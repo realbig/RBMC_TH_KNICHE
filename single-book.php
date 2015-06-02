@@ -70,7 +70,7 @@ if ( $snippet ) : ?>
 
 		</div>
 
-		<?php get_sidebar(); ?>
+		<?php get_sidebar( 'book' ); ?>
 
 	</section>
 
