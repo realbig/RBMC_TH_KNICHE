@@ -45,13 +45,13 @@ if ( ! empty( $featured_products ) ) {
 	?>
 	<section class="home-featured-products columns small-12">
 		<h3 class="section-title">Featured Books</h3>
-		<ul class="product-loop row" data-equalizer>
+		<ul class="featured-product-loop row" data-equalizer>
 			<?php
 			global $post_count;
 			foreach ( $featured_products as $post ) {
 				setup_postdata( $post );
 				$post_count = count( $featured_products );
-				include __DIR__ . '/partials/product-loop-single.php';
+				include __DIR__ . '/partials/featured-product-loop-single.php';
 			}
 			wp_reset_postdata();
 			?>

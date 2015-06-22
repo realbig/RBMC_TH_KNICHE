@@ -4744,6 +4744,50 @@ Global mixins.
 
 @since 1.0.0
 */
+.featured-product-loop li {
+  list-style: none; }
+  .featured-product-loop li > .container {
+    border: 1px solid #ccc;
+    padding: 5px; }
+    .featured-product-loop li > .container:after {
+      content: ' ';
+      display: table;
+      clear: both; }
+.featured-product-loop .product-title {
+  color: #66cc33;
+  font-family: "Helvetica", sans-serif;
+  text-align: center;
+  font-size: 1.3em;
+  line-height: 1; }
+.featured-product-loop .product-image {
+  margin: 0 auto; }
+.featured-product-loop .product-buy {
+  text-align: center;
+  width: 100%; }
+  .featured-product-loop .product-buy .add_to_cart_button {
+    background: transparent;
+    color: #66cc33;
+    padding: 0 10px 0 0;
+    margin: 0 10px 0 0;
+    border: 0 solid #ccc;
+    border-right-width: 1px; }
+
+/*
+Product loop.
+
+@since 1.0.0
+*/
+/*
+Sets up the theme's styling properties and makes some variables already set in Foundation available for easy use
+throughout this theme's SASS files.
+
+@since 1.0.0
+*/
+/*
+Global mixins.
+
+@since 1.0.0
+*/
 .product-loop li {
   list-style: none; }
   .product-loop li > .container {

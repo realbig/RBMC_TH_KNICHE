@@ -39,17 +39,18 @@ if ( have_posts() ) :
 
 					the_post();
 
-					$linked_post = get_post( get_post_meta( get_the_ID(), '_product_link', true ) );
-					if ( $linked_post === null ) {
+					$linked_post = get_post_meta( get_the_ID(), '_product_link', true );
+					if ( empty( $linked_post ) ) {
 						continue;
 					}
+
+					$linked_post = get_post( $linked_post );
 
 					$post = $linked_post;
 					setup_postdata( $post );
 
 					$max_columns = 1;
 					include __DIR__ . '/partials/product-loop-single.php';
-
 				}
 
 				// Reset settings from loop
