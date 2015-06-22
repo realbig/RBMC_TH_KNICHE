@@ -4949,7 +4949,8 @@ Global mixins.
           -webkit-animation: testimonial_transition_in 500ms;
                   animation: testimonial_transition_in 500ms; }
   .testimonials-container .testimonial {
-    color: #777; }
+    color: #777;
+    text-align: center; }
     .testimonials-container .testimonial .testimonial-image {
       text-align: center;
       margin: 20px 0;
