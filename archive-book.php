@@ -34,6 +34,7 @@ if ( have_posts() ) :
 				// Filter output
 				add_filter( 'woocommerce_loop_add_to_cart_link', 'kniche_woocommerce_add_to_cart_link_book' );
 				add_filter( 'woocommerce_price_html', '__return_false' );
+				add_filter( 'post_type_link', 'kniche_book_archive_title_link' );
 
 				while ( have_posts() ) {
 
@@ -57,6 +58,7 @@ if ( have_posts() ) :
 				wp_reset_postdata();
 				remove_filter( 'woocommerce_loop_add_to_cart_link', 'kniche_woocommerce_add_to_cart_link_book' );
 				remove_filter( 'woocommerce_price_html', '__return_false' );
+				remove_filter( 'post_type_link', 'kniche_book_archive_title_link' );
 				?>
 
 			</ul>
@@ -77,4 +79,19 @@ function kniche_woocommerce_add_to_cart_link_book() {
 	global $wp_query;
 
 	return '<a href="' . get_permalink( $wp_query->post->ID ) . '" class="button">View Book</a>';
+}
+
+function kniche_book_archive_title_link( $link ) {
+
+	global $wp_query;
+
+	static $doing;
+
+	if ( ! $doing ) {
+		$doing = true;
+		$link = get_permalink( $wp_query->post->ID );
+		$doing = false;
+	}
+
+	return $link;
 }
