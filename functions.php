@@ -112,6 +112,13 @@ add_action( 'init', function () {
 			);
 		}
 	}
+
+	// Localize data
+	$data = array(
+		'slider_interval' => get_option( 'kidniche_testimonial_widget_slider_interval', 5 ),
+	);
+
+	wp_localize_script( THEME_ID, 'KidNicheData', $data );
 } );
 
 /**

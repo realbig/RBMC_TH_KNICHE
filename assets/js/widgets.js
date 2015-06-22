@@ -17,7 +17,7 @@
 
         var $containers = $('.testimonials-container'),
             interval = typeof data != 'undefined' && typeof data['slider_interval'] != 'undefined' ?
-                parseInt(data['slider_interval']) : 5000,
+                parseInt(data['slider_interval']) * 1000 : 5000,
             slideInterval;
 
         // Cycle through each possible slider

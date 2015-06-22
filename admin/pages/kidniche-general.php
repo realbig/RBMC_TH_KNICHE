@@ -32,4 +32,5 @@ add_action( 'admin_init', function() {
 
 	register_setting( 'kidniche-settings', 'kidniche_about_page' );
 	register_setting( 'kidniche-settings', 'kidniche_about_page_anchor' );
+	register_setting( 'kidniche-settings', 'kidniche_testimonial_widget_slider_interval' );
 });
