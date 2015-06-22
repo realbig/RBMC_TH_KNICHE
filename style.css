@@ -4367,10 +4367,10 @@ Global mixins.
     position: absolute;
     z-index: 10;
     left: 20px;
-    top: -150px;
+    top: -60px;
     width: 30%; }
     #site-header .primary-nav .site-logo.large {
-      bottom: -100px;
+      top: -150px;
       width: 50%; }
   #site-header .primary-nav #site-nav {
     padding: 0; }
@@ -4414,6 +4414,24 @@ Global mixins.
     #site-header .feature .feature-right p {
       font-size: 2em;
       margin-bottom: 1em; }
+#site-header .mobile-header {
+  top: 0;
+  background: #202020;
+  text-align: center;
+  padding: 0.5em;
+  z-index: 100; }
+  #site-header .mobile-header .site-logo {
+    max-height: 100px; }
+  #site-header .mobile-header #mobile-nav .menu-toggle {
+    font-size: 3em;
+    margin-top: 0.5em; }
+  #site-header .mobile-header #mobile-nav .menu {
+    font-size: 1.5em;
+    margin: 0;
+    line-height: 2;
+    display: none; }
+    #site-header .mobile-header #mobile-nav .menu a {
+      display: block; }
 
 /*
 The static site footer.
@@ -4949,8 +4967,7 @@ Global mixins.
           -webkit-animation: testimonial_transition_in 500ms;
                   animation: testimonial_transition_in 500ms; }
   .testimonials-container .testimonial {
-    color: #777;
-    text-align: center; }
+    color: #777; }
     .testimonials-container .testimonial .testimonial-image {
       text-align: center;
       margin: 20px 0;

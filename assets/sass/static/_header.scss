@@ -98,11 +98,11 @@ $primary-nav-height: 50px;
       position: absolute;
       z-index: 10;
       left: 20px;
-      top: -150px;
+      top: -60px;
       width: 30%;
 
       &.large {
-        bottom: -100px;
+        top: -150px;
         width: 50%;
       }
     }
@@ -135,9 +135,6 @@ $primary-nav-height: 50px;
     @include trim(#fff);
     margin-top: 27px; // Compensate for green border (7px tall)
     margin-bottom: 20px;
-//    background: url("http://www.transparenttextures.com/patterns/45-degree-fabric-dark.png") $primary-color repeat;
-//    background: url("http://www.transparenttextures.com/patterns/arches.png") $primary-color repeat;
-//    background: url("http://www.transparenttextures.com/patterns/az-subtle.png") $primary-color repeat;
     background: url("http://www.transparenttextures.com/patterns/black-linen.png") $primary-color repeat;
 
     > .columns {
@@ -164,6 +161,37 @@ $primary-nav-height: 50px;
         font-size: 2em;
         margin-bottom: 1em;
       }
+    }
+  }
+
+  // Mobile header
+  .mobile-header {
+    top: 0;
+    background: #202020;
+    text-align: center;
+    padding: 0.5em;
+    z-index: 100;
+
+    .site-logo {
+      max-height: 100px;
+    }
+
+    #mobile-nav {
+      .menu-toggle {
+        font-size: 3em;
+        margin-top: 0.5em;
+      }
+
+      .menu {
+        font-size: 1.5em;
+        margin: 0;
+        line-height: 2;
+        display: none;
+
+        a {
+          display: block;
+        }
+       }
     }
   }
 }

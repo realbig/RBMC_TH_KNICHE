@@ -41,7 +41,7 @@ global $woocommerce;
 		$show_feature = is_front_page();
 		?>
 
-		<section class="top-header">
+		<section class="top-header hide-for-small-only">
 
 			<div class="row collapse">
 
@@ -92,7 +92,7 @@ global $woocommerce;
 
 		</section>
 
-		<section class="primary-nav row <?php echo $show_feature ? 'large' : ''; ?>">
+		<section class="primary-nav show-for-medium-up row <?php echo $show_feature ? 'large' : ''; ?>">
 
 			<a href="<?php bloginfo( 'url' ); ?>">
 				<img class="site-logo <?php echo $show_feature ? 'large' : ''; ?>"
@@ -106,6 +106,38 @@ global $woocommerce;
 					'container'      => false,
 				) );
 				?>
+			</nav>
+
+		</section>
+
+		<section class="mobile-header show-for-small-only row <?php echo $show_feature ? 'large' : ''; ?>">
+
+			<a href="<?php bloginfo( 'url' ); ?>">
+				<img class="site-logo <?php echo $show_feature ? 'large' : ''; ?>"
+				     src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-header.png"/>
+			</a>
+
+			<nav id="mobile-nav" class="columns small-12 medium-6 push-6">
+
+				<a href="#" class="menu-toggle">
+					<span class="icon-menu"></span>
+				</a>
+
+				<ul class="menu">
+					<?php
+					wp_nav_menu( array(
+						'theme_location' => 'primary',
+						'container'      => false,
+						'items_wrap' => '%3$s',
+					) );
+
+					wp_nav_menu( array(
+						'theme_location' => 'top_nav',
+						'container'      => false,
+						'items_wrap' => '%3$s',
+					) );
+					?>
+				</ul>
 			</nav>
 
 		</section>
