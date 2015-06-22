@@ -9,7 +9,9 @@
 
     $(function () {
 
-        $('#mobile-nav').find('.menu-toggle').click(function () {
+        $('#mobile-nav').find('.menu-toggle').click(function (e) {
+
+            e.preventDefault();
 
             var $menu = $(this).closest('#mobile-nav').find('.menu'),
                 action = $menu.is(':visible') ? 'hide' : 'show';
@@ -27,6 +29,8 @@
                     $menu.show();
                     break;
             }
+
+            return false;
         });
     });
 })(jQuery);
