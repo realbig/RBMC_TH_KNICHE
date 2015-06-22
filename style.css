@@ -4367,7 +4367,7 @@ Global mixins.
     position: absolute;
     z-index: 10;
     left: 20px;
-    bottom: -60px;
+    top: -150px;
     width: 30%; }
     #site-header .primary-nav .site-logo.large {
       bottom: -100px;
