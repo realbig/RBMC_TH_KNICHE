@@ -37,15 +37,17 @@
 
 
             // Reveal and hide initial
-            $testimonial_container.width(offset * $testimonials.length);
-            $testimonials.width(offset);
+            set_widths($testimonial_container, $testimonials, $container);
             $prev.show();
             $next.show();
+
+            $(window).resize(function () {set_widths($testimonial_container, $testimonials, $container)});
 
             $next.click(function () {
 
                 var current_index = $testimonial_container.find('.testimonial.active').index(),
-                    new_index = current_index + 1;
+                    new_index = current_index + 1,
+                    offset = $container.width();
 
                 $testimonials.removeClass('active');
 
@@ -64,7 +66,8 @@
             $prev.click(function () {
 
                 var current_index = $testimonial_container.find('.testimonial.active').index(),
-                    new_index = current_index - 1;
+                    new_index = current_index - 1,
+                    offset = $container.width();
 
                 $testimonials.removeClass('active');
 
@@ -89,6 +92,16 @@
              */
             function next_slide() {
                 $next.click();
+            }
+
+            function set_widths($testimonial_container, $testimonials, $container) {
+
+                var offset = $container.width();
+
+                console.log(offset);
+
+                $testimonial_container.width(offset * $testimonials.length);
+                $testimonials.width(offset);
             }
         });
     });
