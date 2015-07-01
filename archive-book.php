@@ -78,7 +78,7 @@ function kniche_woocommerce_add_to_cart_link_book() {
 
 	global $wp_query;
 
-	return '<a href="' . get_permalink( $wp_query->post->ID ) . '" class="button">View Book</a>';
+	return '<a href="' . get_permalink( $wp_query->post->ID ) . '" class="button tiny">Read More</a>';
 }
 
 function kniche_book_archive_title_link( $link ) {
