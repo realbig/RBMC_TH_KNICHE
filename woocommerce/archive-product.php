@@ -114,7 +114,7 @@ add_filter( 'woocommerce_loop_add_to_cart_link', function () {
 
 <?php
 
-get_sidebar();
+get_sidebar( 'shop' );
 
 kidniche_page_end();
 

@@ -36,7 +36,7 @@ remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_singl
 
 <?php
 
-get_sidebar();
+get_sidebar( 'shop' );
 
 kidniche_page_end();
 

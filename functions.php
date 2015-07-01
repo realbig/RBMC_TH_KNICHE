@@ -192,6 +192,15 @@ add_action( 'widgets_init', function () {
 		'after_title'  => '</h3>',
 	) );
 
+	// Shop
+	register_sidebar( array(
+		'name'         => 'Shop',
+		'id'           => 'shop',
+		'description'  => 'Displays on the side of shop pages.',
+		'before_title' => '<h3 class="widget-title">',
+		'after_title'  => '</h3>',
+	) );
+
 	// Footer
 	register_sidebar( array(
 		'name'          => 'Footer',
