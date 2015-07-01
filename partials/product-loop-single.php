@@ -33,6 +33,12 @@ $columns = 12 / min( $max_columns ? $max_columns : $post_count, $post_count );
 				</a>
 			</h4>
 
+			<?php if ( $field = get_field( 'sub_title' ) ) : ?>
+				<p class="product-subtitle">
+					<?php echo $field; ?>
+				</p>
+			<?php endif; ?>
+
 			<p>
 				<?php echo custom_excerpt_length(); ?>
 			</p>

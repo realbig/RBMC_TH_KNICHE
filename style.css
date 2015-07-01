@@ -4772,11 +4772,13 @@ Global mixins.
       display: table;
       clear: both; }
 .featured-product-loop .product-title {
-  color: #66cc33;
   font-family: "Helvetica", sans-serif;
   text-align: center;
   font-size: 1.3em;
   line-height: 1; }
+.featured-product-loop .product-subtitle {
+  text-align: center;
+  margin: 0; }
 .featured-product-loop .product-image {
   margin: 0 auto; }
 .featured-product-loop .product-buy {
@@ -5048,7 +5050,8 @@ Global mixins.
 @since 1.0.0
 */
 .product h3 {
-  font-family: "Helvetica", sans-serif; }
+  font-family: "Helvetica", sans-serif;
+  color: #66cc33; }
 
 .add_to_cart_button.loading {
   opacity: 1 !important;
@@ -5069,6 +5072,12 @@ Global mixins.
     margin-right: -5px;
     margin-top: -5px;
     z-index: 11; }
+
+.product-title {
+  color: #66cc33; }
+
+.product-subtitle {
+  color: #7D4900; }
 
 .added_to_cart {
   text-align: center;

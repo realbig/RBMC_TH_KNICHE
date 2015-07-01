@@ -24,6 +24,12 @@ remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_singl
 
 		<?php kidniche_page_title(); ?>
 
+		<?php if ( $field = get_field( 'sub_title' ) ) : ?>
+			<p class="product-subtitle">
+				<?php echo $field; ?>
+			</p>
+		<?php endif; ?>
+
 		<?php wc_get_template_part( 'content', 'single-product' ); ?>
 
 	</div> <!-- .page-content -->

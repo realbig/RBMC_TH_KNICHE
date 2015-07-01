@@ -12,7 +12,20 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 add_filter( 'woocommerce_continue_shopping_redirect', '_kniche_modify_cart_success_link' );
+add_action( 'woocommerce_after_shop_loop_item_title', '_kniche_product_subtitle' );
+add_action( 'woocommerce_after_shop_loop_item_title', '_kniche_product_subtitle' );
 
 function _kniche_modify_cart_success_link() {
 	return get_permalink( wc_get_page_id( 'shop' ) );
+}
+
+function _kniche_product_subtitle() {
+
+//	global $post;
+
+	if ( $field = get_field( 'sub_title' ) ) : ?>
+		<p class="product-subtitle">
+			<?php echo $field; ?>
+		</p>
+	<?php endif;
 }

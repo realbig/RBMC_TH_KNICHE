@@ -9,6 +9,7 @@ Global WooCommerce styles.
 .product {
   h3 {
     font-family: $body-font-family;
+    color: $primary-color;
   }
 }
 
@@ -37,6 +38,14 @@ Global WooCommerce styles.
       z-index: 11;
     }
   }
+}
+
+.product-title {
+  color: $primary-color;
+}
+
+.product-subtitle {
+  color: $fourth-color;
 }
 
 .added_to_cart {
