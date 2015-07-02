@@ -13,8 +13,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 get_header();
 
-the_post();
-
 kidniche_page_start();
 
 // Modify button
@@ -40,7 +38,7 @@ add_filter( 'woocommerce_loop_add_to_cart_link', function () {
 
 		$shop_page_ID = get_option( 'woocommerce_shop_page_id' );
 		if ( $shop_form_ID = get_post_meta( $shop_page_ID, '_kidniche_shop_form', true ) ) :
-		?>
+			?>
 
 			<div data-alert class="alert-box">
 				Sign up for wholesale! <a href="#" data-reveal-id="wholesale-form" class="normal-color">Signup Now</a>
