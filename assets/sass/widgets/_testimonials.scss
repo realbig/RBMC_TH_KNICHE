@@ -29,7 +29,7 @@ Styles the testimonial widget.
   overflow: hidden;
 
   .testimonials-prev, .testimonials-next {
-    color: #ccc;
+    color: #aaa;
     position: absolute;
     top: 60px;
     font-size: 20px;
@@ -85,7 +85,7 @@ Styles the testimonial widget.
 
       img {
         overflow: hidden;
-        border: 10px solid #ccc;
+        border: 10px solid #aaa;
         border-radius: 50%;
         width: 100px;
         height: 100px;
@@ -94,7 +94,7 @@ Styles the testimonial widget.
       // Down arrow
       &:after {
         content: '';
-        border-top: 16px solid #ccc;
+        border-top: 16px solid #aaa;
         border-left: 16px solid transparent;
         border-right: 16px solid transparent;
         position: absolute;
@@ -118,7 +118,7 @@ Styles the testimonial widget.
     .testimonial-content {
       .icon-quote {
         font-size: 35px;
-        color: #ddd;
+        color: #aaa;
       }
     }
   }

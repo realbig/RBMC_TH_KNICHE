@@ -12,7 +12,7 @@ Product loop.
 
     > .container {
       @include clearfix;
-      border: 1px solid #ccc;
+      border: 1px solid #aaa;
       padding: 5px;
     }
   }
@@ -42,7 +42,7 @@ Product loop.
       color: $primary-color;
       padding: 0 10px 0 0;
       margin: 0 10px 0 0;
-      border: 0 solid #ccc;
+      border: 0 solid #aaa;
       border-right-width: 1px;
     }
   }

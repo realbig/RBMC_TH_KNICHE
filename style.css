@@ -4775,7 +4775,7 @@ Global mixins.
 .featured-product-loop li {
   list-style: none; }
   .featured-product-loop li > .container {
-    border: 1px solid #ccc;
+    border: 1px solid #aaa;
     padding: 5px; }
     .featured-product-loop li > .container:after {
       content: ' ';
@@ -4799,7 +4799,7 @@ Global mixins.
     color: #66cc33;
     padding: 0 10px 0 0;
     margin: 0 10px 0 0;
-    border: 0 solid #ccc;
+    border: 0 solid #aaa;
     border-right-width: 1px; }
 
 /*
@@ -4821,7 +4821,7 @@ Global mixins.
 .product-loop li {
   list-style: none; }
   .product-loop li > .container {
-    border: 1px solid #ccc;
+    border: 1px solid #aaa;
     padding: 5px; }
     .product-loop li > .container:after {
       content: ' ';
@@ -4846,7 +4846,7 @@ Global mixins.
     color: #66cc33;
     padding: 0 10px 0 0;
     margin: 0 10px 0 0;
-    border: 0 solid #ccc;
+    border: 0 solid #aaa;
     border-right-width: 1px; }
 
 /*
@@ -4949,7 +4949,7 @@ Global mixins.
   position: relative;
   overflow: hidden; }
   .testimonials-container .testimonials-prev, .testimonials-container .testimonials-next {
-    color: #ccc;
+    color: #aaa;
     position: absolute;
     top: 60px;
     font-size: 20px;
@@ -4986,13 +4986,13 @@ Global mixins.
       position: relative; }
       .testimonials-container .testimonial .testimonial-image img {
         overflow: hidden;
-        border: 10px solid #ccc;
+        border: 10px solid #aaa;
         border-radius: 50%;
         width: 100px;
         height: 100px; }
       .testimonials-container .testimonial .testimonial-image:after {
         content: '';
-        border-top: 16px solid #ccc;
+        border-top: 16px solid #aaa;
         border-left: 16px solid transparent;
         border-right: 16px solid transparent;
         position: absolute;
@@ -5008,7 +5008,7 @@ Global mixins.
         color: #66cc33; }
     .testimonials-container .testimonial .testimonial-content .icon-quote {
       font-size: 35px;
-      color: #ddd; }
+      color: #aaa; }
 
 /*
 Social shortcodes.
