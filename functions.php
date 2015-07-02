@@ -255,14 +255,16 @@ function kidniche_page_end() {
  * @since 1.0.0
  */
 function kidniche_post_loop_content() {
+
+
 	?>
-	<article id="post-<?php the_ID(); ?>" <?php post_class( array( 'row', 'collapse' ) ); ?>>
+	<article id="<?php echo get_post_type(); ?>-<?php the_ID(); ?>" <?php post_class( array( 'row', 'collapse' ) ); ?>>
 
 		<?php
 		$column_class = 'medium-12';
 		if ( has_post_thumbnail() ) {
 			?>
-			<div class="post-image columns small-12 medium-3">
+			<div class="<?php echo get_post_type(); ?>-image columns small-12 medium-3">
 				<a href="<?php the_permalink(); ?>">
 					<?php the_post_thumbnail( 'medium' ); ?>
 				</a>
@@ -272,21 +274,21 @@ function kidniche_post_loop_content() {
 		}
 		?>
 
-		<div class="post-content columns small-12 <?php echo $column_class; ?>">
+		<div class="<?php echo get_post_type(); ?>-content columns small-12 <?php echo $column_class; ?>">
 
-			<h4 class="post-title">
+			<h4 class="<?php echo get_post_type(); ?>-title">
 				<a href="<?php the_permalink(); ?>" class="color-invert">
 					<?php the_title(); ?>
 				</a>
 			</h4>
 
-			<p class="post-comment-count">
+			<p class="<?php echo get_post_type(); ?>-comment-count">
 				<span class="icon-bubble"></span>
 				<?php $comment_count = wp_count_comments()->approved; ?>
 				<?php echo $comment_count . _n( ' comment', ' comments', $comment_count ); ?>
 			</p>
 
-			<div class="post-excerpt">
+			<div class="<?php echo get_post_type(); ?>-excerpt">
 				<?php the_excerpt(); ?>
 			</div>
 

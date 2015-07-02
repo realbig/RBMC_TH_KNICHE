@@ -4735,10 +4735,27 @@ Global mixins.
   .post-list .post .post-excerpt p {
     margin-bottom: 0; }
   .post-list .post .post-image {
-    padding-left: 0; }
+    padding-left: 0;
+    padding-right: 15px; }
   .post-list .post .post-content {
     padding-right: 0; }
   .post-list .post .read-more {
+    margin: 10px 0 0 0; }
+
+.lesson-list .lesson {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 20px;
+  padding-bottom: 20px; }
+  .lesson-list .lesson:last-of-type {
+    border-bottom-width: 0; }
+  .lesson-list .lesson .lesson-excerpt p {
+    margin-bottom: 0; }
+  .lesson-list .lesson .lesson-image {
+    padding-left: 0;
+    padding-right: 15px; }
+  .lesson-list .lesson .lesson-content {
+    padding-right: 0; }
+  .lesson-list .lesson .read-more {
     margin: 10px 0 0 0; }
 
 /*

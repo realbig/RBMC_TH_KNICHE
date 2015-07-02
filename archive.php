@@ -4,12 +4,16 @@
  *
  * @since   1.0.0
  * @package KidNiche
+ *
+ * @global WP_Query $wp_query
  */
 
 // Don't load directly
 if ( ! defined( 'ABSPATH' ) ) {
 	die;
 }
+
+$post_type = $wp_query->query['post_type'];
 
 get_header();
 
@@ -20,7 +24,7 @@ kidniche_page_title( post_type_archive_title( '', false ) );
 if ( have_posts() ) :
 	?>
 	<div class="page-content columns small-12 medium-9">
-		<div class="post-list">
+		<div class="<?php echo $post_type; ?>-list">
 			<?php
 			while ( have_posts() ) :
 				the_post();

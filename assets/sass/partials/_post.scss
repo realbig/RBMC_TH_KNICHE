@@ -6,32 +6,41 @@ Posts within a loop.
 
 @import "../settings";
 
-.post-list {
-  .post {
-    border-bottom: 1px solid #ccc;
-    margin-bottom: 20px;
-    padding-bottom: 20px;
+@mixin post-styles($type: post) {
+  .#{$type}-list {
+    .#{$type} {
+      border-bottom: 1px solid #ccc;
+      margin-bottom: 20px;
+      padding-bottom: 20px;
 
-    &:last-of-type {
-      border-bottom-width: 0;
-    }
+      &:last-of-type {
+        border-bottom-width: 0;
+      }
 
-    .post-excerpt {
-      p {
-        margin-bottom: 0;
+      .#{$type}-excerpt {
+        p {
+          margin-bottom: 0;
+        }
+      }
+
+      .#{$type}-image {
+        padding-left: 0;
+        padding-right: 15px;
+      }
+
+      .#{$type}-content {
+        padding-right: 0;
+      }
+
+      .read-more {
+        margin: 10px 0 0 0;
       }
     }
-
-    .post-image {
-      padding-left: 0;
-    }
-
-    .post-content {
-      padding-right: 0;
-    }
-
-    .read-more {
-      margin: 10px 0 0 0;
-    }
   }
+}
+
+$post-types: post lesson;
+
+@each $type in $post-types {
+  @include post-styles($type);
 }
