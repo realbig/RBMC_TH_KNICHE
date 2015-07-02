@@ -7,6 +7,17 @@ Shop page.
 @import "../settings";
 
 body.post-type-archive-product {
+
+  #site-content .products {
+    @extend .small-block-grid-2;
+    @extend .medium-block-grid-3;
+
+    .product {
+      margin: 0;
+      padding: 10px;
+    }
+  }
+
   .product {
     > a {
       display: block;
