@@ -4361,17 +4361,12 @@ Global mixins.
     top: -7px; }
   #site-header .primary-nav:after {
     bottom: -7px; }
-  #site-header .primary-nav.large {
-    margin-top: 160px; }
   #site-header .primary-nav .site-logo {
     position: absolute;
     z-index: 10;
     left: 20px;
     top: -60px;
     width: 30%; }
-    #site-header .primary-nav .site-logo.large {
-      top: -150px;
-      width: 50%; }
   #site-header .primary-nav #site-nav {
     padding: 0; }
     #site-header .primary-nav #site-nav .menu {

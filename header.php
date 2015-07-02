@@ -36,10 +36,7 @@ global $woocommerce;
 
 	<header id="site-header">
 
-		<?php
-		global $post;
-		$show_feature = is_front_page();
-		?>
+		<?php global $post; ?>
 
 		<section class="top-header hide-for-small-only">
 
@@ -92,14 +89,14 @@ global $woocommerce;
 
 		</section>
 
-		<section class="primary-nav show-for-medium-up row <?php echo $show_feature ? 'large' : ''; ?>">
+		<section class="primary-nav show-for-medium-up row">
 
 			<a href="<?php bloginfo( 'url' ); ?>">
-				<img class="site-logo <?php echo $show_feature ? 'large' : ''; ?>"
+				<img class="site-logo"
 				     src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-header.png"/>
 			</a>
 
-			<nav id="site-nav" class="columns small-12 medium-6 push-6">
+			<nav id="site-nav" class="columns small-12">
 				<?php
 				wp_nav_menu( array(
 					'theme_location' => 'primary',
@@ -110,10 +107,10 @@ global $woocommerce;
 
 		</section>
 
-		<section class="mobile-header show-for-small-only row <?php echo $show_feature ? 'large' : ''; ?>">
+		<section class="mobile-header show-for-small-only row">
 
 			<a href="<?php bloginfo( 'url' ); ?>">
-				<img class="site-logo <?php echo $show_feature ? 'large' : ''; ?>"
+				<img class="site-logo"
 				     src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-header.png"/>
 			</a>
 
@@ -128,13 +125,13 @@ global $woocommerce;
 					wp_nav_menu( array(
 						'theme_location' => 'primary',
 						'container'      => false,
-						'items_wrap' => '%3$s',
+						'items_wrap'     => '%3$s',
 					) );
 
 					wp_nav_menu( array(
 						'theme_location' => 'top_nav',
 						'container'      => false,
-						'items_wrap' => '%3$s',
+						'items_wrap'     => '%3$s',
 					) );
 					?>
 				</ul>
@@ -143,11 +140,11 @@ global $woocommerce;
 		</section>
 
 		<?php
-		if ( $show_feature ) :
+		if ( is_front_page() ) :
 
-			$background = get_post_meta( get_option( 'page_on_front' ), '_kidniche_home_featured_background', true );
+			$background         = get_post_meta( get_option( 'page_on_front' ), '_kidniche_home_featured_background', true );
 			$background_preview = $background ? wp_get_attachment_image_src( $background, 'full' ) : '';
-		?>
+			?>
 
 			<section class="feature row"
 				<?php echo $background ? "style=\"background-image: url('$background_preview[0]');\"" : ''; ?>>

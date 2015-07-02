@@ -89,10 +89,6 @@ $primary-nav-height: 50px;
     position: relative;
     margin-top: 100px;
 
-    &.large {
-      margin-top: 160px;
-    }
-
     // Logo
     .site-logo {
       position: absolute;
@@ -100,11 +96,6 @@ $primary-nav-height: 50px;
       left: 20px;
       top: -60px;
       width: 30%;
-
-      &.large {
-        top: -150px;
-        width: 50%;
-      }
     }
 
     // Nav
