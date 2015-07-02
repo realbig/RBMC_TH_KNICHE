@@ -1,0 +1,11 @@
+/*
+Styles the search widget.
+
+@since 1.0.0
+*/
+
+.widget_search {
+  .search-submit {
+    @extend .tiny;
+  }
+}

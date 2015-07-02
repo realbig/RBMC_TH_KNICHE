@@ -3236,7 +3236,7 @@ button, .button, input[type="submit"], .woocommerce .button:not(.alt), .woocomme
     padding-bottom: 1.0714285714rem;
     padding-left: 2rem;
     font-size: 1.1428571429rem; }
-  button.tiny, .button.tiny, input.tiny[type="submit"], .woocommerce .tiny.button:not(.alt), .woocommerce input.tiny[type="submit"]:not(.alt), .woocommerce .tiny.button.alt, .woocommerce input.tiny.alt[type="submit"] {
+  button.tiny, .widget_search button.search-submit, .button.tiny, input.tiny[type="submit"], .widget_search input[type="submit"].search-submit, .widget_search .button.search-submit, .woocommerce .tiny.button:not(.alt), .woocommerce input.tiny[type="submit"]:not(.alt), .woocommerce .tiny.button.alt, .woocommerce input.tiny.alt[type="submit"] {
     padding-top: 0.7142857143rem;
     padding-right: 1.4285714286rem;
     padding-bottom: 0.7857142857rem;
@@ -4156,7 +4156,7 @@ label.error {
   .reveal-modal.collapse, dialog.collapse {
     padding: 0; }
   @media only screen and (min-width:40.063em) {
-    .reveal-modal.tiny, dialog.tiny {
+    .reveal-modal.tiny, dialog.tiny, .widget_search dialog.search-submit, .widget_search .reveal-modal.search-submit {
       width: 30%;
       max-width: 71.4285714286rem;
       left: 0;
@@ -5010,6 +5010,11 @@ Global mixins.
       font-size: 35px;
       color: #aaa; }
 
+/*
+Styles the search widget.
+
+@since 1.0.0
+*/
 /*
 Social shortcodes.
 
