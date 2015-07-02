@@ -4379,36 +4379,34 @@ Global mixins.
       font-size: 1.7em;
       font-family: 'Architects Daughter', cursive; }
 #site-header .feature {
-  margin-top: 7px;
-  margin-bottom: 7px;
   margin-top: 27px;
-  margin-bottom: 20px;
-  background: url("http://www.transparenttextures.com/patterns/black-linen.png") #66cc33 repeat; }
-  #site-header .feature:before, #site-header .feature:after {
-    content: '';
-    width: 100%;
-    height: 7px;
-    background: rgba(255, 255, 255, 0.6);
-    position: relative;
-    display: block; }
-  #site-header .feature:before {
-    top: -7px; }
-  #site-header .feature:after {
-    bottom: -7px; }
-  #site-header .feature > .columns {
-    padding-top: 50px; }
+  margin-bottom: 20px; }
+  #site-header .feature > .row {
+    margin-top: 7px;
+    margin-bottom: 7px; }
+    #site-header .feature > .row:before, #site-header .feature > .row:after {
+      content: '';
+      width: 100%;
+      height: 7px;
+      background: rgba(255, 255, 255, 0.6);
+      position: relative;
+      display: block; }
+    #site-header .feature > .row:before {
+      top: -7px; }
+    #site-header .feature > .row:after {
+      bottom: -7px; }
   #site-header .feature .feature-left {
-    padding: 20px; }
+    padding: 0 20px; }
   #site-header .feature .feature-right {
-    padding: 20px; }
+    padding: 0 20px; }
     #site-header .feature .feature-right .container {
       color: #fff;
       padding: 20px; }
-    #site-header .feature .feature-right p, #site-header .feature .feature-right .button, #site-header .feature .feature-right input[type="submit"] {
-      margin-bottom: 0; }
+    #site-header .feature .feature-right .button, #site-header .feature .feature-right input[type="submit"] {
+      margin: 1em 0 0 0; }
     #site-header .feature .feature-right p {
       font-size: 2em;
-      margin-bottom: 1em; }
+      margin: 0; }
 #site-header .mobile-header {
   top: 0;
   background: #202020;
