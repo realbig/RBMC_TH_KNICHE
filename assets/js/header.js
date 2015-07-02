@@ -9,6 +9,7 @@
 
     $(function () {
 
+        // Mobile nav
         $('#mobile-nav').find('.menu-toggle').click(function (e) {
 
             e.preventDefault();

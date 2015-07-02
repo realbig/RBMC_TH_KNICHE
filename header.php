@@ -109,7 +109,7 @@ global $woocommerce;
 				wp_nav_menu( array(
 					'theme_location' => 'primary',
 					'container'      => false,
-					'items_wrap' => '<ul id="%1$s" class="%2$s">' . $home_item . '%3$s</ul>',
+					'items_wrap'     => '<ul id="%1$s" class="%2$s">' . $home_item . '%3$s</ul>',
 				) );
 				?>
 			</nav>
@@ -155,37 +155,27 @@ global $woocommerce;
 			$background_preview = $background ? wp_get_attachment_image_src( $background, 'full' ) : '';
 			?>
 
-			<section class="feature row"
-				<?php echo $background ? "style=\"background-image: url('$background_preview[0]');\"" : ''; ?>>
+			<section class="feature">
+				<div class="row"
+					<?php echo $background ? "style=\"background-image: url('$background_preview[0]');\"" : ''; ?>>
+					<div class="feature-left columns small-12 medium-6">
+						<?php
+						if ( $image = get_post_meta( get_option( 'page_on_front' ), '_kidniche_home_featured_image', true ) ) {
+							echo wp_get_attachment_image( $image, 'full' );
+						}
+						?>
+					</div>
 
-				<div class="columns small-12">
-
-					<div class="row">
-
-						<div class="feature-left columns small-12 medium-6">
+					<div class="feature-right columns small-12 medium-6" data-vertical-align="middle">
+						<div class="container">
 							<?php
-							if ( $image = get_post_meta( get_option( 'page_on_front' ), '_kidniche_home_featured_image', true ) ) {
-								echo wp_get_attachment_image( $image, 'full' );
+							if ( $blurb = get_post_meta( get_option( 'page_on_front' ), '_kidniche_home_featured_blurb', true ) ) {
+								echo wpautop( do_shortcode( $blurb ) );
 							}
 							?>
 						</div>
-
-						<div class="feature-right columns small-12 medium-6">
-
-							<div class="container">
-								<?php
-								if ( $blurb = get_post_meta( get_option( 'page_on_front' ), '_kidniche_home_featured_blurb', true ) ) {
-									echo wpautop( do_shortcode( $blurb ) );
-								}
-								?>
-							</div>
-
-						</div>
-
 					</div>
-
 				</div>
-
 			</section>
 
 		<?php endif; ?>

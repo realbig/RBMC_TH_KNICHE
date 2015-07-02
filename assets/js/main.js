@@ -17,4 +17,18 @@
         }
     });
 
+    // Vertical alignment
+    $(function () {
+        $('[data-vertical-align]').each(function () {
+
+            var alignment = $(this).data('vertical-align');
+
+            switch (alignment) {
+                case 'middle':
+                    $(this).css('margin-top', ($(this).parent().height() / 2) - ($(this).height() / 2));
+                    break;
+            }
+        });
+    });
+
 })(jQuery);

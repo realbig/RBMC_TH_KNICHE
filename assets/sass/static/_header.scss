@@ -123,34 +123,32 @@ $primary-nav-height: 50px;
 
   // Feature
   .feature {
-    @include trim(#fff);
     margin-top: 27px; // Compensate for green border (7px tall)
     margin-bottom: 20px;
-    background: url("http://www.transparenttextures.com/patterns/black-linen.png") $primary-color repeat;
 
-    > .columns {
-      padding-top: 50px;
+    > .row {
+      @include trim(#fff);
     }
 
     .feature-left {
-      padding: 20px;
+      padding: 0 20px;
     }
 
     .feature-right {
-      padding: 20px;
+      padding: 0 20px;
 
       .container {
         color: #fff;
         padding: 20px;
       }
 
-      p, .button {
-        margin-bottom: 0;
+      .button {
+        margin: 1em 0 0 0;
       }
 
       p {
         font-size: 2em;
-        margin-bottom: 1em;
+        margin: 0;
       }
     }
   }
