@@ -99,11 +99,20 @@ global $woocommerce;
 				     src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-header.png"/>
 			</a>
 
-			<nav id="site-nav" class="columns small-12 medium-6 push-6">
+			<nav id="site-nav" class="columns small-12">
+				<?php ob_start(); ?>
+				<li class="menu-item">
+					<a href="<?php bloginfo( 'url' ); ?>">
+						<span class="icon-home"></span>
+					</a>
+				</li>
 				<?php
+				$home_item = ob_get_clean();
+
 				wp_nav_menu( array(
 					'theme_location' => 'primary',
 					'container'      => false,
+					'items_wrap' => '<ul id="%1$s" class="%2$s">' . $home_item . '%3$s</ul>',
 				) );
 				?>
 			</nav>
