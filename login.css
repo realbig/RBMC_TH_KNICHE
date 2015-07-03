@@ -60,6 +60,8 @@ html, body {
   height: 100%; }
 
 *, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
 html, body {
@@ -341,4 +343,5 @@ body {
 .wp-core-ui input.button-primary.button-large {
   height: auto;
   box-shadow: none; }
+
 /*# sourceMappingURL=login.css.map */

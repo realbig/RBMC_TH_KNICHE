@@ -142,6 +142,11 @@ add_action( 'wp_enqueue_scripts', function () {
 			wp_enqueue_style( THEME_ID . "-font-$ID" );
 		}
 	}
+
+	// Data
+	wp_localize_script( THEME_ID, 'knicheData', array(
+		'ajaxurl' => admin_url( 'admin-ajax.php' ),
+	));
 } );
 
 /**
@@ -335,16 +340,24 @@ function kniche_woocommerce_add_to_cart_link_icon() {
 
 function _kidniche_modify_contact_methods( $profile_fields ) {
 
-	$profile_fields['twitter'] = 'Twitter URL';
+	$profile_fields['twitter']  = 'Twitter URL';
 	$profile_fields['facebook'] = 'Facebook URL';
 	$profile_fields['linkedin'] = 'LinkedIn URL';
 
 	return $profile_fields;
 }
-add_filter('user_contactmethods', '_kidniche_modify_contact_methods');
+
+function kniche_load_more() {
+	?>
+	<a href="#" id="load-more" data-post_type="lesson" class="button">Load More</a>
+<?php
+}
+
+add_filter( 'user_contactmethods', '_kidniche_modify_contact_methods' );
 
 // Include other static files
 require_once __DIR__ . '/includes/shortcodes.php';
 require_once __DIR__ . '/includes/widgets.php';
+require_once __DIR__ . '/includes/ajax.php';
 require_once __DIR__ . '/admin/admin.php';
 require_once __DIR__ . '/woocommerce/overrides.php';
