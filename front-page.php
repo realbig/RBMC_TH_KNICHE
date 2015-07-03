@@ -4,12 +4,16 @@
  *
  * @since   1.0.0
  * @package KidNiche
+ *
+ * @global WP_Query $wp_query
  */
 
 // Don't load directly
 if ( ! defined( 'ABSPATH' ) ) {
 	die;
 }
+
+$post_type = $wp_query->query['post_type'];
 
 get_header();
 
@@ -81,7 +85,7 @@ if ( ! empty( $featured_products ) ) {
 
 				<h3 class="section-title">Lessons</h3>
 
-				<div class="post-list">
+				<div class="<?php echo $post_type; ?>-list">
 					<?php
 					foreach ( $posts as $post ) {
 						setup_postdata( $post );
