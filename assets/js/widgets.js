@@ -98,8 +98,6 @@
 
                 var offset = $container.width();
 
-                console.log(offset);
-
                 $testimonial_container.width(offset * $testimonials.length);
                 $testimonials.width(offset);
             }
