@@ -14,7 +14,7 @@
 
             e.preventDefault();
 
-            var $post_list = $('.post-list'),
+            var $post_list = $('.' + ($(this).data('post_type') || 'post') + '-list'),
                 $this = $(this),
                 settings = {
                     numberposts: 5,
@@ -35,7 +35,7 @@
                 action: 'kniche_load_posts',
                 settings: settings
             };
-            
+
             console.log(settings);
 
             $.post(
