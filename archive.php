@@ -19,7 +19,13 @@ get_header();
 
 kidniche_page_start();
 
-kidniche_page_title( post_type_archive_title( '', false ) );
+switch( $title = post_type_archive_title( '', false ) ) {
+	case 'Testimonials':
+		$title = 'Reviews';
+		break;
+}
+
+kidniche_page_title( $title );
 
 if ( have_posts() ) :
 	?>
