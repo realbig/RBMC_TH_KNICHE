@@ -22,13 +22,19 @@ remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_singl
 ?>
 	<div class="page-content columns small-12 medium-9">
 
-		<?php kidniche_page_title(); ?>
 
-		<?php if ( $field = get_field( 'sub_title' ) ) : ?>
-			<p class="product-subtitle">
-				<?php echo $field; ?>
-			</p>
-		<?php endif; ?>
+		<?php
+		if ( $field = get_field( 'sub_title' ) ) {
+
+			$subtitle = '<p class="product-subtitle">';
+			$subtitle .= $field;
+			$subtitle .= '</p>';
+
+			kidniche_page_title( get_the_title() . $subtitle );
+		} else {
+			kidniche_page_title();
+		}
+		?>
 
 		<?php wc_get_template_part( 'content', 'single-product' ); ?>
 

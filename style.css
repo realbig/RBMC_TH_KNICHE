@@ -5413,6 +5413,9 @@ Global mixins.
 
 @since 1.0.0
 */
+body.single-product .page-title .product-subtitle {
+  font-size: 0.6em;
+  font-family: "Helvetica", sans-serif; }
 body.single-product .price .amount {
   font-size: 2em; }
 

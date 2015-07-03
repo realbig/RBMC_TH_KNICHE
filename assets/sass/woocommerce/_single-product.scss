@@ -7,6 +7,14 @@ Single product page.
 @import "../settings";
 
 body.single-product {
+
+  .page-title {
+    .product-subtitle {
+      font-size: 0.6em;
+      font-family: $font-family-sans-serif;
+    }
+  }
+
   .price {
     .amount {
       font-size: 2em;
