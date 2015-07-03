@@ -13,8 +13,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	die;
 }
 
-$post_type = $wp_query->query['post_type'];
-
 get_header();
 
 kidniche_page_start();
@@ -74,7 +72,7 @@ if ( ! empty( $featured_products ) ) {
 
 		$blog_post_count = get_post_meta( get_the_ID(), '_kidniche_home_blog_post_count', true );
 		$posts           = get_posts( array(
-			'post_type' => 'lesson',
+			'post_type'   => 'lesson',
 			'numberposts' => $blog_post_count ? $blog_post_count : 3,
 		) );
 
@@ -85,7 +83,7 @@ if ( ! empty( $featured_products ) ) {
 
 				<h3 class="section-title">Lessons</h3>
 
-				<div class="<?php echo $post_type; ?>-list">
+				<div class="lesson-list">
 					<?php
 					foreach ( $posts as $post ) {
 						setup_postdata( $post );
