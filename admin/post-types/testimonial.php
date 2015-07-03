@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 add_action( 'init', function () {
-	easy_register_post_type( 'testimonial', 'Testimonial', 'Testimonials', array(
+	easy_register_post_type( 'testimonial', 'Review', 'Reviews', array(
 		'menu_icon' => 'dashicons-testimonial',
 		'supports'  => array( 'title', 'editor', 'thumbnail', 'author' ),
 		'rewrite'   => array( 'slug' => 'testimonials' ),
