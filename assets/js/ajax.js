@@ -35,6 +35,8 @@
                 action: 'kniche_load_posts',
                 settings: settings
             };
+            
+            console.log(settings);
 
             $.post(
                 knicheData.ajaxurl,
@@ -52,10 +54,10 @@
 
                         var $template = $post_list.find('article').first().clone();
 
-                        $template.find('.post-title a').html(post['title']);
-                        $template.find('.post-excerpt').html(post['excerpt']);
+                        $template.find('.' + settings.post_type + '-title a').html(post['title']);
+                        $template.find('.' + settings.post_type + '-excerpt').html(post['excerpt']);
                         $template.find('a').attr('href', post['link']);
-                        $template.find('.post-image img').attr('src', post['image']);
+                        $template.find('.' + settings.post_type + '-image img').attr('src', post['image']);
 
                         $post_list.append($template);
                     });
