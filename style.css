@@ -4638,7 +4638,7 @@ Global mixins.
     position: absolute;
     z-index: 10;
     left: 20px;
-    top: -60px;
+    top: -80px;
     width: 30%; }
   #site-header .primary-nav #site-nav {
     padding: 0; }
