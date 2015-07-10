@@ -62,9 +62,15 @@ function _kidniche_metabox_book_product_link( $post ) {
 				<option></option>
 				<?php
 				foreach ( $products as $product ) {
+
+					$title = $product->post_title;
+
+					if ( $subtitle = get_field( 'sub_title', $product->ID ) ) {
+						$title .= " - $subtitle";
+					}
 					?>
 					<option value="<?php echo $product->ID; ?>" <?php selected( $product->ID, $product_link ); ?>>
-						<?php echo $product->post_title; ?>
+						<?php echo $title; ?>
 					</option>
 				<?php
 				}
