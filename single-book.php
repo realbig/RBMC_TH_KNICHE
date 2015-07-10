@@ -57,6 +57,12 @@ if ( $snippet ) : ?>
 
 			<h1><?php the_title(); ?></h1>
 
+			<?php if ( $field = get_field( 'sub_title' ) ) : ?>
+				<p class="product-subtitle">
+					<?php echo $field; ?>
+				</p>
+			<?php endif; ?>
+
 			<?php the_content(); ?>
 
 			<?php if ( $product_link ) : ?>
