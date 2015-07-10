@@ -95,6 +95,13 @@ if ( ! empty( $featured_products ) ) {
 					?>
 				</div>
 
+				<p class="text-center">
+					<br/>
+					<a href="<?php echo get_post_type_archive_link( 'lesson' ); ?>" class="button">
+						View All Lessons
+					</a>
+				</p>
+
 			</div>
 		<?php
 		}
