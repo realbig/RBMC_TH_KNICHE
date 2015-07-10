@@ -25,25 +25,27 @@ if ( $snippet ) : ?>
 
 	<section class="book-snippet">
 		<div class="row">
+			<div class="container">
 
-			<?php if ( has_post_thumbnail() ) : ?>
-				<div class="book-image columns small-12 medium-6">
-					<?php the_post_thumbnail( 'full' ); ?>
-				</div>
-			<?php endif; ?>
-
-			<div class="book-copy columns small-12 medium-6">
-				<?php echo $snippet; ?>
-
-				<?php if ( $product_link ) : ?>
-					<p class="text-center">
-						<a href="<?php echo $product_link; ?>" class="button large secondary">
-							Order Now
-						</a>
-					</p>
+				<?php if ( has_post_thumbnail() ) : ?>
+					<div class="book-image columns small-12 medium-6">
+						<?php the_post_thumbnail( 'full' ); ?>
+					</div>
 				<?php endif; ?>
-			</div>
 
+				<div class="book-copy columns small-12 medium-6">
+					<?php echo $snippet; ?>
+
+					<?php if ( $product_link ) : ?>
+						<p class="text-center">
+							<a href="<?php echo $product_link; ?>" class="button large secondary">
+								Order Now
+							</a>
+						</p>
+					<?php endif; ?>
+				</div>
+
+			</div>
 		</div>
 	</section>
 

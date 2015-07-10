@@ -9,14 +9,16 @@ The single book landing page.
 body.single-book {
 
   .book-snippet {
-    @include trim(#fff);
-
-    background: url("http://www.transparenttextures.com/patterns/black-linen.png") $primary-color repeat;
     color: #fff;
     margin: $gutter 0;
 
     > .row {
-      padding: $gutter 0;
+      @include trim(#fff);
+      background: url("http://www.transparenttextures.com/patterns/black-linen.png") $primary-color repeat;
+
+      > .container {
+        padding: $gutter 0;
+      }
     }
 
     .book-copy {

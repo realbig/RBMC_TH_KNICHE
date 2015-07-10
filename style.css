@@ -4875,24 +4875,25 @@ Global mixins.
 @since 1.0.0
 */
 body.single-book .book-snippet {
-  margin-top: 7px;
-  margin-bottom: 7px;
-  background: url("http://www.transparenttextures.com/patterns/black-linen.png") #66cc33 repeat;
   color: #fff;
   margin: 30px 0; }
-  body.single-book .book-snippet:before, body.single-book .book-snippet:after {
-    content: '';
-    width: 100%;
-    height: 7px;
-    background: rgba(255, 255, 255, 0.6);
-    position: relative;
-    display: block; }
-  body.single-book .book-snippet:before {
-    top: -7px; }
-  body.single-book .book-snippet:after {
-    bottom: -7px; }
   body.single-book .book-snippet > .row {
-    padding: 30px 0; }
+    margin-top: 7px;
+    margin-bottom: 7px;
+    background: url("http://www.transparenttextures.com/patterns/black-linen.png") #66cc33 repeat; }
+    body.single-book .book-snippet > .row:before, body.single-book .book-snippet > .row:after {
+      content: '';
+      width: 100%;
+      height: 7px;
+      background: rgba(255, 255, 255, 0.6);
+      position: relative;
+      display: block; }
+    body.single-book .book-snippet > .row:before {
+      top: -7px; }
+    body.single-book .book-snippet > .row:after {
+      bottom: -7px; }
+    body.single-book .book-snippet > .row > .container {
+      padding: 30px 0; }
   body.single-book .book-snippet .book-copy {
     font-size: 1.5em;
     font-weight: bold;
