@@ -1,7 +1,7 @@
 /*!
 Theme Name: Kid Niche
 Description: The theme designed for Kid Niche by Real Big Marketing.
-Version: 1.2.1
+Version: 1.3.0
 Author: Joel Worsham
 Author URI: http://realbigmarketing.com/staff/joel-worsham
 */
@@ -4875,24 +4875,25 @@ Global mixins.
 @since 1.0.0
 */
 body.single-book .book-snippet {
-  margin-top: 7px;
-  margin-bottom: 7px;
-  background: url("http://www.transparenttextures.com/patterns/black-linen.png") #66cc33 repeat;
   color: #fff;
   margin: 30px 0; }
-  body.single-book .book-snippet:before, body.single-book .book-snippet:after {
-    content: '';
-    width: 100%;
-    height: 7px;
-    background: rgba(255, 255, 255, 0.6);
-    position: relative;
-    display: block; }
-  body.single-book .book-snippet:before {
-    top: -7px; }
-  body.single-book .book-snippet:after {
-    bottom: -7px; }
   body.single-book .book-snippet > .row {
-    padding: 30px 0; }
+    margin-top: 7px;
+    margin-bottom: 7px;
+    background: url("http://www.transparenttextures.com/patterns/black-linen.png") #66cc33 repeat; }
+    body.single-book .book-snippet > .row:before, body.single-book .book-snippet > .row:after {
+      content: '';
+      width: 100%;
+      height: 7px;
+      background: rgba(255, 255, 255, 0.6);
+      position: relative;
+      display: block; }
+    body.single-book .book-snippet > .row:before {
+      top: -7px; }
+    body.single-book .book-snippet > .row:after {
+      bottom: -7px; }
+    body.single-book .book-snippet > .row > .container {
+      padding: 30px 0; }
   body.single-book .book-snippet .book-copy {
     font-size: 1.5em;
     font-weight: bold;
@@ -4980,6 +4981,25 @@ body.home .home-featured-products .product-buy {
     display: inline-block;
     height: 20px;
     line-height: 20px; }
+
+/*
+Styles page.php.
+
+@since 1.0.0
+*/
+/*
+Sets up the theme's styling properties and makes some variables already set in Foundation available for easy use
+throughout this theme's SASS files.
+
+@since 1.0.0
+*/
+/*
+Global mixins.
+
+@since 1.0.0
+*/
+.search-list [class*="-image"] {
+  padding-right: 15px; }
 
 /*
 Posts within a loop.
