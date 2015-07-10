@@ -58,7 +58,7 @@ function _kidniche_metabox_book_product_link( $post ) {
 		<?php
 		if ( ! empty( $products ) ) {
 			?>
-			<select name="_product_link" data-placeholder="Select a product" class="chosen">
+			<select name="_product_link" data-placeholder="Select a product" class="chosen" style="width: 100%;">
 				<option></option>
 				<?php
 				foreach ( $products as $product ) {
