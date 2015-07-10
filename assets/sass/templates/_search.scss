@@ -1,0 +1,13 @@
+/*
+Styles page.php.
+
+@since 1.0.0
+*/
+
+@import "../settings";
+
+.search-list {
+  [class*="-image"] {
+    padding-right: 15px;
+  }
+}

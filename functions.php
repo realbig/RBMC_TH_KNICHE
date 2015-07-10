@@ -260,8 +260,6 @@ function kidniche_page_end() {
  * @since 1.0.0
  */
 function kidniche_post_loop_content() {
-
-
 	?>
 	<article id="<?php echo get_post_type(); ?>-<?php the_ID(); ?>" <?php post_class( array( 'row', 'collapse' ) ); ?>>
 
