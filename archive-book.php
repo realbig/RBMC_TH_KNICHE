@@ -33,7 +33,7 @@ if ( have_posts() ) :
 
 				// Filter output
 				add_filter( 'woocommerce_loop_add_to_cart_link', 'kniche_woocommerce_add_to_cart_link_book' );
-				add_filter( 'woocommerce_price_html', '__return_false' );
+				add_filter( 'woocommerce_get_price_html', '__return_false' );
 				add_filter( 'post_type_link', 'kniche_book_archive_title_link' );
 
 				while ( have_posts() ) {
