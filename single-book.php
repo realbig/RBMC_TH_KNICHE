@@ -28,7 +28,7 @@ if ( $snippet ) : ?>
 			<div class="container">
 
 				<?php if ( has_post_thumbnail() ) : ?>
-					<div class="book-image columns small-12 medium-6">
+					<div class="book-image columns small-12 medium-6 text-center">
 						<?php the_post_thumbnail( 'full' ); ?>
 					</div>
 				<?php endif; ?>
