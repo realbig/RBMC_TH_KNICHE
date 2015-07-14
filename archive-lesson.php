@@ -23,7 +23,7 @@ kidniche_page_title( post_type_archive_title( '', false ) );
 
 if ( have_posts() ) :
 	?>
-	<div class="page-content columns small-12 medium-9">
+	<div class="page-content columns small-12">
 		<div class="<?php echo $post_type; ?>-list">
 			<?php
 			while ( have_posts() ) :
@@ -41,8 +41,6 @@ if ( have_posts() ) :
 	</div>
 <?php
 endif;
-
-get_sidebar();
 
 kidniche_page_end();
 

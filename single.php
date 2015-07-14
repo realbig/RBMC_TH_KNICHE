@@ -18,7 +18,7 @@ the_post();
 kidniche_page_start();
 ?>
 
-	<div class="page-content columns small-12 medium-9">
+	<div class="page-content columns small-12">
 		<?php kidniche_page_title(); ?>
 
 		<?php the_content(); ?>
@@ -27,8 +27,6 @@ kidniche_page_start();
 	</div>
 
 <?php
-get_sidebar();
-
 kidniche_page_end();
 
 get_footer();
