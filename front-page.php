@@ -88,7 +88,7 @@ if ( ! empty( $featured_products ) ) {
 			?>
 			<div class="home-blog">
 
-				<h3 class="section-title">Blog</h3>
+				<h3 class="section-title">From The Blog</h3>
 
 				<div class="post-list">
 					<?php
