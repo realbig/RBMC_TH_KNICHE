@@ -121,7 +121,8 @@ kidniche_page_start();
 			'post_type'   => 'lesson',
 			'numberposts' => 30,
 			'offset'      => $lessons_page > 1 ? ( $lessons_page - 1 ) * 30 : 0,
-			'order'       => 'ASC',
+			'order' => 'ASC',
+			'orderby' => 'menu_order',
 		) );
 
 		if ( ! empty( $lessons ) ) :
