@@ -19,7 +19,8 @@ $post_count = $post_count ? $post_count : $wp_query->post_count;
 
 $columns = 12 / min( $max_columns ? $max_columns : $post_count, $post_count );
 ?>
-<li class="columns small-12 medium-<?php echo $columns; ?>" <?php echo is_front_page() ? 'data-equalizer-watch' : ''; ?>>
+<li class="<?php echo $columns < 12 ? "columns small-12 medium-$columns" : ''; ?>"
+	<?php echo is_front_page() ? 'data-equalizer-watch' : ''; ?>>
 
 	<div class="container">
 		<div class="product-image">
