@@ -15,6 +15,6 @@ add_action( 'init', function () {
 	easy_register_post_type( 'lesson', 'Lesson', 'Lessons', array(
 		'menu_icon' => 'dashicons-welcome-learn-more',
 		'supports'  => array( 'title', 'editor', 'thumbnail', 'author' ),
-		'rewrite'   => array( 'slug' => 'lessons' ),
+		'has_archive' => false,
 	) );
 } );

@@ -353,6 +353,18 @@ function kniche_load_more() {
 
 add_filter( 'user_contactmethods', '_kidniche_modify_contact_methods' );
 
+/**
+ * @param wp_query $query
+ */
+function _kniche_pre_get_posts( $query ) {
+
+	if ( is_admin() ) {
+		return;
+	}
+}
+
+add_filter( 'pre_get_posts', '_kniche_pre_get_posts' );
+
 // Include other static files
 require_once __DIR__ . '/includes/shortcodes.php';
 require_once __DIR__ . '/includes/widgets.php';
