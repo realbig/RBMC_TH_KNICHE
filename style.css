@@ -4853,6 +4853,11 @@ Global mixins.
     font-size: 0.8em;
     color: #555; }
 
+.gform_wrapper input {
+  margin-bottom: 5px; }
+.gform_wrapper label {
+  margin-bottom: 15px !important; }
+
 /*
 Styles single.php.
 

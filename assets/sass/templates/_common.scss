@@ -3,7 +3,6 @@ Styles shared among all templates.
 
 @since 1.0.0
 */
-
 @import "../settings";
 
 // Titles
@@ -36,5 +35,16 @@ Styles shared among all templates.
     text-align: center;
     font-size: 0.8em;
     color: #555;
+  }
+}
+
+// Forms
+.gform_wrapper {
+  input {
+    margin-bottom: 5px;
+  }
+
+  label {
+    margin-bottom: 15px !important;
   }
 }
