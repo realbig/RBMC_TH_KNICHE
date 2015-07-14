@@ -4948,6 +4948,12 @@ body.home .feature {
     top: -7px; }
   body.home .feature:after {
     bottom: -7px; }
+  body.home .feature .mobile-background {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0; }
   body.home .feature .feature-right {
     padding: 0 20px; }
     body.home .feature .feature-right .container {

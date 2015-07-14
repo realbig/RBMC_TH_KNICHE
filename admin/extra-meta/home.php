@@ -41,6 +41,8 @@ function _kidniche_mb_home_extra_callback() {
 
 	$featured_background         = get_post_meta( $post->ID, '_kidniche_home_featured_background', true );
 	$featured_background_preview = $featured_background ? wp_get_attachment_image_src( $featured_background, 'medium' ) : '';
+	$featured_background_mobile         = get_post_meta( $post->ID, '_kidniche_home_featured_background_mobile', true );
+	$featured_background_mobile_preview = $featured_background_mobile ? wp_get_attachment_image_src( $featured_background_mobile, 'medium' ) : '';
 	$featured_image              = get_post_meta( $post->ID, '_kidniche_home_featured_image', true );
 	$featured_image_preview      = $featured_image ? wp_get_attachment_image_src( $featured_image, 'medium' ) : '';
 	$featured_blurb              = get_post_meta( $post->ID, '_kidniche_home_featured_blurb', true );
@@ -61,6 +63,19 @@ function _kidniche_mb_home_extra_callback() {
 			<br/>
 			<input type="hidden" class="image-id" name="_kidniche_home_featured_background"
 			       value="<?php echo $featured_background; ?>"/>
+			<a class="image-button button">Upload / Choose Image</a>
+		</label>
+	</p>
+
+	<p>
+		<label>
+			Section MobileBackground:
+			<br/>
+			<img src="<?php echo $featured_background_mobile_preview[0]; ?>" class="image-preview"
+			     style="max-width: 100%; width: 300px;"/>
+			<br/>
+			<input type="hidden" class="image-id" name="_kidniche_home_featured_background_mobile"
+			       value="<?php echo $featured_background_mobile; ?>"/>
 			<a class="image-button button">Upload / Choose Image</a>
 		</label>
 	</p>
@@ -155,6 +170,7 @@ function _kidniche_save_metaboxes_home( $post_ID ) {
 
 	$options = array(
 		'_kidniche_home_featured_background',
+		'_kidniche_home_featured_background_mobile',
 		'_kidniche_home_featured_image',
 		'_kidniche_home_featured_blurb',
 		'_kidniche_home_welcome_blurb_title',

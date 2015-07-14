@@ -152,13 +152,21 @@ global $woocommerce;
 		<?php
 		if ( is_front_page() ) :
 
-			$background         = get_post_meta( get_option( 'page_on_front' ), '_kidniche_home_featured_background', true );
+			$background                = get_post_meta( get_option( 'page_on_front' ), '_kidniche_home_featured_background', true );
 			$background_preview = $background ? wp_get_attachment_image_src( $background, 'full' ) : '';
+
+			$mobile_background         = get_post_meta( get_option( 'page_on_front' ), '_kidniche_home_featured_background_mobile', true );
+			$mobile_background_preview = $mobile_background ? wp_get_attachment_image_src( $mobile_background, 'full' ) : '';
 			?>
 
 			<section class="feature">
 				<div class="row collapse"
 					<?php echo $background ? "style=\"background-image: url('$background_preview[0]');\"" : ''; ?>>
+
+					<?php if ( $mobile_background ) : ?>
+						<div class="mobile-background hide-for-medium-up"
+							<?php echo $mobile_background ? "style=\"background-image: url('$mobile_background_preview[0]');\"" : ''; ?>></div>
+					<?php endif; ?>
 
 					<div class="feature-left columns small-12 medium-6">
 						<?php
