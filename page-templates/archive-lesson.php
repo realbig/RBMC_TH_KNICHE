@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Lesson Archive
+ * Template Name: Activity Archive
  *
  * @since   1.0.0
  * @package KidNiche
