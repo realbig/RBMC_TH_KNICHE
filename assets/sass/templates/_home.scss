@@ -82,4 +82,14 @@ body.home {
       }
     }
   }
+
+  // Featured Video
+  .home-video {
+    margin-top: $gutter;
+    margin-bottom: $gutter;
+
+    iframe {
+      width: 100%;
+    }
+  }
 }

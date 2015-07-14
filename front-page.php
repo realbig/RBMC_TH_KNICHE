@@ -70,6 +70,14 @@ if ( ! empty( $featured_products ) ) {
 		$author_ID = get_post_meta( get_the_ID(), '_kidniche_home_author_user_id', true );
 		include __DIR__ . '/partials/about-the-author.php';
 
+		if ( $video = get_post_meta( get_the_ID(), '_kidniche_home_video', true ) ) :
+			?>
+			<div class="home-video">
+				<?php echo wp_oembed_get( $video ); ?>
+			</div>
+			<?php
+		endif;
+
 		$blog_post_count = get_post_meta( get_the_ID(), '_kidniche_home_blog_post_count', true );
 		$posts           = get_posts( array(
 			'numberposts' => $blog_post_count ? $blog_post_count : 3,
@@ -93,12 +101,12 @@ if ( ! empty( $featured_products ) ) {
 				</div>
 
 				<?php if ( $blog_index = get_option( 'page_for_posts' ) ) : ?>
-				<p class="text-center">
-					<br/>
-					<a href="<?php echo get_permalink( $blog_index ); ?>" class="button">
-						View All Posts
-					</a>
-				</p>
+					<p class="text-center">
+						<br/>
+						<a href="<?php echo get_permalink( $blog_index ); ?>" class="button">
+							View All Posts
+						</a>
+					</p>
 				<?php endif; ?>
 
 			</div>

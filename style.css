@@ -4989,6 +4989,11 @@ body.home .home-featured-products .product-buy {
     display: inline-block;
     height: 20px;
     line-height: 20px; }
+body.home .home-video {
+  margin-top: 30px;
+  margin-bottom: 30px; }
+  body.home .home-video iframe {
+    width: 100%; }
 
 /*
 Styles page.php.

@@ -46,6 +46,7 @@ function _kidniche_mb_home_extra_callback() {
 	$featured_blurb              = get_post_meta( $post->ID, '_kidniche_home_featured_blurb', true );
 	$welcome_blurb_title = get_post_meta( $post->ID, '_kidniche_home_welcome_blurb_title', true );
 	$welcome_blurb       = get_post_meta( $post->ID, '_kidniche_home_welcome_blurb', true );
+	$video       = get_post_meta( $post->ID, '_kidniche_home_video', true );
 	$blog_post_count     = get_post_meta( $post->ID, '_kidniche_home_blog_post_count', true );
 	?>
 
@@ -110,6 +111,17 @@ function _kidniche_mb_home_extra_callback() {
 		</label>
 	</p>
 
+	<h2>Featured Video</h2>
+
+	<p>
+		<label>
+			Video Link:
+			<br/>
+			<input type="text" name="_kidniche_home_video" class="widefat"
+			       value="<?php echo $video; ?>">
+		</label>
+	</p>
+
 	<h2>From the Blog</h2>
 
 	<p>
@@ -147,6 +159,7 @@ function _kidniche_save_metaboxes_home( $post_ID ) {
 		'_kidniche_home_featured_blurb',
 		'_kidniche_home_welcome_blurb_title',
 		'_kidniche_home_welcome_blurb',
+		'_kidniche_home_video',
 		'_kidniche_home_blog_post_count',
 	);
 
