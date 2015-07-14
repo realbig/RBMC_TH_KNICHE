@@ -4972,9 +4972,6 @@ body.home .about-the-author {
 body.home #site-content {
   margin-top: 0;
   padding-top: 0; }
-@media only screen and (min-width:40.063em) {
-  body.home .post-list .post-content {
-    padding-left: 1.7857142857rem; } }
 body.home .post-comment-count {
   font-weight: bold;
   color: #aaa; }

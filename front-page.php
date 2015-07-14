@@ -72,18 +72,17 @@ if ( ! empty( $featured_products ) ) {
 
 		$blog_post_count = get_post_meta( get_the_ID(), '_kidniche_home_blog_post_count', true );
 		$posts           = get_posts( array(
-			'post_type'   => 'lesson',
 			'numberposts' => $blog_post_count ? $blog_post_count : 3,
 		) );
 
-		if ( ! empty( $posts ) ) {
+		if ( ! empty( $posts ) ) :
 			global $post;
 			?>
 			<div class="home-blog">
 
-				<h3 class="section-title">Lessons</h3>
+				<h3 class="section-title">Blog</h3>
 
-				<div class="lesson-list">
+				<div class="post-list">
 					<?php
 					foreach ( $posts as $post ) {
 						setup_postdata( $post );
@@ -93,17 +92,17 @@ if ( ! empty( $featured_products ) ) {
 					?>
 				</div>
 
+				<?php if ( $blog_index = get_option( 'page_for_posts' ) ) : ?>
 				<p class="text-center">
 					<br/>
-					<a href="<?php echo get_post_type_archive_link( 'lesson' ); ?>" class="button">
-						View All Lessons
+					<a href="<?php echo get_permalink( $blog_index ); ?>" class="button">
+						View All Posts
 					</a>
 				</p>
+				<?php endif; ?>
 
 			</div>
-		<?php
-		}
-		?>
+		<?php endif; ?>
 
 	</section>
 

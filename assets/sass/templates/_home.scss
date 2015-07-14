@@ -53,13 +53,6 @@ body.home {
   }
 
   // Blog
-  .post-list {
-    .post-content {
-      @media #{$medium-up} {
-        padding-left: $column-gutter / 2;
-      }
-    }
-  }
   .post-comment-count {
     font-weight: bold;
     color: #aaa;
