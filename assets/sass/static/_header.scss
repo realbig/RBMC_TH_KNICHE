@@ -84,10 +84,11 @@ $primary-nav-height: 50px;
   // Bottom header
   .primary-nav {
     @include trim($primary-color);
+    max-width: $row-width;
+    margin: 100px auto 0 auto;
     color: $primary-color;
     background: #fff;
     position: relative;
-    margin-top: 100px;
 
     // Logo
     .site-logo {
@@ -117,38 +118,6 @@ $primary-nav-height: 50px;
         a {
           @extend a.color-invert;
         }
-      }
-    }
-  }
-
-  // Feature
-  .feature {
-    margin-top: 27px; // Compensate for green border (7px tall)
-    margin-bottom: 20px;
-
-    > .row {
-      @include trim(#fff);
-    }
-
-    .feature-left {
-      padding: 0 20px;
-    }
-
-    .feature-right {
-      padding: 0 20px;
-
-      .container {
-        color: #fff;
-        padding: 20px;
-      }
-
-      .button {
-        margin: 1em 0 0 0;
-      }
-
-      p {
-        font-size: 2em;
-        margin: 0;
       }
     }
   }

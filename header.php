@@ -89,31 +89,32 @@ global $woocommerce;
 
 		</section>
 
-		<section class="primary-nav show-for-medium-up row">
+		<section class="primary-nav show-for-medium-up">
+			<div class="row">
 
-			<a href="<?php bloginfo( 'url' ); ?>">
-				<img class="site-logo"
-				     src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-header.png"/>
-			</a>
+				<a href="<?php bloginfo( 'url' ); ?>">
+					<img class="site-logo"
+					     src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-header.png"/>
+				</a>
 
-			<nav id="site-nav" class="columns small-12">
-				<?php ob_start(); ?>
-				<li class="menu-item">
-					<a href="<?php bloginfo( 'url' ); ?>">
-						<span class="icon-home"></span>
-					</a>
-				</li>
-				<?php
-				$home_item = ob_get_clean();
+				<nav id="site-nav" class="columns small-12">
+					<?php ob_start(); ?>
+					<li class="menu-item">
+						<a href="<?php bloginfo( 'url' ); ?>">
+							<span class="icon-home"></span>
+						</a>
+					</li>
+					<?php
+					$home_item = ob_get_clean();
 
-				wp_nav_menu( array(
-					'theme_location' => 'primary',
-					'container'      => false,
-					'items_wrap'     => '<ul id="%1$s" class="%2$s">' . $home_item . '%3$s</ul>',
-				) );
-				?>
-			</nav>
-
+					wp_nav_menu( array(
+						'theme_location' => 'primary',
+						'container'      => false,
+						'items_wrap'     => '<ul id="%1$s" class="%2$s">' . $home_item . '%3$s</ul>',
+					) );
+					?>
+				</nav>
+			</div>
 		</section>
 
 		<section class="mobile-header show-for-small-only row">
@@ -156,8 +157,9 @@ global $woocommerce;
 			?>
 
 			<section class="feature">
-				<div class="row"
+				<div class="row collapse"
 					<?php echo $background ? "style=\"background-image: url('$background_preview[0]');\"" : ''; ?>>
+
 					<div class="feature-left columns small-12 medium-6">
 						<?php
 						if ( $image = get_post_meta( get_option( 'page_on_front' ), '_kidniche_home_featured_image', true ) ) {

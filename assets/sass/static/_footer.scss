@@ -8,10 +8,11 @@ The static site footer.
 
 #site-footer {
   @include trim;
+  max-width: $row-width;
+  margin: 0 auto 30px auto;
   background: $primary-color;
   text-align: center;
   color: #fff;
-  margin-bottom: 30px;
 
   p {
     margin: 0;
