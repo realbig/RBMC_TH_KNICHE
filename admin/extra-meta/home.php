@@ -45,6 +45,7 @@ function _kidniche_mb_home_extra_callback() {
 	$featured_background_mobile_preview = $featured_background_mobile ? wp_get_attachment_image_src( $featured_background_mobile, 'medium' ) : '';
 	$featured_image              = get_post_meta( $post->ID, '_kidniche_home_featured_image', true );
 	$featured_image_preview      = $featured_image ? wp_get_attachment_image_src( $featured_image, 'medium' ) : '';
+	$featured_image_link              = get_post_meta( $post->ID, '_kidniche_home_featured_image_link', true );
 	$featured_blurb              = get_post_meta( $post->ID, '_kidniche_home_featured_blurb', true );
 	$welcome_blurb_title = get_post_meta( $post->ID, '_kidniche_home_welcome_blurb_title', true );
 	$welcome_blurb       = get_post_meta( $post->ID, '_kidniche_home_welcome_blurb', true );
@@ -69,7 +70,7 @@ function _kidniche_mb_home_extra_callback() {
 
 	<p>
 		<label>
-			Section MobileBackground:
+			Section Mobile Background:
 			<br/>
 			<img src="<?php echo $featured_background_mobile_preview[0]; ?>" class="image-preview"
 			     style="max-width: 100%; width: 300px;"/>
@@ -90,6 +91,15 @@ function _kidniche_mb_home_extra_callback() {
 			<input type="hidden" class="image-id" name="_kidniche_home_featured_image"
 			       value="<?php echo $featured_image; ?>"/>
 			<a class="image-button button">Upload / Choose Image</a>
+		</label>
+	</p>
+
+	<p>
+		<label>
+			Product Image Link:
+			<br/>
+			<input type="text" class="widefat" name="_kidniche_home_featured_image_link"
+			       value="<?php echo esc_url( $featured_image_link ); ?>"/>
 		</label>
 	</p>
 
@@ -172,6 +182,7 @@ function _kidniche_save_metaboxes_home( $post_ID ) {
 		'_kidniche_home_featured_background',
 		'_kidniche_home_featured_background_mobile',
 		'_kidniche_home_featured_image',
+		'_kidniche_home_featured_image_link',
 		'_kidniche_home_featured_blurb',
 		'_kidniche_home_welcome_blurb_title',
 		'_kidniche_home_welcome_blurb',
@@ -183,8 +194,12 @@ function _kidniche_save_metaboxes_home( $post_ID ) {
 
 		if ( ! isset( $_POST[ $option ] ) || empty( $_POST[ $option ] ) ) {
 			delete_post_meta( $post_ID, $option );
+			continue;
 		}
 
+		if ( $option == '_kidniche_home_featured_image_link' ) {
+			$_POST[ $option ] = esc_url( $_POST[ $option ] );
+		}
 		update_post_meta( $post_ID, $option, $_POST[ $option ] );
 	}
 }

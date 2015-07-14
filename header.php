@@ -152,10 +152,10 @@ global $woocommerce;
 		<?php
 		if ( is_front_page() ) :
 
-			$background                = get_post_meta( get_option( 'page_on_front' ), '_kidniche_home_featured_background', true );
+			$background                = get_post_meta( get_the_ID(), '_kidniche_home_featured_background', true );
 			$background_preview = $background ? wp_get_attachment_image_src( $background, 'full' ) : '';
 
-			$mobile_background         = get_post_meta( get_option( 'page_on_front' ), '_kidniche_home_featured_background_mobile', true );
+			$mobile_background         = get_post_meta( get_the_ID(), '_kidniche_home_featured_background_mobile', true );
 			$mobile_background_preview = $mobile_background ? wp_get_attachment_image_src( $mobile_background, 'full' ) : '';
 			?>
 
@@ -168,13 +168,17 @@ global $woocommerce;
 							<?php echo $mobile_background ? "style=\"background-image: url('$mobile_background_preview[0]');\"" : ''; ?>></div>
 					<?php endif; ?>
 
-					<div class="feature-left columns small-12 medium-6">
-						<?php
-						if ( $image = get_post_meta( get_option( 'page_on_front' ), '_kidniche_home_featured_image', true ) ) {
-							echo wp_get_attachment_image( $image, 'full' );
-						}
-						?>
-					</div>
+					<?php if ( $image = get_post_meta( get_the_ID(), '_kidniche_home_featured_image', true ) ) : ?>
+						<div class="feature-left columns small-12 medium-6">
+							<?php
+							if ( $link = get_post_meta( get_the_ID(), '_kidniche_home_featured_image_link', true ) ) {
+								echo "<a href=\"$link\">";
+							}
+							?>
+							<?php echo wp_get_attachment_image( $image, 'full' ); ?>
+							<?php echo $link ? '</a>' : ''; ?>
+						</div>
+					<?php endif; ?>
 
 					<div class="feature-right columns small-12 medium-6" data-vertical-align="middle">
 						<div class="container">
