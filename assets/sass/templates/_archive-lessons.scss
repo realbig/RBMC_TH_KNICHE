@@ -1,0 +1,18 @@
+/*
+Styles lessons archive.
+
+@since 1.0.0
+*/
+
+@import "../settings";
+
+body.page-template-archive-lesson {
+
+  .lesson-pagination {
+    margin: 1em 0;
+
+    a, span {
+      margin: 0 0.5em;
+    }
+  }
+}

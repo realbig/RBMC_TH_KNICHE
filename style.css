@@ -5001,6 +5001,27 @@ body.home .home-video {
     width: 100%; }
 
 /*
+Styles lessons archive.
+
+@since 1.0.0
+*/
+/*
+Sets up the theme's styling properties and makes some variables already set in Foundation available for easy use
+throughout this theme's SASS files.
+
+@since 1.0.0
+*/
+/*
+Global mixins.
+
+@since 1.0.0
+*/
+body.page-template-archive-lesson .lesson-pagination {
+  margin: 1em 0; }
+  body.page-template-archive-lesson .lesson-pagination a, body.page-template-archive-lesson .lesson-pagination span {
+    margin: 0 0.5em; }
+
+/*
 Styles page.php.
 
 @since 1.0.0
