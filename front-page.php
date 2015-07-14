@@ -38,6 +38,7 @@ $featured_products = get_posts( array(
 	'meta_key'       => '_featured',
 	'meta_value'     => 'yes',
 	'posts_per_page' => 3,
+	'order' => 'ASC',
 ) );
 
 if ( ! empty( $featured_products ) ) {
