@@ -197,6 +197,15 @@ add_action( 'widgets_init', function () {
 		'after_title'  => '</h3>',
 	) );
 
+	// Activities
+	register_sidebar( array(
+		'name'         => 'Activities',
+		'id'           => 'lesson',
+		'description'  => 'Displays on the side of the activity pages.',
+		'before_title' => '<h3 class="widget-title">',
+		'after_title'  => '</h3>',
+	) );
+
 	// Shop
 	register_sidebar( array(
 		'name'         => 'Shop',
