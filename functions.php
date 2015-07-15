@@ -24,7 +24,7 @@ if ( defined( 'THEME_VERSION' ) || defined( 'THEME_ID' ) || isset( $theme_fonts 
 /**
  * The theme's current version (make sure to keep this up to date!)
  */
-define( 'THEME_VERSION', '1.4.1' );
+define( 'THEME_VERSION', '1.5.0' );
 
 /**
  * The theme's ID (used in handlers).
