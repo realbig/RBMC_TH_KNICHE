@@ -16,5 +16,8 @@ add_action( 'init', function () {
 		'menu_icon' => 'dashicons-welcome-learn-more',
 		'supports'  => array( 'title', 'editor', 'thumbnail', 'author' ),
 		'has_archive' => false,
+		'rewrite' => array(
+			'slug' => 'activity',
+		),
 	) );
 } );
