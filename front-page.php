@@ -74,7 +74,7 @@ if ( ! empty( $featured_products ) ) {
 		if ( $video = get_post_meta( get_the_ID(), '_kidniche_home_video', true ) ) :
 			?>
 			<div class="home-video">
-				<?php echo wp_oembed_get( $video ); ?>
+				<?php echo wp_oembed_get( $video, array( 'rel' => 0 ) ); ?>
 			</div>
 			<?php
 		endif;

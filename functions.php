@@ -374,6 +374,18 @@ function _kniche_pre_get_posts( $query ) {
 
 add_filter( 'pre_get_posts', '_kniche_pre_get_posts' );
 
+function _kniche_oembed_filter($html, $url, $args) {
+
+	$parameters = http_build_query( $args );
+
+	// Modify video parameters
+	$html = str_replace( '?feature=oembed', '?feature=oembed'.'&amp;'.$parameters, $html );
+
+	return $html;
+}
+
+add_filter('oembed_result','_kniche_oembed_filter', 10, 3);
+
 // Include other static files
 require_once __DIR__ . '/includes/shortcodes.php';
 require_once __DIR__ . '/includes/widgets.php';
