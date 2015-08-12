@@ -35,10 +35,10 @@ function kniche_lesson_pagination( $page, $lessons ) {
 			$page_link = '<span>';
 		}
 
-		$first_lesson = $i * 3;
-		$first_lesson = $first_lesson === 0 ? 1 : $first_lesson;
+		$first_lesson = $i * 10;
+		$first_lesson = $first_lesson === 0 ? 1 : $first_lesson + 1;
 
-		$last_lesson = ( $i * 3 ) + 3;
+		$last_lesson = ( $i * 10 ) + 10;
 
 		$page_link .= "{$first_lesson}a - {$last_lesson}c";
 
