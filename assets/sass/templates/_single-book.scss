@@ -17,6 +17,7 @@ body.single-book {
       background: url("http://www.transparenttextures.com/patterns/black-linen.png") $primary-color repeat;
 
       > .container {
+        @include clearfix;
         padding: $gutter 0;
       }
     }

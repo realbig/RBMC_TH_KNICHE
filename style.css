@@ -1,7 +1,7 @@
 /*!
 Theme Name: Kid Niche
 Description: The theme designed for Kid Niche by Real Big Marketing.
-Version: 1.5.0
+Version: 1.5.1
 Author: Joel Worsham
 Author URI: http://realbigmarketing.com/staff/joel-worsham
 */
@@ -4889,6 +4889,10 @@ body.single-book .book-snippet {
       bottom: -7px; }
     body.single-book .book-snippet > .row > .container {
       padding: 30px 0; }
+      body.single-book .book-snippet > .row > .container:after {
+        content: ' ';
+        display: table;
+        clear: both; }
   body.single-book .book-snippet .book-copy {
     font-size: 1.5em;
     font-weight: bold;
