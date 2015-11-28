@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 add_action( 'init', function () {
 	easy_register_post_type( 'lesson', 'Activity', 'Activities', array(
 		'menu_icon' => 'dashicons-welcome-learn-more',
-		'supports'  => array( 'title', 'editor', 'thumbnail', 'author' ),
+		'supports'  => array( 'title', 'editor', 'thumbnail', 'author', 'comments' ),
 		'has_archive' => false,
 		'rewrite' => array(
 			'slug' => 'activity',
