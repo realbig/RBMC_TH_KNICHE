@@ -46,7 +46,12 @@ add_filter( 'woocommerce_loop_add_to_cart_link', function () {
 			</div>
 
 			<div id="wholesale-form" class="reveal-modal" data-reveal aria-labelledby="wholesale-form-title" aria-hidden="true" role="dialog">
-				<h2 id="wholesale-form-title">Wholesale Signup</h2>
+
+                <h2 id="wholesale-form-title">Wholesale Signup</h2>
+
+                <div id="wholesale-top-banner">
+                    <h3>Free Shipping & Handling on $50 Orders — Mix & Match</h3>
+                </div>
 
 				<?php
 				if ( function_exists( 'gravity_form' ) ) {
@@ -60,6 +65,10 @@ add_filter( 'woocommerce_loop_add_to_cart_link', function () {
 					);
 				}
 				?>
+
+                <div id="wholesale-bottom-banner">
+                    <h3>Questions? Call Susan at <a href="tel:12313607318">231-360-7318</a> or Keith at <a href="tel:12313607320">231-360-7320</a></h3>
+                </div>
 
 				<a class="close-reveal-modal" aria-label="Close">&#215;</a>
 			</div>

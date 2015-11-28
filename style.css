@@ -5617,6 +5617,22 @@ Global mixins.
     padding: 10px;
     display: block; }
 
+/*
+Gravity Forms Terms of Use Addon
+
+@since 1.0.0
+*/
+/*
+Sets up the theme's styling properties and makes some variables already set in Foundation available for easy use
+throughout this theme's SASS files.
+
+@since 1.0.0
+*/
+/*
+Global mixins.
+
+@since 1.0.0
+*/
 .gform_body div.gform_tos {
   height: 200px;
   overflow: auto;
@@ -5636,6 +5652,50 @@ Global mixins.
       list-style-type: decimal !important; }
     .gform_body div.gform_tos ol li:last-of-type {
       margin-bottom: 1em; }
+
+/*
+Wholesale Signup Form
+
+@since 1.0.0
+*/
+/*
+Sets up the theme's styling properties and makes some variables already set in Foundation available for easy use
+throughout this theme's SASS files.
+
+@since 1.0.0
+*/
+/*
+Global mixins.
+
+@since 1.0.0
+*/
+#wholesale-form {
+  padding: 0; }
+  #wholesale-form #wholesale-form-title {
+    margin: 2.1428571429rem 4.2857142858rem 2.1428571429rem 2.1428571429rem;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-top: 1px solid #aaa;
+    border-bottom: 1px solid #aaa;
+    position: relative; }
+    #wholesale-form #wholesale-form-title:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      height: 4px;
+      width: 30px;
+      background: #66cc33; }
+  #wholesale-form #wholesale-top-banner, #wholesale-form #wholesale-bottom-banner {
+    padding: 2.1428571429rem;
+    background-color: #66cc33;
+    text-align: center; }
+    #wholesale-form #wholesale-top-banner h3, #wholesale-form #wholesale-bottom-banner h3 {
+      color: #fff; }
+      #wholesale-form #wholesale-top-banner h3 a, #wholesale-form #wholesale-bottom-banner h3 a {
+        color: #fff; }
+  #wholesale-form #gform_wrapper_2 {
+    padding: 0 2.1428571429rem 0 2.1428571429rem; }
 
 /*
 Global WooCommerce styles.
