@@ -1,0 +1,45 @@
+.gform_body div.gform_tos {
+    height: 200px;
+    overflow: auto;
+    resize: vertical;
+    
+    ul {
+        
+        margin-left: 1.4285714286rem !important;
+        margin-bottom: 0;
+        
+        li {
+            
+            margin-left: 1.4285714286rem !important;
+            
+        }
+        
+        li:last-of-type {
+            
+            margin-bottom: 1em;
+            
+        }
+        
+    }
+    
+    ol {
+        
+        margin-left: 1.4285714286rem !important;
+        list-style: decimal;
+        
+        li {
+            
+            margin-left: 1.4285714286rem !important;
+            list-style-type: decimal !important;
+            
+        }
+        
+        li:last-of-type {
+            
+            margin-bottom: 1em;
+            
+        }
+        
+    }
+    
+}
