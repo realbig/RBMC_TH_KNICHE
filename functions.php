@@ -391,4 +391,5 @@ require_once __DIR__ . '/includes/shortcodes.php';
 require_once __DIR__ . '/includes/widgets.php';
 require_once __DIR__ . '/includes/ajax.php';
 require_once __DIR__ . '/admin/admin.php';
+require_once __DIR__ . '/includes/gravityforms.php';
 require_once __DIR__ . '/woocommerce/overrides.php';
