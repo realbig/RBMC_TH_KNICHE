@@ -23,22 +23,20 @@ $columns = 12 / min( $max_columns ? $max_columns : $post_count, $post_count );
 	<?php echo is_front_page() ? 'data-equalizer-watch' : ''; ?>>
 
 	<div class="container">
-		<div class="product-image">
-			<?php the_post_thumbnail( 'thumbnail' ); ?>
-		</div>
 
-		<div class="product-content">
-			<h4 class="product-title">
-				<a href="<?php the_permalink(); ?>">
-					<?php the_title(); ?>
-				</a>
-			</h4>
+            <a href = "<?php the_permalink(); ?>">
 
-			<?php if ( $field = get_field( 'sub_title' ) ) : ?>
-				<p class="product-subtitle">
-					<?php echo $field; ?>
-				</p>
-			<?php endif; ?>
+                <?php do_action( 'woocommerce_before_shop_loop_item_title' ); ?>
+
+                <h4 class="product-title"><?php the_title(); ?></h4>
+
+                <?php if ( $field = get_field( 'sub_title' ) ) : ?>
+                    <p class="product-subtitle">
+                        <?php echo $field; ?>
+                    </p>
+                <?php endif; ?>
+
+            </a>
 
 			<p>
 				<?php echo custom_excerpt_length(); ?>

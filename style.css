@@ -5211,19 +5211,44 @@ body.home .post-comment-count {
 
 body.home .home-featured-products li > .container {
   position: relative;
-  padding-bottom: 20px;
+  padding-bottom: 30px;
   height: 100%; }
+
+body.home .home-featured-products li .onsale {
+  min-height: 3.236em;
+  min-width: 3.236em;
+  padding: .202em;
+  font-weight: 700;
+  position: absolute;
+  text-align: center;
+  line-height: 3.236;
+  top: -.5em;
+  left: -.5em;
+  margin: 0;
+  border-radius: 100%;
+  background-color: #77a464;
+  color: #fff;
+  font-size: .857em;
+  -webkit-font-smoothing: antialiased;
+  top: 0;
+  right: 0;
+  left: auto;
+  margin: -.5em -.5em 0 0; }
 
 body.home .home-featured-products .product-buy {
   position: absolute;
-  bottom: 10px;
-  height: 20px;
-  line-height: 20px; }
+  bottom: 32px;
+  height: 0;
+  line-height: 30px; }
   body.home .home-featured-products .product-buy .add_to_cart_button, body.home .home-featured-products .product-buy .price, body.home .home-featured-products .product-buy .amount {
     vertical-align: middle;
     display: inline-block;
     height: 20px;
     line-height: 20px; }
+  body.home .home-featured-products .product-buy .price del {
+    opacity: .5; }
+    body.home .home-featured-products .product-buy .price del span {
+      text-decoration: line-through; }
 
 body.home .home-video {
   margin-top: 30px;
