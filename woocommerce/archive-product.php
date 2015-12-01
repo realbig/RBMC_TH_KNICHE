@@ -36,14 +36,26 @@ add_filter( 'woocommerce_loop_add_to_cart_link', function () {
 
 		kidniche_page_title( __( 'Shop', 'KidNiche' ) );
 
+        global $current_user;
+        $user_role = $current_user->roles[0];
+
 		$shop_page_ID = get_option( 'woocommerce_shop_page_id' );
 		if ( $shop_form_ID = get_post_meta( $shop_page_ID, '_kidniche_shop_form', true ) ) :
+
+            if ( $user_role !== 'customer_wholesale' ) {
+
 			?>
 
 			<div data-alert class="alert-box">
 				Sign up for wholesale! <a href="#" data-reveal-id="wholesale-form" class="normal-color">Signup Now</a>
 				<a href="#" class="close">&times;</a>
 			</div>
+
+            <?php
+
+            }
+
+            ?>
 
 			<div id="wholesale-form" class="reveal-modal" data-reveal aria-labelledby="wholesale-form-title" aria-hidden="true" role="dialog">
 

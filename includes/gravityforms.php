@@ -14,24 +14,20 @@ add_filter( 'gform_username_2', 'generate_wholesale_username' );
  */
 function generate_wholesale_username( $username ) {
     
-    if ( class_exists( 'GFUser' ) ) {
-    
-        $first = rgpost( 'input_1_3' );
-        $last = rgpost( 'input_1_6' );
+    $first = rgpost( 'input_1_3' );
+    $last = rgpost( 'input_1_6' );
 
-        // No need for overly long Usernames
-        $username = substr( $first, 0, 1 ) . substr( $last, 0, 10 );
-        $username = preg_replace( '/[^A-Za-z]/', '', strtolower( $username ) );
+    // No need for overly long Usernames
+    $username = substr( $first, 0, 1 ) . substr( $last, 0, 10 );
+    $username = preg_replace( '/[^A-Za-z]/', '', strtolower( $username ) );
 
-        $index = 1;
-        while( username_exists( $username ) !== false ) {
+    $index = 1;
+    while( username_exists( $username ) !== false ) {
 
-            $username = str_replace( $index - 1, '', $username ) . $index;
+        $username = str_replace( $index - 1, '', $username ) . $index;
 
-            $index++;
+        $index++;
 
-        }
-        
     }
     
     return $username;

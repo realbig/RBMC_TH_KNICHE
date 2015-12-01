@@ -17,6 +17,8 @@ add_action( 'woocommerce_after_shop_loop_item_title', '_kniche_product_subtitle'
 add_filter('loop_shop_columns', '_kniche_loop_columns');
 add_filter( 'woocommerce_package_rates', '_kniche_user_role_shipping', 10, 2 );
 
+add_action( 'woocommerce_check_cart_items', '_kniche_wholesale_shipping_notice' );
+
 function _kniche_modify_cart_success_link() {
 	return get_permalink( wc_get_page_id( 'shop' ) );
 }
@@ -113,4 +115,24 @@ function _kniche_user_role_shipping( $rates, $package ) {
 
     return $rates;
 
+}
+
+/**
+ * Moved "VarkTech Minimum Purchase for WooCommerce" plugin functionality here.
+ * The plugin would often show the notice numerous times for no reason and it didn't limit it to a single User Role properly
+ */
+function _kniche_wholesale_shipping_notice() {
+
+    global $current_user;
+
+    $user_role = $current_user->roles[0];
+
+    $total = WC()->cart->subtotal_ex_tax;
+
+    if ( ( $total < 50 ) && ( $user_role == 'customer_wholesale' ) ) {
+
+        wc_add_notice( 'Free Shipping & Handling on $50 Orders — Mix & Match', 'error' );
+        
+    }
+    
 }
