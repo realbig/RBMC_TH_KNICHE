@@ -6,30 +6,20 @@
  * @package KidNiche
  */
 
-add_filter( 'gform_username_2', 'generate_wholesale_username' );
+add_action( 'wp', 'custom_gform_activation_page', 9 );
 /**
- * Ensures that the Username is unique
- * @param  string $username Set to First Name in the Registration Feed (Full Name doesn't work for some reason)
- * @return string $username
+ * Overrides the default Gravity Forms User Activation Page
  */
-function generate_wholesale_username( $username ) {
-    
-    $first = rgpost( 'input_1_3' );
-    $last = rgpost( 'input_1_6' );
+function custom_gform_activation_page() {
 
-    // No need for overly long Usernames
-    $username = substr( $first, 0, 1 ) . substr( $last, 0, 10 );
-    $username = preg_replace( '/[^A-Za-z]/', '', strtolower( $username ) );
+    $template_path = __DIR__ . '/activate.php';
+    $is_activate_page = isset( $_GET['page'] ) && $_GET['page'] == 'gf_activation';
 
-    $index = 1;
-    while( username_exists( $username ) !== false ) {
+    if( ! file_exists( $template_path ) || ! $is_activate_page  )
+        return;
 
-        $username = str_replace( $index - 1, '', $username ) . $index;
+    require_once( $template_path );
 
-        $index++;
+    exit();
 
-    }
-    
-    return $username;
-    
 }
