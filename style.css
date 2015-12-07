@@ -5278,6 +5278,50 @@ body.page-template-archive-lesson .lesson-pagination {
     margin: 0 0.5em; }
 
 /*
+Styles books archive.
+
+@since 1.0.0
+*/
+/*
+Sets up the theme's styling properties and makes some variables already set in Foundation available for easy use
+throughout this theme's SASS files.
+
+@since 1.0.0
+*/
+/*
+Global mixins.
+
+@since 1.0.0
+*/
+body.post-type-archive-book .product-loop .container {
+  position: relative; }
+  body.post-type-archive-book .product-loop .container > img {
+    float: left;
+    margin-right: 1em;
+    max-width: 35%;
+    width: 150px; }
+  body.post-type-archive-book .product-loop .container > .onsale {
+    min-height: 3.236em;
+    min-width: 3.236em;
+    padding: .202em;
+    font-weight: 700;
+    position: absolute;
+    text-align: center;
+    line-height: 3.236;
+    top: -.5em;
+    left: -.5em;
+    margin: 0;
+    border-radius: 100%;
+    background-color: #77a464;
+    color: #fff;
+    font-size: .857em;
+    -webkit-font-smoothing: antialiased;
+    top: 0;
+    right: 0;
+    left: auto;
+    margin: .5em .5em 0 0; }
+
+/*
 Styles page.php.
 
 @since 1.0.0
