@@ -5295,6 +5295,8 @@ Global mixins.
 */
 body.post-type-archive-book .product-loop .container {
   position: relative; }
+  body.post-type-archive-book .product-loop .container .product-content {
+    overflow: hidden; }
   body.post-type-archive-book .product-loop .container > img {
     float: left;
     margin-right: 1em;

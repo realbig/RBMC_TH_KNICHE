@@ -13,6 +13,10 @@ body.post-type-archive-book {
         .container {
             position: relative;
 
+            .product-content {
+                overflow: hidden;
+            }
+
             & > img {
                 float: left;
                 margin-right: 1em;
