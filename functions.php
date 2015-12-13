@@ -296,7 +296,7 @@ function kidniche_post_loop_content() {
 
 			<p class="<?php echo get_post_type(); ?>-comment-count">
 				<span class="icon-bubble"></span>
-				<?php $comment_count = wp_count_comments()->approved; ?>
+				<?php $comment_count = wp_count_comments( get_the_ID() )->approved; ?>
 				<?php echo $comment_count . _n( ' comment', ' comments', $comment_count ); ?>
 			</p>
 
