@@ -28,6 +28,14 @@ function _kidniche_add_metaboxes_shop() {
 		'_kidniche_mb_shop_extra_callback',
 		'page'
 	);
+
+    add_meta_box(
+		'kidniche_mb_user_updater',
+		__( 'Gravity Form User Updater ID', 'KidNiche' ),
+		'_kidniche_mb_user_updater_callback',
+		'page'
+	);
+
 }
 
 function _kidniche_mb_shop_extra_callback() {
@@ -47,6 +55,23 @@ function _kidniche_mb_shop_extra_callback() {
 <?php
 }
 
+function _kidniche_mb_user_updater_callback() {
+
+	global $post;
+
+	wp_nonce_field( __FILE__, 'kidniche_mb_user_updater_nonce' );
+
+	$updater_form = get_post_meta( $post->ID, '_kidniche_user_update_form', true );
+	?>
+	<p>
+		<label>
+			<input type="text" name="_kidniche_user_update_form"
+			       value="<?php echo $updater_form; ?>"/>
+		</label>
+	</p>
+<?php
+}
+
 function _kidniche_save_metaboxes_shop( $post_ID ) {
 
 	if ( ! isset( $_POST['kidniche_mb_shop_extra_nonce'] ) ) {
@@ -54,6 +79,14 @@ function _kidniche_save_metaboxes_shop( $post_ID ) {
 	}
 
 	if ( ! wp_verify_nonce( $_POST['kidniche_mb_shop_extra_nonce'], __FILE__ ) ) {
+		return;
+	}
+
+    if ( ! isset( $_POST['kidniche_mb_user_updater_nonce'] ) ) {
+		return;
+	}
+
+	if ( ! wp_verify_nonce( $_POST['kidniche_mb_user_updater_nonce'], __FILE__ ) ) {
 		return;
 	}
 
@@ -67,6 +100,7 @@ function _kidniche_save_metaboxes_shop( $post_ID ) {
 
 	$options = array(
 		'_kidniche_shop_form',
+        '_kidniche_user_update_form',
 	);
 
 	foreach ( $options as $option ) {

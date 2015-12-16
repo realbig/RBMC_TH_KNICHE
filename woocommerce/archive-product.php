@@ -40,7 +40,7 @@ add_filter( 'woocommerce_loop_add_to_cart_link', function () {
         $user_role = $current_user->roles[0];
 
 		$shop_page_ID = get_option( 'woocommerce_shop_page_id' );
-		if ( $shop_form_ID = get_post_meta( $shop_page_ID, '_kidniche_shop_form', true ) ) :
+		if ( ( $shop_form_ID = get_post_meta( $shop_page_ID, '_kidniche_shop_form', true ) ) && $user_update_form_ID = get_post_meta( $shop_page_ID, '_kidniche_user_update_form', true ) ) :
 
             if ( $user_role !== 'customer_wholesale' ) {
 
@@ -67,14 +67,26 @@ add_filter( 'woocommerce_loop_add_to_cart_link', function () {
 
 				<?php
 				if ( function_exists( 'gravity_form' ) ) {
-					gravity_form(
-						$shop_form_ID,
-						$display_title = false,
-						$display_description = false,
-						$display_inactive = false,
-						$field_values = null,
-						$ajax = true
-					);
+                    if ( ! is_user_logged_in() ) { // Show Regular Wholesale Signup Form
+                        gravity_form(
+                            $shop_form_ID,
+                            $display_title = false,
+                            $display_description = false,
+                            $display_inactive = false,
+                            $field_values = null,
+                            $ajax = true
+                        );
+                    }
+                    else {
+                        gravity_form( // Show Form for so they can Update Their User Account
+                            $user_update_form_ID,
+                            $display_title = false,
+                            $display_description = false,
+                            $display_inactive = false,
+                            $field_values = null,
+                            $ajax = true
+                        );
+                    }
 				}
 				?>
 

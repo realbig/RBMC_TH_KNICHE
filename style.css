@@ -5765,7 +5765,7 @@ Global mixins.
       color: #fff; }
       #wholesale-form #wholesale-top-banner h3 a, #wholesale-form #wholesale-bottom-banner h3 a {
         color: #fff; }
-  #wholesale-form #gform_wrapper_2 {
+  #wholesale-form #gform_wrapper_2, #wholesale-form #gform_wrapper_3 {
     padding: 0 2.1428571429rem 0 2.1428571429rem; }
 
 /*
