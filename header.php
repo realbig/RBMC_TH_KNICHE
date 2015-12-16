@@ -23,6 +23,9 @@ global $woocommerce;
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
+    <meta name="msvalidate.01" content="BC0CA43152825FE3AF36AECF5EC2E1D0" />
+    <meta name="google-site-verification" content="XD-sLL0wtQneZCDoVZKeN14rXMjTJjTpo0F5_169psY" />
+
 	<!--[if lt IE 9]>
 	<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/vendor/js/html5.js"></script>
 	<![endif]-->
