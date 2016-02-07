@@ -54,7 +54,7 @@ function kniche_lesson_pagination( $page, $lessons ) {
 	$prefix  = count( $page_links ) > 4 ? true : false;
 	$postfix = count( $page_links ) > 3 ? true : false;
 
-	$page_links = kniche_trim_array_ends( $page_links, 3 );
+	$page_links = kniche_trim_array_ends( $page_links, 4 );
 
 	// First, next
 	if ( $page > 1 ) {
