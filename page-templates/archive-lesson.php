@@ -17,7 +17,7 @@ function kniche_lesson_pagination( $page, $lessons ) {
 
 	$all_lessons = get_posts( array(
 		'post_type'   => 'lesson',
-		'numberposts' => - 1,
+		'numberposts' => -1,
 	) );
 
 	$total_lessons = count( $all_lessons );
@@ -54,7 +54,7 @@ function kniche_lesson_pagination( $page, $lessons ) {
 	$prefix  = count( $page_links ) > 4 ? true : false;
 	$postfix = count( $page_links ) > 3 ? true : false;
 
-	$page_links = kniche_trim_array_ends( $page_links, 4 );
+	$page_links = kniche_trim_array_ends( $page_links, 5 );
 
 	// First, next
 	if ( $page > 1 ) {
